@@ -1,0 +1,59 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+header {
+    background-color: chocolate;
+}
+
+li {
+    border: 2px solid red;
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(255, 219, 14);
+    border-radius: 50%;
+    display: inline-block;    
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 400px;
+}
+
+#bloc1 {
+    background-color: darkcyan;
+    width: 40%;
+    height: 400px;
+}
+
+#bloc2 {
+    background-color: rgb(194, 30, 186);
+    width: 40%;
+    height: 400px;
+    border: 2px solid red;
+}
+
+.bloc3 {
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+section img {
+    display: block;
+    margin: auto;
+    border: 2px solid red;
+}
+
+.logo {
+    border: 2px solid red;
+    background-color: darksalmon;
+    border-radius: 5px;
+    width: 45px;
+    height: 45px;
+}
