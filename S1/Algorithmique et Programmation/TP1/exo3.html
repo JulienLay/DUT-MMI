@@ -12,7 +12,7 @@
     // ECRIRE ICI VOTRE ALGORITHME
 
     // glossaire : mettre let devant chaque variable
-    let montant, somme_a_payer, deduction;
+    let montant, somme_a_payer, deduction, cmptr_20=0, cmptr_10=0, cmptr_5=0, cmptr_2=0, cmptr_1=0;
 
     // début de l'algo
     somme_a_payer = entrer();
@@ -23,8 +23,60 @@
     } else if (montant == somme_a_payer) {
         sortir("c'est bon !");
     } else {
-        deduction = somme_a_payer - montant;
-        sortir(deduction, "euros à rendre soit ", deduction%20, "billet(s) de 20", (deduction-deduction%20)%10 ,"billet(s) de 10", (deduction-((deduction-deduction%20)%10))%5,"billet(s) de 5", deduction-((deduction-((deduction-deduction%20)%10))%5)%2, "pièces(s) de 2", deduction-(deduction-((deduction-((deduction-deduction%20)%10))%5)%2)%1, "pièce(s) de 1");
+        deduction = montant - somme_a_payer;
+
+        while (deduction >= 20) {
+            deduction = deduction - 20;
+            cmptr_20 = cmptr_20 + 1;
+        }
+
+        while (deduction >= 10) {
+            deduction = deduction - 10;
+            cmptr_10 = cmptr_10 + 1;
+        }
+
+        while (deduction >= 5) {
+            deduction = deduction - 5;
+            cmptr_5 = cmptr_5 + 1;
+        }
+
+        while (deduction >= 2) {
+            deduction = deduction - 2;
+            cmptr_2 = cmptr_2 + 1;
+        }
+
+        while (deduction >= 1) {
+            deduction = deduction - 1;
+            cmptr_1 = cmptr_1 + 1;
+        }
+
+        sortir("Somme à payer : ")
+        sortir(somme_a_payer);
+        sortir("\n");
+
+        sortir("Montant donné : ");
+        sortir(montant);
+        sortir("\n");
+        sortir("\n");
+
+        sortir(montant - somme_a_payer);
+        sortir(" euros à rendre soit :");
+        sortir("\n");
+        sortir("\n");
+        sortir(cmptr_20);
+        sortir(" billet(s) de 20, ");
+        sortir("\n");
+        sortir(cmptr_10);
+        sortir(" billet(s) de 10, ");
+        sortir("\n");
+        sortir(cmptr_5);
+        sortir(" billet(s) de 5, ");
+        sortir("\n");
+        sortir(cmptr_2);
+        sortir(" pièces(s) de 2, ");
+        sortir("\n");
+        sortir(cmptr_1);
+        sortir(" pièce(s) de 1.");
     }
 
     // fin de l'algo
