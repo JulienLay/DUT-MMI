@@ -1,0 +1,8 @@
+Excercie HTML CSS
+
+Reproduire la page HTML/CSS avec comme modèle le fichier « apercu.png »
+Vous disposez d’une page HTML (index.html) de base et d’une page CSS (style.css) vierge.
+Le dossier « images » contient toutes les images utilisées sur le page web.
+Le fichier « texte.txt » contient tous les textes utilisés.
+La police utilisée pour le titre de la bannière est Indie Flower (Google Fonts)
+La police utilisée pour le reste du texte est du Verdana.

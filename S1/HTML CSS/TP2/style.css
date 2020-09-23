@@ -1,0 +1,30 @@
+body {
+    background-image: url("images/zen-bg.png");
+    background-repeat: no-repeat;
+}
+
+p {
+    font-family: Verdana;
+}
+
+main {
+    padding-top: 5px;
+    padding-right: 500px;
+    padding-left: 100px;
+}
+
+header {
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+
+
+#milieu {
+    display: flex;
+}
+
