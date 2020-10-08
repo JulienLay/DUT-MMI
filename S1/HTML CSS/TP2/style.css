@@ -1,16 +1,13 @@
 body {
+    width: 1266px;
     background-image: url("images/zen-bg.png");
     background-repeat: no-repeat;
-}
-
-p {
+    margin: 9px 103px;
     font-family: Verdana;
 }
 
 main {
-    padding-top: 5px;
-    padding-right: 500px;
-    padding-left: 100px;
+    display: flex;
 }
 
 header {
@@ -20,11 +17,57 @@ header {
 h1 {
     text-align: center;
     font-family: 'Indie Flower', cursive;
+    color: rgb(94, 91, 91);
 }
 
-
-
-#milieu {
-    display: flex;
+h2 {
+    font-family: Verdana;
+    color: rgb(94, 91, 91);
+    padding-left: 20px;
 }
 
+h3 {
+    font-family: Verdana;
+    font-style: italic;
+    color: rgb(120, 126, 103);
+    font-weight: lighter;
+}
+
+aside {
+    border-left: 2px dotted black;
+    padding: 20px;
+    width: 30%;
+    height: 50%;
+}
+
+footer{
+    padding-left: 350px;
+    font-size: 12px;
+}
+
+article {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+article img {
+    border: solid 1px black;
+}
+
+section {
+    width: 50%;
+    font-size: 15px;
+}
+
+.menu {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: rgb(94, 91, 91);
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    border: solid 1px gray;
+}
