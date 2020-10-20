@@ -1,0 +1,121 @@
+/* CSS Avancé - TP1 : Rappels et révisions */
+
+
+/* Éléments CSS communs
+    exemple : cibler tous les p.
+    p {
+        propriété: valeur;
+    }
+*/
+
+
+/* Identifiants de ce TP :
+     - #bases : Les bases en CSS
+     - #texts : La mise en forme de textes
+     - #backgrounds : La gestion des fonds
+     - #models : Le modèles des boîtes
+     - #float : Les flottants et débordements
+     - #advanced-bases : Les bases du CSS avancé
+*/
+
+
+/* CSS de la partie : Les bases en CSS */
+
+a {
+    color: green;
+}
+
+#bases .exercice.is-2 {
+    color: blue;
+}
+
+#bases .exercice.is-3 {
+    display: none;
+    /*display: none; masque totalement l'élément et annule des propriétés telles que margin, padding, width, height...tandis que visibility: hidden; masque seulement l'élément, ce qui peut laisser des espaces vides.*/
+}
+
+#bases .exercice.is-4 em {
+    text-decoration: underline;
+}
+
+/* CSS de la partie : La mise en forme de textes */
+
+#texts {
+    font-family: Verdana;
+}
+
+#texts h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#texts .exercice.is-7 .css.is-c{
+    font-size: 20px;
+}
+
+#texts .exercice.is-7 .css.is-s.as-first{
+    font-family: Impact;
+}
+
+#texts .exercice.is-7 .css.is-s.as-second{
+    font-style: italic;
+    font-size: 10px;
+}
+
+#texts .exercice.is-8 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#texts .exercice.is-9 .css.is-c{
+    text-shadow: 2px 2px 1px red;
+}
+
+#texts .exercice.is-9 .css.is-s.as-first{
+    text-decoration: line-through;
+}
+
+#texts .exercice.is-9 .css.is-s.as-second{
+    text-transform: lowercase;
+}
+
+#texts .exercice.is-10 {
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+#texts .exercice.is-11 {
+    opacity: 50%;
+}
+
+#texts .exercice.is-11 span {
+    line-height: 45px;
+}
+
+#texts .exercice.is-12 {
+    text-indent: 50px;
+}
+
+#texts .exercice.is-12 span {
+    text-indent: 100px;
+    display: block;
+}
+
+/* CSS de la partie : La gestion des fonds */
+
+#backgrounds {}
+
+
+/* CSS de la partie : Le modèles des boîtes */
+
+#models {}
+
+
+/* CSS de la partie : Les flottants et débordements */
+
+#floats {}
+
+
+/* CSS de la partie : Les bases du CSS avancé */
+
+#advanced-bases {}

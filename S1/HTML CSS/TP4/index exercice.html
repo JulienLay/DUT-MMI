@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Avancé - TP1 : Rappels et révisions</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleexercice.css">
+</head>
+
+<body>
+
+    <header>
+
+        <p>
+            <span>MMI - DUT 1ère année</span> &nbsp;
+            <span>CSS Avancé - Travaux Pratiques</span> &nbsp;
+            <span>Intervenant - <a href="mailto: vincent.seguier@iut-tlse3.fr">Vincent SEGUIER</a></span> &nbsp;
+            <span>d'après le cours de Alban ALLEE</span>
+        </p>
+
+        <h1>TP1 : Rappels et révisions</h1>
+
+        <p><strong>Objectifs du TP</strong> : Revoir les éléments précédemment vus en cours et être à l'aise avec :
+        </p>
+
+        <ul>
+            <li><a href="#bases">Les bases en CSS</a></li>
+            <li><a href="#texts">La mise en forme de textes</a></li>
+            <li><a href="#backgrounds">La gestion des fonds</a></li>
+            <li><a href="#models">Le modèle des boîtes</a></li>
+            <li><a href="#floats">Les flottants et débordements</a></li>
+            <li><a href="#advanced-bases">Les bases du CSS avancé</a></li>
+        </ul>
+
+        <p><strong>Consigne</strong> : aucun style ne doit être appliqué via des modifications apportées à ce fichier <strong>index.html</strong>. Tout se passera dans <strong>style.css</strong>.</p>
+
+        <p><strong>Aide pour ce TP</strong> : <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> ou autre site ..., Google, votre cours.</p>
+
+    </header>
+
+    <!-- HTML de la partie : Les bases en CSS -->
+    <section id="bases">
+
+        <h2>Les bases en CSS</h2>
+
+        <p class="exercice is-1">Utiliser un sélécteur <em>CSS</em> pour changer la couleur des liens afin qu'ils apparaissent tous en vert.</p>
+
+        <p class="exercice is-2">Utiliser un sélécteur <em>CSS</em> afin d'appliquer la couleur bleue uniquement à ce texte.</p>
+
+        <p class="exercice is-3">Utiliser un sélécteur <em>CSS</em> afin de masquer ce texte et écrire un commentaire dans style.css afin d'expliquer succinctement ce que fait la propriété choisie.</p>
+
+        <p class="exercice is-4">Utiliser un sélécteur <em>CSS</em> afin de souligner le mot "CSS" uniquement pour cet exemple.</p>
+
+    </section>
+
+    <!-- HTML de la partie : La mise en forme de textes -->
+    <section id="texts">
+
+        <h2>La mise en forme de textes</h2>
+
+        <p class="exercice is-5">Changer le police de caractères du texte de toute cette section et utiliser "Verdana"</p>
+
+        <p class="exercice is-6">Changer le style de l'élément "h2" de cette section pour que son texte soit d'une taille de 30px et qu'il n'apparaisse plus en gras.</p>
+
+        <p class="exercice is-7">Appliquer un style différent à chaque lettre du mot suivant en utilisant uniquement des propriétés commençants par "font-" : <span class="css is-c">C</span><span class="css is-s as-first">S</span><span class="css is-s as-second">S</span></p>
+
+        <p class="exercice is-8">Changer le style de cet élément "p" pour que son texte soit centré et en majuscule.</p>
+
+        <p class="exercice is-9">Appliquer un style différent à chaque lettre du mot suivant en utilisant uniquement des propriétés commençants par "text-" : <span class="css is-c">C</span><span class="css is-s as-first">S</span><span class="css is-s as-second">S</span></p>
+
+        <p class="exercice is-10">Changer la couleur du texte de cet élément "p" en rouge et y ajouter un ombrage noir.</p>
+
+        <p class="exercice is-11">Changer l'opacité de cet élément "p" pour qu'elle soit de 50% et ajuster la hauteur de ligne du texte suivant pour qu'il soit de 45px : <br>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, soluta rerum, ad quod perspiciatis vitae explicabo et magni possimus repellat nulla. Magni, possimus, cum! Aut fuga vitae molestias, expedita.</span>
+        </p>
+
+        <p class="exercice is-12">Changer l'indentation de cet élément "p" pour qu'il soit décalé de 50px et que l'indentation du texte suivant soit décalé de 100px : <br>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quia, soluta rerum, ad quod perspiciatis vitae explicabo et magni possimus repellat nulla. Magni, possimus, cum! Aut fuga vitae molestias, expedita.</span>
+        </p>
+
+    </section>
+
+    <!-- HTML de la partie : La gestion des fonds -->
+    <section id="backgrounds">
+
+        <h2>La gestion des fonds</h2>
+
+        <p class="exercice is-13">Changer la couleur de fond de cet élément "p" et la remplacer par du rouge en utilisant un code couleur hexadecimal.</p>
+
+        <p class="exercice is-14">Changer la couleur de fond de cet élément "p" et la remplacer par du vert en utilisant un code couleur RGB.</p>
+
+        <p class="exercice is-15">Utiliser un dégradé linaire du jaune vers le rouge sur cet élément "p".</p>
+
+        <p class="exercice is-16">Utiliser une <a href="http://thecatapi.com/api/images/get?format=src&type=gif">image</a> provenant de <a href="http://thecatapi.com/">thecatapi</a> comme image de fond sur cet élément "p". Définir à l'élément une largeur de 500px et une hauteur
+            de 400px. Faire en sorte que l'image recouvre l'intégralité de cet élément "p" sans déformation.</p>
+
+    </section>
+
+    <!-- HTML de la partie : Le modèles des boîtes -->
+    <section id="models">
+
+        <h2>Le modèle des boîtes</h2>
+
+        <ul class="is-hidden">
+            <li class="exercice is-17">Définir l'élément ayant pour classe "is-parent" comme élément relatif et y ajouter une brodure noire solide de 2px. Fixer la taille de cet élément à 500px et y ajouter un fond rouge.</li>
+
+            <li class="exercice is-18">Définir l'élément ayant pour classe "as-margin" avec une marge extérieure de 50px.</li>
+
+            <li class="exercice is-19">Définir l'élément ayant pour classe "as-border" avec une bordure orange solide de 50px.</li>
+
+            <li class="exercice is-20">Définir l'élément ayant pour classe "as-padding" avec une marge intérieure de 50px et y ajouter une couleur de fond jaune.</li>
+
+            <li class="exercice is-21">Définir l'élément ayant pour classe "as-content" avec un fond de couleur blanc, un texte centré et une hauteur de ligne de 90px.</li>
+
+            <li class="exercice is-22">Positionner chaque texte en haut à droite de leur élément "box" respectif.</li>
+
+            <li class="exercice is-23">Masquer les éléments de cette section ayant pour classe "is-hidden".</li>
+        </ul>
+
+        <p>Représentation du <a href="https://developer.mozilla.org/fr/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte" target="_blank">modèle des boîtes</a> <span class="is-hidden">à compléter </span>:</p>
+
+        <div class="box is-parent">
+
+            <div class="box as-margin">
+                <span class="text">Margin</span>
+
+                <div class="box as-border">
+                    <span class="text">Border</span>
+
+                    <div class="box as-padding">
+                        <span class="text">Padding</span>
+
+                        <div class="box as-content">
+                            <span class="text">Contenu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- HTML de la partie : Les flottants et débordements -->
+    <section id="floats">
+
+        <h2>Les flottants et débordements</h2>
+
+        <p class="exercice is-24">Faire flotter cet élément "p" à gauche avec une largeur de 30% et une hauteur de 200px.</p>
+
+        <p class="exercice is-25">Faire flotter cet élément "p" à droite avec une largeur de 70% et une hauteur de 100px.</p>
+
+        <p class="exercice is-26">Faire flotter cet élément "p" à gauche avec une largeur de 50% sous ces deux premiers éléments "p". Cet élément doit apparaitre sous le premier élément "p".</p>
+
+        <p class="exercice is-27">Faire flotter cet élément "p" à droite du précédent avec une largeur de 50%.</p>
+
+        <p class="exercice is-28">Utiliser la propriété CSS "clear" sur cet élément "p" afin de fixer les problèmes rencontrés. Expliquer succinctement le problème rencontré via un commentaire dans style.css</p>
+
+        <p class="exercice is-29">Définir une hauteur de 150px et une largeur de 320px sur cet élément "p" puis faire en sorte que son contenu puisse être lu intégralement et sans venir géner les sections à suivre.<br>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias tempora, labore reprehenderit nobis optio odit unde! Quaerat beatae hic vitae magnam eaque unde enim odio. Similique nostrum numquam a, saepe! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore atque, omnis repudiandae. Magni sint ducimus a praesentium sapiente assumenda pariatur quod iure quas animi eum sit ullam accusantium, provident, nisi!</span>
+        </p>
+
+    </section>
+
+    <!-- HTML de la partie : Les bases du CSS avancé -->
+    <section id="advanced-bases">
+
+        <h2>Les bases du CSS avancé</h2>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin de changer la couleur de ce texte en vert au passage de la souris. En faire de même pour les liens de cette page afin qu'ils deviennent rose au passage de la souris.</p>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin de changer la couleur de tous les liens visités de cette page en marron.</p>
+
+        <p class="exercice">Grouper des sélecteurs <em>CSS</em> afin que les éléments "h2" et "em" de cette section d'exercices apparaissent en orange.</p>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin d'ajouter une marge extérieure supérieure de 75px au premier élément "p" de cette section.</p>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin d'ajouter une marge extérieure supérieure de 45px à chaque élément "p" de cette section d'exercices à l'exception du premier élément.</p>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin d'ajouter le caractère tilde "~" devant chaque élément "p" de cette section d'exercices.</p>
+
+        <p class="exercice">Utiliser un sélécteur <em>CSS</em> afin de changer la couleur de chacun des éléments "p" ayant pour classe "exercice" afin que les éléments "p" impairs soient écrits en bleu et que les éléments pairs soient écrits en gris.</p>
+
+        <p class="exercice">Compléter le sélécteur <em>CSS</em> des liens pour effectuer une transition de couleur d'une durée de .5s au passage de la souris.</p>
+
+        <p class="exercice">Animer l'élément "span" contenant le texte "Terminé" afin de changer sa couleur de fond, sa taille et sa position en utilisant une animation CSS infinie. <br>
+            <span>Terminé</span>
+        </p>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Avancé - TP3 : Media Queries & Révisions d'examen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        body {
+            background-color: #FFEFDB;
+        }
+        
+        a {
+            color: #458b74;
+        }
+        
+        code {
+            background-color: #FFFFFF;
+            display: inline-block;
+            padding: 2px 3px;
+            border-radius: 5px;
+            border: 1px solid #D3D3D3;
+        }
+        
+        ol {
+            list-style-type: none;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+
+        <p>
+            <span>MMI - DUT 1ère année</span> &nbsp;
+            <span>CSS Avancé - Travaux Pratiques</span> &nbsp;
+            <span>Intervenant - <a href="mailto: vincent.seguier@iut-tlse3.fr">Vincent SEGUIER</a></span> &nbsp;
+            <span>d'après le cours de Alban ALLEE</span>
+        </p>
+
+        <h1>TP3 : Media Queries & Révisions Examen</h1>
+
+        <p><strong>Objectifs du TP</strong> : Découvrir les media queries et se préparer à l'examen.</p>
+
+        <ul>
+            <li><a href="#media">Les media queries</a></li>
+            <li><a href="#revisions">Révisions d'examen</a></li>
+        </ul>
+
+        <p><strong>Consigne</strong> : aucun style ne doit être appliqué via des modifications apportées à ce fichier <strong>index.html</strong>. Tout se passera dans <strong>style.css</strong>.</p>
+
+        <p><strong>Aide pour ce TP</strong> : <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> ou autre site, Google, votre cours.</p>
+
+    </header>
+
+    <section id="media">
+
+        <h2 class="title">Les media queries</h2>
+
+        <p>Exemple de media query :</p>
+        <code><pre>
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</pre></code>
+
+        <div class="exercice">
+            <h3>Comprendre les media queries</h3>
+            <p>Mettre en place la media query ci-dessus dans votre <strong>style.css</strong>.</p>
+            <p>Avec l'aide de cette <a href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">page de documentation du W3C sur les media queries</a>, expliquer avec un commentaire dans <strong>style.css</strong>.</p>
+        </div>
+
+        <div class="exercice">
+            <h3>Utilisation des media queries</h3>
+            <ol>
+                <li>Appliquer la couleur bleue à chacun des items de cette liste.</li>
+                <li>Appliquer la couleur rouge à cet item de liste pour une largeur maximum d'écran de 800px.</li>
+                <li>Appliquer la couleur orange à cet item de liste pour une largeur maximum d'écran de 600px.</li>
+                <li>Appliquer la couleur verte à cet item de liste pour une largeur maximum d'écran de 400px.</li>
+                <li>Cacher le texte de "Exemple de media query" ainsi que le code associé en utilisant <code>display: none;</code> pour une largeur maximum de 800px.</li>
+            </ol>
+        </div>
+
+        <div class="exercice">
+            <h3>Cas d'utilisation des media queries avec des flottant</h3>
+            <ol>
+                <li>Faire flotter cet élément de liste à gauche et lui appliquer une largeur de 50% / hauteur de 100px / une couleur de fond rouge.</li>
+                <li>Faire flotter cet élément de liste à droite et lui appliquer une largeur de 50% / hauteur de 100px / une couleur de fond verte.</li>
+                <li>Faire flotter cet élément de liste à gauche et lui appliquer une largeur de 33.33333% / hauteur de 100px / une couleur de fond bleue.</li>
+                <li>Faire flotter cet élément de liste à gauche et lui appliquer une largeur de 33.33333% / hauteur de 100px / une couleur de fond rose.</li>
+                <li>Faire flotter cet élément de liste à gauche et lui appliquer une largeur de 33.33333% / hauteur de 100px / une couleur de fond jaune.</li>
+            </ol>
+
+            <p>Pour finir écrire la media query permettant à chaque élément de liste de faire une taille de 100% pour une largeur max de 800px.</p>
+        </div>
+
+    </section>
+
+    <section id="revisions">
+
+        <h2 class="title">Révisions d'examen</h2>
+
+        <ol>
+            <li>Cibler la <code>section</code> ayant pour identifiant "revisions" et lui appliquer la couleur de fond aquamarine.</li>
+            <li>Cibler l'élément <code>h2</code> ayant pour classe "title" uniquement pour cette section, le mettre en italic et lui appliquer une taille de caractère de 30px.</li>
+            <li class="a b c">Cibler cet élément de liste en faisant appel à la classe "a", à la classe "b" et à la classe "c". et lui appliquer la couleur orange.</li>
+            <li>Cibler l'élément adjacent de cet élément et lui appliquer la couleur verte.</li>
+            <li>Cibler l'élément code de ce <code>li</code> et lui appliquer la couleur de fond marron.</li>
+        </ol>
+
+        <p>Dans la structure ci-dessous :</p>
+        <div>
+            <span>Appliquer la couleur de fond rose à la <code>div</code> parent de ce <code>span</code></span>
+            <span>et colorer ce texte en rouge.</span>
+            <div>
+                <span>Appliquer la couleur de fond gris à la <code>div</code> parent de ce <code>span</code></span>
+                <span>et colorer ce texte en bleu.</span>
+                <div>
+                    <span>Appliquer la couleur de fond jaune à la <code>div</code> parent de ce <code>span</code></span>
+                    <span>et colorer ce texte en vert.</span>
+                </div>
+            </div>
+        </div>
+
+        <p>Dans la liste ci-dessous :</p>
+        <ol>
+            <li data-item="1">Cibler cet élément et changer la couleur de son texte en rouge au survol de la souris.</li>
+            <li data-item="2">Cibler cet élément et l'encadrer avec des crochets <code>[]</code>.</li>
+            <li>Cibler cet élément, mettre son texte en italic et son fond en rouge en utilisant la pseudo-classe <code>:not(selecteur)</code></li>
+        </ol>
+
+        <div>Colorer la première lettre de ce texte en orange et la première ligne en bleu. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at cumque inventore quibusdam a dolorem voluptatibus, itaque molestias quasi culpa. Similique asperiores
+            inventore incidunt iure. Expedita, molestiae, magnam! Aspernatur, veritatis.</div>
+
+    </section>
+
+</body>
+
+</html>
