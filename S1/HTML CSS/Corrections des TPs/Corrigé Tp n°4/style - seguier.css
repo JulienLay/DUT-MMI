@@ -1,0 +1,302 @@
+/* CSS Avancé - TP1 : Rappels et révisions */
+
+
+/* Éléments CSS communs
+    exemple : cibler tous les p.
+    p {
+        propriété: valeur;
+    }
+*/
+
+a {
+    color: green;
+    transition: color .5s;
+}
+
+a:visited {
+    color: brown;
+}
+
+a:hover {
+    color: pink;
+}
+
+
+/* Identifiants de ce TP :
+     - #bases : Les bases en CSS
+     - #texts : La mise en forme de textes
+     - #models : Le modèles des boîtes
+     - #float : Les flottants et débordements
+     - #backgrounds : La gestion des fonds
+     - #advanced-bases : Les bases du CSS avancé
+*/
+
+
+/* CSS de la partie : Les bases en CSS */
+
+#bases {}
+
+#bases .exercice.is-2 {
+    color: blue;
+}
+
+#bases .exercice.is-3 {
+    display: none;
+}
+
+
+/* La propriété display avec pour valeur none va nous permettre de ne pas du tout afficher l'élément ciblé. */
+
+#bases .exercice.is-4 em {
+    text-decoration: underline;
+}
+
+
+/* CSS de la partie : La mise en forme de textes */
+
+#texts {
+    font-family: Verdana;
+}
+
+#texts h2 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+#texts .exercice.is-7 .css.is-c {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+#texts .exercice.is-7 .css.is-s.as-first {
+    font-size: 14px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+#texts .exercice.is-7 .css.is-s.as-second {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#texts .exercice.is-8 {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#texts .exercice.is-9 .css.is-c {
+    text-transform: lowercase;
+}
+
+#texts .exercice.is-9 .css.is-s.as-first {
+    text-shadow: 1px 1px 1px gray;
+}
+
+#texts .exercice.is-9 .css.is-s.as-second {
+    text-decoration: line-through;
+}
+
+#texts .exercice.is-10 {
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+#texts .exercice.is-11 {
+    opacity: .5;
+}
+
+#texts .exercice.is-11 span {
+    line-height: 45px;
+}
+
+#texts .exercice.is-12 {
+    text-indent: 50px;
+}
+
+#texts .exercice.is-12 span {
+    text-indent: 100px;
+    display: inline-block;
+}
+
+
+/* CSS de la partie : La gestion des fonds */
+
+#backgrounds {}
+
+#backgrounds .exercice.is-13 {
+    background-color: #FF0000;
+}
+
+#backgrounds .exercice.is-14 {
+    background-color: rgb(0, 255, 0);
+}
+
+#backgrounds .exercice.is-15 {
+    background: linear-gradient(yellow, red);
+}
+
+#backgrounds .exercice.is-16 {
+    background-image: url('http://thecatapi.com/api/images/get?format=src&type=gif');
+    background-size: cover;
+    width: 500px;
+    height: 400px;
+}
+
+
+/* CSS de la partie : Le modèles des boîtes */
+
+#models {}
+
+#models .box.is-parent {
+    position: relative;
+    border: 2px solid black;
+    width: 500px;
+    background-color: red;
+}
+
+#models .box.as-margin {
+    margin: 50px;
+}
+
+#models .box.as-border {
+    border: 50px solid orange;
+}
+
+#models .box.as-padding {
+    padding: 50px;
+    background-color: yellow;
+}
+
+#models .box.as-content {
+    background-color: white;
+    text-align: center;
+    line-height: 90px;
+}
+
+#models .box {
+    position: relative;
+}
+
+#models .box.as-margin>.text,
+#models .box.as-border>.text {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+
+#models .box.as-padding>.text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#models .is-hidden {
+    display: none;
+}
+
+
+/* CSS de la partie : Les flottants et débordements */
+
+#floats {}
+
+#floats .exercice.is-24 {
+    float: left;
+    width: 30%;
+    height: 200px;
+}
+
+#floats .exercice.is-25 {
+    float: right;
+    width: 70%;
+    height: 100px;
+}
+
+#floats .exercice.is-26 {
+    float: left;
+    width: 50%;
+    clear: both;
+}
+
+#floats .exercice.is-27 {
+    float: right;
+    width: 50%;
+}
+
+#floats .exercice.is-28 {
+    clear: both;
+}
+
+
+/* Le flow de contenu se poursuit autour des éléments flottant, l'utilisation de clear both permet de repasser dans un flux propre après les éléments flottants. */
+
+#floats .exercice.is-29 {
+    width: 320px;
+    height: 150px;
+    overflow: auto;
+}
+
+
+/* CSS de la partie : Les bases du CSS avancé */
+
+#advanced-bases {
+    margin-bottom: 300px;
+}
+
+#advanced-bases .exercice:nth-of-type(1):hover {
+    color: green;
+}
+
+#advanced-bases h2,
+#advanced-bases em {
+    color: orange;
+}
+
+#advanced-bases .exercice:first-of-type {
+    margin-top: 75px;
+}
+
+#advanced-bases .exercice {
+    margin-top: 45px;
+}
+
+#advanced-bases .exercice:before {
+    content: "~";
+    display: inline-block;
+}
+
+#advanced-bases .exercice:nth-of-type(2n+1) {
+    color: blue;
+}
+
+#advanced-bases .exercice:nth-of-type(2n) {
+    color: grey;
+}
+
+#advanced-bases .exercice:last-of-type span {
+    display: inline-block;
+    padding: 5px;
+    animation-name: animate;
+    animation-duration: 1.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    border: 1px solid;
+    width: 100px;
+    transform: rotate(0deg);
+    position: relative;
+    left: 0;
+}
+
+@keyframes animate {
+    0% {
+        background-color: grey;
+    }
+    100% {
+        background-color: yellow;
+        width: 200px;
+        transform: rotate(360deg);
+        left: 200px;
+    }
+}
