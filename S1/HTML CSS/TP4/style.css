@@ -19,11 +19,25 @@
 */
 
 
-/* CSS de la partie : Les bases en CSS */
+/* Partie sur les liens du site */
+
 
 a {
     color: green;
+    transition: 0.5s;
 }
+
+a:hover {
+    color: pink;
+}
+
+a:visited {
+    color: maroon;
+}
+
+
+/* CSS de la partie : Les bases en CSS */
+
 
 #bases .exercice.is-2 {
     color: blue;
@@ -38,7 +52,9 @@ a {
     text-decoration: underline;
 }
 
+
 /* CSS de la partie : La mise en forme de textes */
+
 
 #texts {
     font-family: Verdana;
@@ -101,21 +117,171 @@ a {
     display: block;
 }
 
+
 /* CSS de la partie : La gestion des fonds */
 
-#backgrounds {}
+
+#backgrounds .exercice.is-13 {
+    background-color: rgb(255, 0, 0);
+}
+
+#backgrounds .exercice.is-14 {
+    background-color: rgb(0, 255, 0);
+}
+
+#backgrounds .exercice.is-15 {
+    background: linear-gradient(yellow, red);
+}
+
+#backgrounds .exercice.is-16 {
+    background-image: url('http://thecatapi.com/api/images/get?format=src&type=gif');
+    width: 500px;
+    height: 400px;
+    background-size: cover;
+}
 
 
 /* CSS de la partie : Le modèles des boîtes */
 
-#models {}
+
+#models .box.is-parent {
+    position: relative;
+    border: 2px solid black;
+    width: 500px;
+    background-color: red;
+}
+
+#models .box.as-margin {
+    margin: 50px;
+}
+
+#models .box.as-border {
+    border: 50px solid orange;
+}
+
+#models .box.as-padding {
+    padding: 50px;
+    background-color: yellow;
+}
+
+#models .box.as-content {
+    background-color: white;
+    text-align: center;
+    line-height: 90px;
+}
+
+#models .box {
+    position: relative;
+}
+
+#models .box.as-margin>.text,
+#models .box.as-border>.text {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+
+#models .box.as-padding>.text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#models .is-hidden {
+    display: none;
+}
 
 
 /* CSS de la partie : Les flottants et débordements */
 
-#floats {}
+
+#floats .exercice.is-24 {
+    float: left;
+    width: 30%;
+    height: 200px;
+}
+
+#floats .exercice.is-25 {
+    float: right;
+    width: 70%;
+    height: 100px;
+}
+
+#floats .exercice.is-26 {
+    float: left;
+    width: 50%;
+    clear: both;
+}
+
+#floats .exercice.is-27 {
+    float: right;
+    width: 50%;
+}
+
+#floats .exercice.is-28 {
+    clear: both;
+}
+
+/* Le flow de contenu se poursuit autour des éléments flottant, l'utilisation de clear both permet de repasser dans un flux propre après les éléments flottants. */
+
+#floats .exercice.is-29 {
+    width: 320px;
+    height: 150px;
+    overflow: auto;
+}
 
 
 /* CSS de la partie : Les bases du CSS avancé */
 
-#advanced-bases {}
+
+#advanced-bases .exercice:first-of-type:hover {
+    color: green;
+}
+
+#advanced-bases h2,em {
+    color: orange;
+}
+
+#advanced-bases p:first-of-type {
+    margin-top: 75px;
+}
+
+#advanced-bases .exercice {
+    margin-top: 45px;
+}
+
+#advanced-bases p::before {
+    content : "~";
+}
+
+#advanced-bases p:nth-child(even) {
+    color: blue;
+}
+
+#advanced-bases p:nth-child(odd) {
+    color: gray;
+}
+
+#advanced-bases .exercice:last-of-type span {
+    display: inline-block;
+    padding: 5px;
+    animation-name: monAnimation;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+}
+
+@keyframes monAnimation {
+    from {
+      background-color: red;
+    }
+  
+    to {
+      background-color: lightgoldenrodyellow;
+      transform: rotate(-360deg);
+      width: 100px;
+      text-align: center;
+    }
+  }
