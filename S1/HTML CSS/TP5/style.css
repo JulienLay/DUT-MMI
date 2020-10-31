@@ -1,1 +1,130 @@
 /* CSS Avancé - TP2 : Selecteurs */
+
+#selectors .exercice.is-1 * {
+    color: red;
+}
+
+#selectors .exercice.is-2 #amazing {
+    color: red;
+}
+
+#selectors .exercice.is-3 .awesome {
+    color: red;
+}
+
+#selectors .exercice.is-3 .awesome.crazy {
+    color: red;
+}
+
+#selectors .exercice.is-4 h3 {
+    color: red;
+}
+
+#selectors .exercice.is-5 h3 {
+    color: rgba(255, 13, 255);
+}
+  
+#selectors .exercice.is-5 p {
+    color: rgba(13, 200, 25);
+}
+  
+#selectors .exercice.is-5 code {
+    color: rgba(180, 25, 133);
+}
+
+#selectors .exercice.is-6 h3 + p {
+    color: red;
+}
+
+/* L'élément n'est pas rouge car le + permet de cibler uniquement le p qui suit le h3 */
+
+#selectors .exercice.is-7 h3 ~ p {
+    color: red;
+}
+
+/* L'élément n'est pas rouge car il n'est pas un p du h3 : c'est un div du h3 */
+/* L'élément est rouge car il est un p du h3 */
+
+#selectors .exercice.is-8>.parent {
+    color: rgba(13, 200, 25);
+}
+
+#selectors .exercice.is-8>.parent>.child {
+    color: rgba(180, 25, 133);
+}
+
+#selectors .exercice.is-8>.parent>.child>.sub-child {
+    color: rgba(255, 13, 255);
+}
+
+#selectors .exercice.is-9 a[title] {
+    color: salmon;
+}
+
+#selectors .exercice.is-9 p[data-int] {
+    color: darkcyan;
+}
+
+#selectors .exercice.is-9 p[class] {
+    color: green;
+}
+
+#selectors .exercice.is-10 ul li:first-child {
+    color: red;
+}
+
+#selectors .exercice p:only-of-type {
+    background-color: yellow;
+}
+
+#selectors .exercice:first-of-type h3 {
+    background-color: yellow;
+}
+
+#selectors .exercice.is-10 ul li a:visited {
+    color: pink;
+}
+
+#selectors .exercice.is-10 ul li a:link {
+    color: orange;
+}
+
+#selectors .exercice.is-10 ul li a:hover {
+    color: maroon;
+}
+
+#selectors .exercice.is-10 ul li span:not(.forget-me-plz) {
+    background-color: yellow;
+}
+
+#selectors .exercice.is-10 #checkbox:checked + label {
+    color: blue;
+}
+
+#selectors .exercice.is-10 ul li:nth-of-type(7) {
+    color: gray;
+}
+
+#selectors .exercice.is-10 ul li:nth-child(8) {
+    color: purple;
+}
+
+#selectors .exercice.is-10 ul li:last-child {
+    color: blue;
+}
+
+#selectors .exercice.is-11 > p:nth-of-type(1)::before {
+    content: "[";
+}
+  
+#selectors .exercice.is-11 > p:nth-of-type(1)::after {
+    content: "]";
+}
+
+#selectors .exercice.is-11 > p:nth-of-type(2)::first-letter {
+    color: red;
+}
+
+#selectors .exercice.is-11 .text::first-line {
+    color: red;
+}
