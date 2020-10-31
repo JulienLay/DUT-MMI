@@ -13,17 +13,21 @@
 <script>
     // ECRIRE ICI VOTRE ALGORITHME
     // glossaire : mettre let devant chaque variable
-    let valeur, i=0;
-    let max = entrerNB();
+    let valeur, i=0, max = entrerNB("Tapez une valeur :");
     // début de l'algo
+    sortir("Valeur 1 : " + max);
+    sortir("\n");
     while (i<9) {
         valeur = entrerNB();
+        sortir("Valeur " + (i+2) + " : " + valeur);
+        sortir("\n");
         if (valeur > max) {
             max = valeur;
         }
         i += 1;
     }
-    sortir(max);
+    sortir("\n");
+    sortir("Le maximum des valeurs entrées est : " + max);
     // fin de l'algo
 </script>
 </body>
