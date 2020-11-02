@@ -6,7 +6,7 @@
     }
 }
 
-/* Quand la fenêtre fait moins de 600px, cela devient bleu */
+/* Quand la fenêtre fait moins de 600px, le fond de la page devient bleu */
 
 #media .exercice:nth-of-type(2) {
     color: blue;
@@ -146,4 +146,3 @@
 #revisions div:nth-of-type(2)::first-line {
     color: blue;
 }
-  
