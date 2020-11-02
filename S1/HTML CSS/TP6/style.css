@@ -1,1 +1,149 @@
 /* CSS Avancé - TP4 : Media Queries & Révisions d'examen */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Quand la fenêtre fait moins de 600px, cela devient bleu */
+
+#media .exercice:nth-of-type(2) {
+    color: blue;
+} 
+
+@media only screen and (max-width: 800px) {
+    #media .exercice:nth-of-type(2)  li:nth-of-type(2){
+        color: red;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #media .exercice:nth-of-type(2)  li:nth-of-type(3){
+        color: orange;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #media .exercice:nth-of-type(2)  li:nth-of-type(4){
+        color: green;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #media title, #media p, #media code {
+        display: none;
+    }
+}
+
+#media .exercice:nth-of-type(3)  li:nth-of-type(1) {
+    float: left;
+    width: 50%;
+    height: 100px;
+    background-color: red;
+}
+
+#media .exercice:nth-of-type(3)  li:nth-of-type(2) {
+    float: right;
+    width: 50%;
+    height: 100px;
+    background-color: green;
+}
+
+#media .exercice:nth-of-type(3)  li:nth-of-type(3) {
+    float: left;
+    width: 33.33333%;
+    height: 100px;
+    background-color: blue;
+}
+
+#media .exercice:nth-of-type(3)  li:nth-of-type(4) {
+    float: left;
+    width: 33.33333%;
+    height: 100px;
+    background-color: pink;
+}
+
+#media .exercice:nth-of-type(3)  li:nth-of-type(5) {
+    float: left;
+    width: 33.33333%;
+    height: 100px;
+    background-color: yellow;
+}
+
+@media only screen and (max-width: 800px) {
+    #media .exercice:nth-of-type(3)  li {
+        width: 100%;
+    }
+}
+
+#revisions {
+    background-color: aquamarine;
+}
+
+#revisions .title {
+    font-style: italic;
+    font-size: 30px;
+}
+
+.a.b.c {
+    color: orange;
+}
+
+.a.b.c + li{
+    color: green;
+}
+
+#revisions ol li:nth-of-type(5) {
+    background-color: maroon;
+}
+
+#revisions > div{
+    background-color: pink;
+}
+
+#revisions > div > span{
+    color: red;
+}
+
+#revisions > div > div{
+    background-color: gray;
+}
+
+#revisions > div > div > span{
+    color: blue;
+}
+
+#revisions > div > div > div{
+    background-color: yellow;
+}
+
+#revisions > div > div > div > span{
+    color: green;
+}
+
+#revisions li[data-item="1"]:hover {
+    color:red;
+}
+
+#revisions li[data-item="2"]::before {
+    content:"[";
+}
+
+#revisions li[data-item="2"]::after {
+    content:"]";
+}
+
+#revisions ol:nth-of-type(2) li:not([data-item]) {
+    font-style: italic;
+    background-color: red;
+}
+  
+#revisions div:nth-of-type(2)::first-letter {
+    color: orange;
+}
+  
+#revisions div:nth-of-type(2)::first-line {
+    color: blue;
+}
+  
