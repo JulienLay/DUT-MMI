@@ -1,0 +1,139 @@
+/* CSS Avancé - TP2 : Selecteurs */
+#selectors .exercice.is-1 * {
+  color: red;
+}
+
+#selectors .exercice.is-2 #amazing {
+  color: pink;
+}
+
+#selectors .exercice.is-3 .awesome {
+  color: blue;
+}
+
+#selectors .exercice.is-3 .awesome.crazy {
+  color: green;
+}
+
+#selectors .exercice.is-4 h3 {
+  color: red;
+}
+
+#selectors .exercice.is-5 h3 {
+  color: rgba(255, 133, 12);
+}
+
+#selectors .exercice.is-5 p {
+  color: rgba(133, 12, 255);
+}
+
+#selectors .exercice.is-5 code {
+  color: rgba(12, 255, 133);
+}
+
+#selectors .exercice.is-6 h3 + p {
+  color: red;
+}
+/* Le selecteur adjacent , dans ce cas,
+ne sélectionnera que le premier élément p
+suivant immédiatement un élément h3. */
+
+#selectors .exercice.is-7 h3 ~ p {
+  color: purple;
+}
+/* L'élément p non coloré n'a pas le même
+ parent que les que les p ciblé par notre selecteur.
+ Il n'est donc ni un élément suivant le h3 ciblé
+ par notre sélecteur, ni un frère des p à cibler. */
+
+#selectors .exercice.is-8 .parent > .text {
+  color: red;
+}
+
+#selectors .exercice.is-8 .child > .text {
+  color: green;
+}
+
+#selectors .exercice.is-8 .sub-child > .text {
+  color: blue;
+}
+
+#selectors .exercice.is-9 a[title] {
+  color: red;
+}
+
+#selectors .exercice.is-9 p[data-int="999"] {
+  color: green;
+}
+
+#selectors .exercice.is-9 p[data-int="888"] {
+  color: blue;
+}
+
+#selectors .exercice.is-9 p[class="p"] {
+  color: purple;
+}
+
+#selectors .exercice.is-9 p[class="also-p"] {
+  color: pink;
+}
+
+#selectors .exercice.is-10 ul li:first-child {
+  color: red;
+}
+
+#selectors .exercice p:only-of-type {
+  background-color: yellow;
+}
+
+#selectors .exercice:first-of-type h3 {
+  background-color: black;
+}
+
+#selectors .exercice.is-10 ul li a:visited {
+  color: pink;
+}
+
+#selectors .exercice.is-10 ul li a:link {
+  color: orange;
+}
+
+#selectors .exercice.is-10 ul li a:hover {
+  color: brown;
+}
+
+#selectors .exercice.is-10 ul li span:not(.forget-me-plz) {
+  background-color: yellow;
+}
+
+#selectors .exercice.is-10 #checkbox:checked + label {
+  color: blue;
+}
+
+#selectors .exercice.is-10 ul li:nth-of-type(7) {
+  color: grey;
+}
+
+#selectors .exercice.is-10 ul li:nth-child(8) {
+  color: purple;
+}
+
+#selectors .exercice.is-10 ul li:last-child {
+  color: blue;
+}
+
+#selectors .exercice.is-11 > p:nth-of-type(1)::before {
+  content: "[";
+}
+
+#selectors .exercice.is-11 > p:nth-of-type(1)::after {
+  content: "]";
+}
+
+#selectors .exercice.is-11 > p:nth-of-type(2)::first-letter {
+  color: red;
+}
+
+#selectors .exercice.is-11 > .text::first-line {
+  color: red;
+}

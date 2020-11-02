@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Avancé - TP2 : Sélecteurs - Mon CV</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+        body {
+            background-color: #FFEFDB;
+        }
+        
+        a {
+            color: #458b74;
+        }
+        
+        code {
+            background-color: #FFFFFF;
+            display: inline-block;
+            padding: 2px 3px;
+            border-radius: 5px;
+            border: 1px solid #D3D3D3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+
+        <p>
+            <span>MMI - DUT 1ère année</span> &nbsp;
+            <span>CSS Avancé - Travaux Pratiques</span> &nbsp;
+            <span>Intervenant - <a href="mailto: vincent.seguier@iut-tlse3.fr">Vincent SEGUIER</a></span> &nbsp;
+            <span>d'après le cours de Alban ALLEE</span>
+        </p>
+
+        <h1>TP2 : Sélecteurs</h1>
+
+        <p><strong>Objectifs du TP</strong> : Connaitre les sélecteurs CSS les plus utilisés :
+        </p>
+
+        <ul>
+            <li><a href="#selectors">Les selecteurs CSS</a></li>
+        </ul>
+
+        <p><strong>Consigne</strong> : aucun style ne doit être appliqué via des modifications apportées à ce fichier <strong>index.html</strong>. Tout se passera dans <strong>style.css</strong>.</p>
+
+        <p><strong>Aide pour ce TP</strong> : <a href="https://www.w3schools.com/css/default.asp" target="_blank">w3schools</a> ou autre site, Google, votre cours.</p>
+
+    </header>
+
+    <section id="selectors">
+
+        <h2>Les selecteurs CSS</h2>
+
+        <p>Pour ces exercices, les selecteurs CSS utilisés doivent cibler uniquement les éléments contenus dans la section ayant pour identifiant <code>#selector</code> et répondre aux différents intitulés ci-dessous. Chaque selecteur devra être le plus
+            spécifique possible.</p>
+
+        <div class="exercice is-1">
+            <h3>Le selecteur *</h3>
+            <p>Cibler tous les éléments de cet exercice et leurs appliquer la couleur rouge.</p>
+        </div>
+
+        <div class="exercice is-2">
+            <h3>Le selecteur d'id</h3>
+            <p>Cibler l'élément ayant pour id <code>#amazing</code> dans cet <span id="amazing">exercice</span> et lui appliquer la couleur rouge.</p>
+        </div>
+
+        <div class="exercice is-3">
+            <h3>Le selecteur de classe</h3>
+            <p>Cibler l'élément ayant pour classe <code>.awesome</code> dans cet <span class="awesome">exercice</span> et lui appliquer la couleur rouge.</p>
+            <p>Cibler l'élément ayant pour classe <code>.awesome</code> et pour classe <code>.crazy</code> dans cet <span class="awesome crazy">exercice</span> et lui appliquer la couleur rouge.</p>
+        </div>
+
+        <div class="exercice is-4">
+            <h3>Le selecteur descendant</h3>
+            <p>Cibler l'élément descendant <code>h3</code> de cet exercice et lui appliquer la couleur rouge.<br> Exemple de selecteur descendant : <code>div p</code></p>
+        </div>
+
+        <div class="exercice is-5">
+            <h3>Le selecteur d'élément</h3>
+            <p>Cibler tous les éléments de cet exercice et leur appliquer une couleur différente. Exemple d'éléments <code>h1, h2, p, div, section</code> etc...</p>
+        </div>
+
+        <div class="exercice is-6">
+            <h3>Le selecteur adjacent</h3>
+            <p>Cibler cet élément <code>p</code>, adjacent de l'élément <code>h3</code> qui le précède et ...</p>
+            <p>lui appliquer la couleur rouge en utilisant le selecteur <code>+</code></p>
+            <p>Expliquer pourquoi cet élément <code>p</code> n'est pas rouge avec un commentaire dans votre fichier style.css</p>
+        </div>
+
+        <div class="exercice is-7">
+            <h3>Le combinateur de frères</h3>
+            <p>Cibler cet élément <code>p</code>, adjacent de l'élément <code>h3</code> qui le précède</p>
+            <p>ainsi que ses frères afin de leur appliquer la couleur rouge</p>
+            <p>en utilisant le selecteur <code>~</code> (tilde)</p>
+            <div>
+                <p>Expliquer pourquoi cet élément <code>p</code> n'est pas rouge avec un commentaire dans votre fichier style.css</p>
+            </div>
+            <p>Expliquer pourquoi cet élément <code>p</code> est rouge avec un commentaire dans votre fichier style.css</p>
+        </div>
+
+        <div class="exercice is-8">
+            <h3>Le selecteur d'enfants directs</h3>
+            <p>Cibler dans la structure suivante les enfants direct de chaque <code>div</code> et leurs appliquer une couleur différente en utilisant le selecteur <code>></code>.</p>
+            <div class="parent">
+                <span class="text">Parent</span>
+                <div class="child">
+                    <span class="text">Child</span>
+                    <div class="sub-child">
+                        <span class="text">Sub-Child</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="exercice is-9">
+            <h3>Le selecteur d'attributs</h3>
+            <p>Cibler dans la structure suivante les différents éléments ayant pour attributs <code>title, data-int, class</code> et leur appliquer une couleur différente en utilisant le selecteur d'attribut <code>element[attribut]</code>.</p>
+            <div>
+                <a href="javascript:void();" title="Un lien ?">Un lien avec un attribut <code>title</code></a>
+                <p data-int="999">Un paragraphe avec un attribut <code>data-int</code> qui vaut 999</p>
+                <p data-int="888">Un paragraphe avec un attribut <code>data-int</code> qui vaut 888</p>
+                <p class="p">Un paragraphe avec un attribut <code>class</code></p>
+                <p class="also-p">Un autre paragraphe avec un attribut <code>class</code></p>
+            </div>
+        </div>
+
+        <div class="exercice is-10" id="pseudo-classes">
+            <h3>Les pseudo-classes</h3>
+            <ul>
+                <li>Cibler le premier élément de cette liste et lui appliquer la couleur rouge en utilisant la pseudo-classe <code>:first-child</code>.</li>
+                <li>Cibler tous les éléments <code>p</code> contenus dans une <code>div</code> ayant pour classe <code>.exercice</code> et leurs appliquer un fond jaune si ils sont le seul élément <code>p</code> dans cette <code>div</code> en utilisant la
+                    pseudo-classe <code>:only-of-type</code></li>
+                <li>Cibler l'élément <code>h3</code> du premier élément ayant pour classe <code>.exercice</code> en utilisant la pseudo-classe <code>:first-of-type</code> et lui appliquer un fond jaune.</li>
+                <li>Cibler les liens (<code>a</code>) suivants et appliquer la couleur rose aux <a href="https://www.w3schools.com/cssref/sel_visited.asp" target="_blank">liens visités</a> en utilisant la pseudo-classe <code>:visited</code>, la couleur orange
+                    pour <a href="#pseudo-classes">les ancres</a> qui n'ont pas encore été cliquées en utilisant la pseudo-classe <code>:link</code>. Pour finir, utiliser la pseudo-classe <code>:hover</code> afin de changer la couleur de ces mêmes liens
+                    en marron au survol de la souris.</li>
+                <li>Cibler les éléments <code>span</code> suivants qui n'ont pas la classe <code>.forget-me-plz</code> et leurs appliquer un fond jaune en utilisant la pseudo-classe <code>:not(selecteur)</code> : <span class="forget-me-plz">C</span><span>O</span>
+                    <span
+                        class="forget-me-plz">L</span><span>O</span><span class="forget-me-plz">R</span></li>
+                <li>Cibler cet élément <code>input</code> de type checkbox et appliquer à son <code>label</code> la couleur bleue uniquement si il est coché en utilisant la pseudo-classe <code>:checked</code> : <input type="checkbox" id="checkbox">
+                    <label
+                        for="checkbox">Check !</label>
+                </li>
+                <li>Cibler cet élément de liste <code>li</code> en utilisant la pseudo-classe <code>:nth-of-type(n)</code> et lui appliquer la couleur grise.</li>
+                <li>Cibler cet élément de liste <code>li</code> en utilisant la pseudo-classe <code>:nth-child(n)</code> et lui appliquer la couleur violette.</li>
+                <li>Cibler le dernier élément de cette liste et lui appliquer la couleur bleue en utilisant la pseudo-classe <code>:last-child</code>.</li>
+            </ul>
+        </div>
+
+        <div class="exercice is-11">
+            <h3>Les pseudo-éléments</h3>
+            <p>Encadrer cet élément <code>p</code> avec des crochets <code>[]</code> en utilisant les pseudo-éléments <code>::before</code> et <code>::after</code>.</p>
+            <p>Cibler la première lettre de cet élément <code>p</code> et lui appliquer la couleur rouge en utilisant le pseudo-élément <code>::first-letter</code>.</p>
+            <p>Cibler la première ligne du texte de l'élément suivant ayant pour classe <code>.text</code> et lui appliquer la couleur rouge en utilisant le pseudo-élément <code>::first-line</code>.</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem fuga non quis commodi optio neque pariatur unde possimus molestias iusto, sunt sint! Illum saepe ea, quibusdam itaque deleniti ab unde. Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Placeat vero, recusandae iste, animi dignissimos dolorem quaerat eveniet delectus provident, architecto repudiandae. Omnis laborum, commodi quos molestias exercitationem sapiente illum excepturi.</p>
+        </div>
+
+    </section>
+</body>
+
+</html>
