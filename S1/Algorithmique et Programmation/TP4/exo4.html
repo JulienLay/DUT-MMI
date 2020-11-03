@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+    // glossaire : mettre let devant chaque variable
+
+    function test(nombre) {
+        if (nombre >= 0) {
+            return "Vrai";
+        } else {
+            return "False";
+        }
+    }
+
+    function saisiePositif(nombre){
+        while (nombre < 0) {
+            nombre = entrerNB();
+        }
+    }
+
+    function affichageNombrePositifSur5Nombres() {
+        let cmptr = 0;
+        let nbPositifs = 0;
+        while (cmptr < 5) {
+            let nb = entrerNB("Saisissez un nombre : ");
+            if (nb >=0) {
+                nbPositifs+=1;
+            }
+            cmptr += 1;
+        }
+        sortir("Nombre de nombres positifs : " + nbPositifs);
+    }
+
+    // début de l'algo
+    let resultat = test(3);
+    sortir(resultat);
+
+    saisiePositif(entrerNB("Saisir un nombre positif : "));
+    sortir("\n");
+
+    affichageNombrePositifSur5Nombres();
+
+    // fin de l'algo
+</script>
+</body>
+</html>

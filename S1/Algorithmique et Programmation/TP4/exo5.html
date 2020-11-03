@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+    // glossaire : mettre let devant chaque variable
+
+    function Bulletins(n1,n2,n3,n4,n5) {
+        return (n1+n2+n3+n4+n5)/5;
+    }
+
+    function superieurA10(nb) {
+        if (nb >=10){
+            return "Succès";
+        } else {
+            return "Echec";
+        }
+    }
+    //a finir (voir fiche TD4)
+    function CinqNombres(){
+        let cmptr = 0;
+        while (cmptr < 5) {
+            let nb = entrerNB("Saisissez un nombre : ");
+            
+            cmptr += 1;
+        }
+    }
+
+
+    // début de l'algo
+    
+
+    // fin de l'algo
+</script>
+</body>
+</html>
