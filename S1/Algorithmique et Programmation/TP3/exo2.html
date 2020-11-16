@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+    // glossaire : mettre let devant chaque variable
+    let tab=[], nbValeurs=0, i=1, valeur;
+    nbValeurs = entrerNB("Tapez le nombre de valeurs que vous voulez entrer : ");
+    // début de l'algo
+    
+    while (nbValeurs < 1 || nbValeurs > 50) {
+        nbValeurs = entrerNB("Il faut une valeur entre 1 et 50. Tapez de nouveau le nombre de valeurs que vous voulez entrer : ");
+    }
+
+    while (i <= nbValeurs) {
+        valeur = entrerNB("Tapez la valeur " + i + " : ");
+        tab[i] = valeur;
+        sortir("Valeur "+ i + " : " + tab[i]);
+        sortir("\n");
+        i+=1;
+    }
+
+    sortir("\n");
+    i = i-1;
+
+    while (i > 0) {
+        sortir("Valeur "+ i + " : " + tab[i]);
+        sortir("\n");
+        i-=1;
+    }
+
+    // fin de l'algo
+</script>
+</body>
+</html>

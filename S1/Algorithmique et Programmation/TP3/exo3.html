@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+    // glossaire : mettre let devant chaque variable
+    let tJours=[], chaine="", i=1, j=0, cptr=0, min, valMin=0;
+    // début de l'algo
+    chaine = entrerCH("Tapez le jour de la semaine : ");
+    
+    if (chaine != "fin") {
+        tJours[0] = chaine;
+        min = chaine;
+    }
+    
+
+    while (chaine != "fin") {
+        chaine = entrerCH("Tapez le jour de la semaine : ");
+        if (chaine != "fin") {
+            tJours[i] = chaine;
+        }
+        i += 1;
+    }
+    sortir("Les valeurs dans le tableau : ");
+    sortir("\n");
+
+    while (j < tJours.length) {
+        sortir(tJours[j]);
+        sortir("\n");
+        j+=1;
+    }
+
+    
+
+    while(cptr < tJours.length) {
+        if (tJours[cptr] < min) {
+            min = tJours[cptr];
+            valMin = cptr;
+        }
+
+        cptr+=1;
+    }
+
+    sortir("\n");
+    sortir("Premier en ordre alphabétique : " + min);
+    sortir("\n");
+    sortir("Son indice dans le tableau : " + valMin);
+
+
+    // fin de l'algo
+</script>
+</body>
+</html>
