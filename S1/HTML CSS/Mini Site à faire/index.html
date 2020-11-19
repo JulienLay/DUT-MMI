@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MMI CASTRES</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="rose">
-        <ul>
-            <li>Programme</li>
-            <li>Stage</li>
-        </ul>
-        <h1>
-            MMI CASTRES
-        </h1>
-        <ul id="liste2">
-            <li>Poursuite d'études</li>
-            <li>Les métiers du Multimédia</li>
-        </ul>
-        <h2>Prêt pour l'aventure ?</h2>
-        <h3>Rejoignez la promo MMI à Castres</h3>
-        <p>C'est parti !</p>
+    <header>
+        <div id="titremenu">
+            <ul id="liste1">
+                <li>Programme</li>
+                <li id="texte2">Stage</li>
+            </ul>
+            <h1>
+                MMI CASTRES
+            </h1>
+            <ul id="liste2">
+                <li id="texte1">Poursuite d'études</li>
+                <li id="texte2">Les métiers du Multimédia</li>
+            </ul>
+        </div>
+        <div id="texte">
+            <h2>Prêt pour l'aventure ?</h2>
+            <h3>Rejoignez la promo MMI à Castres</h3>
+            <p>C'est parti !</p>
+        </div>
     </header>
     <main>
         <section class="projet">
@@ -31,20 +35,20 @@
                 <img src="Images/pic01.jpg" alt="pic01.jpg">
                 <h2>Projet 1</h2>
                 <p>Les projets 1-1 vous permettent de collaborer avec vos designers de manière sécurisée et optimisée sur des projets privés. C'est un espace de travail en ligne</p>
-                <p>Voir le projet </p>
+                <p class="bouton">Voir le projet </p>
             </article>
             <article>
                 <img src="Images/pic02.jpg" alt="pic02.jpg">
                 <h2>Projet 2</h2>
                 <p>Les projets 2-2 vous permettent de collaborer avec vos designers de manière sécurisée et optimisée sur des projets privés. C'est un espace de travail en ligne</p>
-                <p>Voir le projet </p>
+                <p class="bouton">Voir le projet </p>
             </article>
         </section>
         <section class="bleu">
             <p>Découvrez les Métiers d'Internet et du Multimédia</p>
         </section>
-        <h2>Actualités MMI</h2>
-        <section class="actualités">
+        <section class="actualites">
+            <h2>Actualités MMI</h2>
             <article>
                 <img src="Images/pic03.jpg" alt="pic03.jpg">
                 <p>Castres. Des étudiants organisent une nouvelle soirée "événement</p>
@@ -55,14 +59,14 @@
             </article>
             <article>
                 <img src="Images/pic05.jpg" alt="pic05.jpg">
-                <p>Castres. Les étudiants de l'IUT créent l'identité graphique de la bière Bombéro</p>
+                <p>Castres. Des étudiants organisent une nouvelle soirée "événement</p>
             </article>
+            <p class="bouton">Voir les actualités </p>
         </section>
-        <p>Voir les actualités </p>
     </main>
     <footer>
         <p id="credits">Crédits</p>
-        <p>© MMI CASTRES 1A Design: HTML5 CSS3 </p>
+        <p id="©">© MMI CASTRES 1A Design: HTML5 CSS3 </p>
     </footer>
 </body>
 </html>

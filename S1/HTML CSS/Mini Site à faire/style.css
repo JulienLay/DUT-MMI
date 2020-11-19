@@ -1,38 +1,139 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0%;
 }
 
-section {
-    display: flex;
-    text-align: center;
-}
-
-.rose {
+header {
     background-color: #f08c89;
     color: white;
 }
 
-.rose h1 {
-    background-color: lightpink;
-    position: relative;
+header #titremenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.rose p {
+header #titremenu #liste1 #texte2{
+    margin-left: 50px;
+}
+
+header #titremenu #liste2 #texte1{
+    margin-right: 50px;
+}
+
+header #titremenu #liste2 #texte2{
+    margin-right: 30px;
+}
+
+header #titremenu h1{
+    margin-left: 200px;
+    margin-top: -1px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header h1 {
+    background-color: rgb(255, 179, 190);
+    text-align: center;
+    width: 200px;
+    border-radius: 5px;
+    
+}
+
+header #texte {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header #texte h2 {
+    font-size: 50px;
+}
+
+header p {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    text-align: center;
     color: #f08c89;
     background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
 }
 
-.rose ul {
-    list-style-type: none;
+.projet {
+    display: flex;
+    text-align: center;
+}
+
+.projet img {
+    margin-top: 100px;
+    width: 700px;
+}
+
+.projet .bouton{
+    border: 2px solid lightgray;
+    line-height: 2.5;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 100px;
+}
+
+.projet p:not(.bouton) {
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .bleu p {
     color: white;
     background-image: url(Images/promo.jpg);
+    height: 500px;
+    text-align: center;
+    padding-top: 250px;
+    background-repeat: no-repeat;
+    font-size: 40px;
 }
 
-.actualites {
+.actualites article {
+    display: inline-block;
+    width: 500px;
     text-align: center;
+}
+
+.actualites h2 {
+    text-align: center;
+}
+
+.actualites img {
+    width: 450px;
+}
+
+.actualites .bouton{
+    border: 2px solid lightgray;
+    line-height: 2.5;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 150px;
 }
 
 footer {
@@ -40,6 +141,22 @@ footer {
     text-align: center;
 }
 
+footer p {
+    text-align: center;
+}
+
 footer #credits {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 100px;
+    padding-bottom: 30px;
     border-bottom: 2px solid black;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer #© {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
