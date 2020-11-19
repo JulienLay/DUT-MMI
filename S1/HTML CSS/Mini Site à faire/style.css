@@ -1,0 +1,45 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section {
+    display: flex;
+    text-align: center;
+}
+
+.rose {
+    background-color: #f08c89;
+    color: white;
+}
+
+.rose h1 {
+    background-color: lightpink;
+    position: relative;
+}
+
+.rose p {
+    color: #f08c89;
+    background-color: white;
+}
+
+.rose ul {
+    list-style-type: none;
+}
+
+.bleu p {
+    color: white;
+    background-image: url(Images/promo.jpg);
+}
+
+.actualites {
+    text-align: center;
+}
+
+footer {
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+footer #credits {
+    border-bottom: 2px solid black;
+}

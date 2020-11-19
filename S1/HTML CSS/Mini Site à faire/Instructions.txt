@@ -1,0 +1,8 @@
+Instructions :
+- Reproduire en HTML CSS la page web tel que le modèle apercu-ordinateur.png
+
+- La police d'écritude est une Google font : 'Source Sans Pro'
+- Une fois la version ordinateur développé, vous pouvez rendre 
+le site responsive tel que le montre le visuel apercu-mobile.png
+
+- Une fois votre travail terminé n'oublié pas de valider votre page au W3C.
