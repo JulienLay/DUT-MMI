@@ -13,41 +13,51 @@
 <script>
     // ECRIRE ICI VOTRE ALGORITHME
     // glossaire : mettre let devant chaque variable
-    function bonjour1() {
-        sortir("bonjour");
+    function bonsoir() {
+        sortir("bonsoir");
     }
 
-    function bonjour(nom){
-        sortir("bonjour " + nom);
+    function date() {
+        let now = new Date();
+        sortir(now.toDateString());
     }
 
-    function carre(n){
-        return n * n ;
+    function double(n) {
+        return 2 * n ;
     }
 
-    function somme(k,l){
-        return k + l ;
+    function multiplier(p1,p2) {
+        return p1 * p2 ;
     }
 
-    function conversion(valeur){
-        return valeur * 1.8 + 32 ;
+    function toRgb(hex) {
+        hex = hex.slice(1);
+        let r = Number.parseInt(hex.slice(0, 2), 16);
+        let g = Number.parseInt(hex.slice(2, 4), 16);
+        let b = Number.parseInt(hex.slice(4, 6), 16);
+        return [r,g,b];
     }
-
 
     // début de l'algo
-    bonjour1();
+    
+    bonsoir();
     sortir("\n");
-    bonjour("Robin");
+    date();
     sortir("\n");
-    let result1 = carre(2);
-    let result2 = somme(5,6) ;
-    let result3 = conversion(25);
-    sortir(result1);
+    let leDouble = double(4);
+    sortir(leDouble);
     sortir("\n");
-    sortir(result2);
+    let multiplication = multiplier(2,3);
+    sortir(multiplication);
     sortir("\n");
-    sortir(result3);
-    sortir("\n");
+    let RGB = toRgb("#FF0000");
+    let cptr = 0;
+    while (cptr < RGB.length) {
+        sortir(RGB[cptr]);
+        sortir("\n");
+        cptr += 1;
+    }
+
 
     // fin de l'algo
 </script>

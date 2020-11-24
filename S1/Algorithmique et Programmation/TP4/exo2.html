@@ -13,26 +13,29 @@
 <script>
     // ECRIRE ICI VOTRE ALGORITHME
     // glossaire : mettre let devant chaque variable
-    function perimetreCercle(rayon) {
-        sortir(2*3.14*rayon);
+    
+    function surface(rayon) {
+        return Math.PI*rayon**2;
     }
 
-    function perimetreCarre(cote) {
-        sortir(cote*4);
+    function carre(cote) {
+        return cote**2;
     }
 
-    function perimetreRectangle(longueur, largeur) {
-        sortir((longueur+largeur)*2);
+    function rectangle(longueur, largeur) {
+        return longueur*largeur;
     }
-
 
     // début de l'algo
-    perimetreCercle(3);
+    
+    let result = surface(3);
+    sortir(result);
     sortir("\n");
-    perimetreCarre(2);
+    let hihi = surface(3);
+    sortir(hihi);
     sortir("\n");
-    perimetreRectangle(4,3);
-    sortir("\n");
+    let ahah = rectangle(3,2);
+    sortir(ahah);
 
     // fin de l'algo
 </script>

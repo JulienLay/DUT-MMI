@@ -13,14 +13,31 @@
 <script>
     // ECRIRE ICI VOTRE ALGORITHME
     // glossaire : mettre let devant chaque variable
-
-    function compterElement(tableau) {
-        sortir(tableau.length);
+    
+    function prix(n) {
+        let t1 = 0.5;
+        let t2 = 0.3;
+        let t3 = 0.2;
+        let q1 = 10;
+        let q2 = 20;
+        let p;
+        
+        p=0;
+        if(n<q1) {
+            p=n*t1;
+        } else if(n<q1+q2){
+            p=t1*q1+t2*(n-q1);
+        }else{
+            p=t1*q1+t2*q2+t3*(n-q2-q1);
+        }
+        sortir(p);
     }
 
-
     // début de l'algo
-    compterElement([1,2,3,4,5,6]);
+    
+    prix(14);
+    sortir("\n");
+    prix(38);
 
     // fin de l'algo
 </script>

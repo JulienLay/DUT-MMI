@@ -13,42 +13,39 @@
 <script>
     // ECRIRE ICI VOTRE ALGORITHME
     // glossaire : mettre let devant chaque variable
-
-    function test(nombre) {
-        if (nombre >= 0) {
-            return "Vrai";
-        } else {
-            return "False";
-        }
-    }
-
-    function saisiePositif(nombre){
-        while (nombre < 0) {
-            nombre = entrerNB();
-        }
-    }
-
-    function affichageNombrePositifSur5Nombres() {
-        let cmptr = 0;
-        let nbPositifs = 0;
-        while (cmptr < 5) {
-            let nb = entrerNB("Saisissez un nombre : ");
-            if (nb >=0) {
-                nbPositifs+=1;
-            }
-            cmptr += 1;
-        }
-        sortir("Nombre de nombres positifs : " + nbPositifs);
+    
+    function couleurComplementaire(hex) {
+        hex = hex.slice(1);
+        /*let premierCarac = hex[0].toString;
+        if (premierCarac != "#") {
+            return("erreur car premier caractère différent de #");
+        */}
+        let r = ('00' + (255 - parseInt(hex.slice(0, 2),16)).toString(16)).slice(-2);
+        let g = ('00' + (255 - parseInt(hex.slice(2, 4),16)).toString(16)).slice(-2);
+        let b = ('00' + (255 - parseInt(hex.slice(4, 6),16)).toString(16)).slice(-2);
+        if (r < 0 && r > 9 || r > 'f' && g < 0 && g > 9 || g > 'f' && b < 0 && b > 9 || b > 'f') {
+            return '#' + r + g + b;
+        /*} else {
+            return ("erreur dans les 6 caractères suivant le #");
+        }*/
+        
     }
 
     // début de l'algo
-    let resultat = test(3);
-    sortir(resultat);
-
-    saisiePositif(entrerNB("Saisir un nombre positif : "));
+    
+    
+    sortir(couleurComplementaire("#FF0000"));
     sortir("\n");
+    sortir(couleurComplementaire("#26A69A"));
+    sortir("\n");
+    sortir(couleurComplementaire("#D95965"));
+    sortir("\n");
+    
 
-    affichageNombrePositifSur5Nombres();
+    let couleur = entrerCH("Tapez une couleur au format hexadécimal : ");
+    sortir("Sa couleur complémentaire a pour code : " + couleurComplementaire(couleur));
+
+
 
     // fin de l'algo
 </script>
