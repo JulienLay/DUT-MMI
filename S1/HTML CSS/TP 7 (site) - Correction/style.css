@@ -1,0 +1,211 @@
+*{
+    margin:0;
+    padding: 0; 
+}
+html,body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: #52575c;
+    line-height: 1.75em;
+    font-size: 14pt;
+}
+a{
+    text-decoration: none;;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+nav{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4em;
+    line-height: 4em;
+}
+nav li:nth-child(1n){
+    float: left;
+}
+nav li:nth-child(n+3){
+    float: right;
+}
+ul{
+   list-style: none; 
+}
+ul li{
+  padding-left: 0.5em;  
+}
+nav > ul > li > span, nav > ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    border: 0;
+    padding: 0.3em 1em 0.3em 1em;
+}
+h1{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 280px;
+    margin-left: -140px;
+    height: 2em;
+    line-height: 2em;
+    background: rgba(255, 255, 255, 0.15);
+    border: solid 1px;
+    border-color: #fff;
+    border-color: rgba(255, 255, 255, 0.75);
+    border-top-color: rgba(255, 255, 255, 0.75);
+    border-top: 0;
+    border-radius: 0 0 0.35em 0.35em;
+    color: #fff;
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+}
+header{
+    background-color: #f08c89;
+    color:white;
+    padding: 10em 0 6em 0;
+    text-align: center;
+}
+header h2{
+    font-size: 3em;
+    margin-bottom: 1em;
+}
+p, ul, ol, dl, table {
+    margin-bottom: 1.5em;
+}
+h3,h2 {
+    font-size: 2em;
+    line-height: 1.25em;
+    margin-bottom: 1em;
+}
+header p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+header a{
+    color:white;
+}
+section{
+    padding: 6em 0 6em 0;
+    text-align: center;
+}
+.row{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1230px;
+    margin: auto;
+}
+#section3 .row article{
+    max-width: 368px;
+    text-align: center;
+}
+.row article{
+    max-width: 576px;
+    text-align: center;
+}
+.btn {
+    background: #fff;
+    background-color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0);
+    color: black;
+    font-size: 1.25em;
+    display: inline-block;
+    text-decoration: none;
+    border: solid 1px #c2c7cc;
+    border-top-color: rgb(194, 199, 204);
+    border-right-color: rgb(194, 199, 204);
+    border-bottom-color: rgb(194, 199, 204);
+    border-left-color: rgb(194, 199, 204);
+    border-radius: 0.35em;
+    padding: 0.8em 2em 0.8em 2em;
+    cursor: pointer;
+    outline: 0;
+}
+header .btn{
+    color: #f08c89;
+}
+#section2{
+    position: relative;
+    background-image: url("./images/promo.jpg");
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    text-align: center;
+    padding: 6em 0 6em 0
+    }
+#section2 h2{
+    background: rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.25);
+    border-radius: 0.5em;
+    padding: 1.75em 2.5em 1.75em 2.5em;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+footer{
+    position: relative;
+    border-top: solid 1px #c2c7cc;
+    padding: 6em 0 6em 0;
+    background-color: #f6f8fb;
+    text-align: center;
+
+}
+hr{
+    max-width: 1200px;
+    width: 90%;
+    margin:auto;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    img{
+        max-width: 100%;
+    }
+    .row{
+        display: block;
+    }
+    .row article{
+    max-width:100%;
+    margin-bottom: 35px;
+    }
+    header,main{
+        padding-left:10px;
+        padding-right: 10px;
+    }
+    #section2 h2 {
+        padding:0.5em;
+        margin:0 10px;
+    }
+    header{
+        padding-top:45px;
+
+    }
+    nav {
+        margin-top: 45px;
+        position: relative;
+        height:auto;
+        line-height: normal;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        flex-direction: column;
+        text-transform: uppercase;
+}
+    nav li:nth-child(n) {
+        float: none;padding:0;
+    }
+    nav li:nth-child(n+3) {
+        float: none;padding:0;
+    }
+}
