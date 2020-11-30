@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+    // glossaire : mettre let devant chaque variable
+    let n = entrerNB("nombres");
+    let i = 1;
+    let j = 2;
+    let tPremier = [];
+    let cptr = 0;
+
+    function enleverValeur(tab, nb) {
+        let compteur = 0;
+        while (compteur < tab.length) {
+            if (tab[compteur]%nb == 0 && tab[compteur] != nb) {
+                tab[compteur] = -1;
+            }
+            compteur += 1;
+        }
+        
+    }
+
+    // début de l'algo
+    
+    //met les nombres de 1 à n dans le tableau
+    while (i<=n) {
+        if (i%2 == 0 && i != 2) {
+            tPremier.push(-1);
+        } else {
+            tPremier.push(i);
+        }
+        i += 1;
+    }
+
+    //appelle la fonction pour les valeurs de 2 à n
+    while (j <= n) {
+        enleverValeur(tPremier,j);
+        j += 1;
+    }
+    
+
+    //affichage du tableau
+    while (cptr < tPremier.length) {
+        if (tPremier[cptr] != -1) {
+            sortir(tPremier[cptr] + ' ');
+        }
+        cptr += 1;
+    }
+
+    
+
+    // fin de l'algo
+</script>
+</body>
+</html>

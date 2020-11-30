@@ -15,20 +15,35 @@
     // glossaire : mettre let devant chaque variable
     
     function couleurComplementaire(hex) {
+        
+        // Est-ce que la chaine comporte 7 caracteres ?
+        if (hex.length != 7) {
+            return "Votre chaine ne fait pas 7 caractères.";
+        }
+
+        // Est-ce que la chaine commence par un # ?
+        if (hex[0] != "#") {
+            return "Erreur car premier caractère différent de #.";
+        }
+
+        // Est-ce que la chaine comporte uniquement des chiffres (0-9) et des lettres (a-f) ?
+        let i = 1;
+        let char = "";
+        while (i < hex.length) {
+            char = hex[i].toLowerCase();
+ 
+            if (char > 'f') {
+                return "Erreur dans les chiffres et lettres."
+            }
+
+            i += 1;
+        }
+
         hex = hex.slice(1);
-        /*let premierCarac = hex[0].toString;
-        if (premierCarac != "#") {
-            return("erreur car premier caractère différent de #");
-        */}
         let r = ('00' + (255 - parseInt(hex.slice(0, 2),16)).toString(16)).slice(-2);
         let g = ('00' + (255 - parseInt(hex.slice(2, 4),16)).toString(16)).slice(-2);
         let b = ('00' + (255 - parseInt(hex.slice(4, 6),16)).toString(16)).slice(-2);
-        if (r < 0 && r > 9 || r > 'f' && g < 0 && g > 9 || g > 'f' && b < 0 && b > 9 || b > 'f') {
-            return '#' + r + g + b;
-        /*} else {
-            return ("erreur dans les 6 caractères suivant le #");
-        }*/
-        
+        return '#' + r + g + b;
     }
 
     // début de l'algo
@@ -45,7 +60,12 @@
     let couleur = entrerCH("Tapez une couleur au format hexadécimal : ");
     sortir("Sa couleur complémentaire a pour code : " + couleurComplementaire(couleur));
 
-
+    let couleur2 = entrerCH("Saisir une couleur");
+    let couleurComplementaire2 = couleurComplementaire(couleur2);
+    while (couleurComplementaire2 == "Votre chaine ne fait pas 7 caractères." || couleurComplementaire2 == "Erreur car premier caractère différent de #." || couleurComplementaire2 == "Erreur dans les chiffres et lettres.") {
+        couleur2 = entrerCH("Saisir une couleur");
+        couleurComplementaire2 = couleurComplementaire(couleur2);
+    }
 
     // fin de l'algo
 </script>
