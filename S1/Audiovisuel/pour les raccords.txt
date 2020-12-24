@@ -1,0 +1,23 @@
+[CAD] : Raccord cadres : lorsqu'on reste dans un cadre/lieu donné. Représente 90% des raccords
+
+[CUT] : Raccort cut : lorsqu'on change de cadre/lieu. Les 10% manquants.
+
+- NB : tout raccord est soit cut soit cadre.
+
+[MOV] : Raccord mouvement : si lors d'un changement de plan le même mouvement se perpétue.
+
+[REG] : Raccord regard : le regard d'un personnage mène à un raccord sur l'objet (zoom par expl).
+
+[GER] : Raccord regard inversé, on part de l'objet pour se diriger vers le regard.
+
+[C3] : Raccord champs-contre-champs : changement d'angle sur une situation donnée.
+
+[ANA] : Raccord analogique (liant une chose à une autre par un sens commun, expl du sang et du ketchup)
+
+[Metaph] : Raccord métaphorique : symbole ayant son sens dans la situation (raccord sur des corbeaux pour signaler la mort d'un personnage par expl).
+
+[Prem] : Raccord prémonitoire : qui prédit une situation future.
+
+[Met] : Raccord métonymique : marque un lien logique entre deux éléments (contenant, contenu, intérieur, extérieur, tout, partie). Exemple : extérieur de l'iut puis salle de classe.
+
+[SON] : Raccord son : raccord le plus fréquent avec le CAD, présent lorsque le son est continu d'une scène à une autre.
