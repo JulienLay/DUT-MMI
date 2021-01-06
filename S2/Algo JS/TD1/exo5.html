@@ -16,6 +16,10 @@
     // glossaire : mettre let devant chaque variable
     function occurenceNombre(n) {
         let compteur = 0;
+        if (n == 0 || n == 1) {
+            return 1;
+        } 
+
         while (n > 1) {
             compteur += 1;
             n = n/10;
@@ -25,8 +29,7 @@
 
     // début de l'algo
 
-    let result = occurenceNombre(25677);
-    sortir(result);
+    sortir(occurenceNombre(25677));
 
     // fin de l'algo
 

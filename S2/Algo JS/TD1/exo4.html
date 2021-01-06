@@ -15,6 +15,9 @@
 
     // glossaire : mettre let devant chaque variable
     let nb = entrerNB("Veuillez entrer un nombre entier positif ou nul : ");
+    while (nb < 0) {
+        nb = entrerNB("Veuillez entrer un nombre entier positif ou nul : ");
+    }
 
     // début de l'algo
     for(let i=0; i<=nb; i+=1) {
