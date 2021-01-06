@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+
+    // glossaire : mettre let devant chaque variable
+    let nb = entrerNB("Veuillez entrer un nombre entier positif ou nul : ");
+
+    // début de l'algo
+    for(let i=0; i<=nb; i+=1) {
+        if (i%3 == 0 || i == 0) {
+            sortir(i + " ");
+        }
+    }
+
+    // fin de l'algo
+
+</script>
+</body>
+</html>
