@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+    background-image: url(images/banner.jpg);
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 75px;
+    font-weight: bold;
+}
+
+header nav ul li:first-of-type {
+    flex-grow: 2;
+}
+
+header nav ul li:nth-child(2), header nav ul li:nth-child(3) {
+    padding-right: 50px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+header p {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+nav {
+    border-bottom: 2px solid #9a9a9a;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h1 {
+    color: #FFF;
+    margin-top: 100px;
+}
+
+section {
+    margin-top: 100px;
+}
+
+#gris {
+    color: #9a9a9a;
+}
+
+#un {
+    display: flex;
+    text-align: center;
+}
+
+#un img {
+    border-radius: 50%;
+}
+
+#un div {
+    border-radius: 50%;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.bouton {
+    color: #6cc091;
+    border: 2px solid #6cc091; 
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#deux {
+    background-color: #6cc091;
+}
+
+#deux h2 {
+    color: #FFF;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+#deux div {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+#deux section:first-of-type, #deux section:nth-last-of-type(2), #deux section:last-of-type{
+    width: 33%;
+    padding-left: 8%;
+}
+
+#deux div section img:not(:first-of-type){
+    margin-top: 100px;
+}
+
+footer {
+    color: #6cc091;
+    text-align: center;
+    padding: 50px;
+}
+
+footer h2{
+    padding-bottom: 20px;
+}
