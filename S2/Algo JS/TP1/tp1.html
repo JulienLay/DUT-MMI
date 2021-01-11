@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S2 Algo en JS</title>
+    <script>
+        function partieEntiere(n){if(n!==undefined&&typeof n!=="string")return Math.floor(n);else return NaN}
+        function entrer(){return prompt()}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+        function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+    </script>
+</head>
+<body>
+<script>
+    let numeroCarte = entrerNB("Tapez le numéro de carte : ");
+    let codeSecret = entrerNB("Tapez le code secret : ");
+    let nb100 = 3;
+    let nb50 = 10;
+    let nb20 = 10;
+    let nb10 = 10;
+    let cent = 0;
+    let cinquante = 0;
+    let vingt = 0;
+    let dix = 0;
+    let tentative = 1;
+    let tabCarte=[{num:0,code:2020},{num:1,code:2021}, {num:3,code:2023}, {num:10,code:2040}];
+
+    /*
+    function nbBillets(somme, type, N) {
+        let nb=parseInt(somme / type);
+        if (nb > N) {
+            nb=N;
+        }
+        return nb;
+    }
+    */
+
+    while (tentative < 3) 
+    {
+        for(let i=0; i<tabCarte.length; i=i+1) 
+        {
+            if (numeroCarte == tabCarte[i].num && codeSecret == tabCarte[i].code) 
+            {
+                let montant = entrerNB("Tapez un montant : ");
+                if (montant > 1100) 
+                {
+                    sortir("somme impossible à distribuer");
+                    tentative = 4;
+                } else 
+                {
+                    while (montant >= 100 && nb100 > 0) 
+                    {
+                        montant = montant - 100;
+                        cent = cent + 1;
+                        nb100 = nb100 - 1; 
+                    }
+                    while (montant >= 50 && nb50 > 0) 
+                    {
+                        montant = montant - 50;
+                        cinquante = cinquante + 1;
+                        nb50 = nb50 - 1; 
+                    }
+                    while (montant >= 20 && nb20 > 0) 
+                    {
+                        montant = montant - 20;
+                        vingt = vingt + 1;
+                        nb20 = nb20 - 1; 
+                    }
+                    while (montant >= 10 && nb10 > 0) 
+                    {
+                        montant = montant - 10;
+                        dix = dix + 1;
+                        nb100 = nb100 - 1; 
+                    }
+                    sortir(cent + " billet(s) de 100, " + cinquante + " billet(s) de 50, " + vingt + " billet(s) de 20, " + dix + " billet(s) de 10.");
+                    tentative = 4;
+                }
+            }
+        }
+        sortir("numéro de carte ou code secret éroné.");
+        sortir("\n");
+        tentative = tentative + 1;
+        let numeroCarte = entrerNB("Tapez le numéro de carte : ");
+        let codeSecret = entrerNB("Tapez le code secret : ");
+    }
+
+    if (tentative == 3) 
+    {
+        sortir("Vous avez fait 3 essais, vous ne pouvez plus continuer.");
+    }
+    
+
+    
+</script>
+</body>
+</html>
