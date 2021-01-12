@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+
+    // glossaire : mettre let devant chaque variable
+    let angle=entrerNB("Tapez un angle : ");
+
+    // début de l'algo
+    switch(angle) {
+        case 0:
+            sortir("Nord");
+            break;
+        case 90:
+            sortir("Est");
+            break;
+        case 180:
+            sortir("Sud");
+            break;
+        case 270:
+            sortir("Ouest");
+            break;
+        default :
+            sortir("tapez 0, 90, 180 ou 270");
+            break;
+    }
+
+    // fin de l'algo
+
+</script>
+</body>
+</html>

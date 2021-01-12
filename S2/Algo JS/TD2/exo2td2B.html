@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+<script>
+    // ECRIRE ICI VOTRE ALGORITHME
+
+    // glossaire : mettre let devant chaque variable
+    let temperature = entrerCH("Tapez un état :");
+
+    // début de l'algo
+    switch (temperature) {
+        case "solide" :
+            sortir("moins de 0 degré");
+            break;
+        case "liquide" :
+            sortir("entre 0 et 100 degrés");
+            break;
+        case "gazeux" :
+            sortir("plus de 100 degrés");
+            break;
+        default :
+            sortir("vous de devez taper soit gazeux, solide ou liquide");
+            break;
+    }
+
+    // fin de l'algo
+
+</script>
+</body>
+</html>
