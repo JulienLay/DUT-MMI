@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Page de contact</title>
+    <link href="stylecontact.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <h1>Full moon</h1>
+            <p>
+                <a href="index.html"><img src="logo.png" alt="Logo" /></a>
+            </p>
+        </div>
+        <nav>
+            <ul id="menutop">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">A propos</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="galerie.html">Galerie</a></li>
+                <li><a href="clients.html">Nos partenaires</a></li>
+                <li><a href="blog.php">Notre blog</a></li>
+                <li><a href="contact.html">Nous contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Formulaire à remplir</h1>
+        <form id=formulaire1 action="exo.php" method="POST">
+            <aside>
+                <div id=bout1><label for="choix1">Monsieur</label><br>
+                    <input type="radio" name="profil" value="choix1" id="choix1">
+                </div>
+                <div id=bout2> <label for="choix2">Madame</label><br>
+                    <input type="radio" name="profil" value="choix2" id="choix2">
+                </div>
+                <div id=bout3><label for="choix3">Mademoiselle</label><br>
+                    <input type="radio" name="profil" value="choix3" id="choix3">
+                </div>
+            </aside>
+            <br>
+            <br>
+            <label for="nom"></label>Votre Nom <input type="text" name="nom" placeholder="Saisir votre nom">
+            <br>
+            <br>
+            <label for="prenom"></label>Votre Prénom <input type="text" name="prenom" placeholder="Saisir votre prénom">
+            <br>
+            <br>
+            <label for="date"></label>Votre date de naissance <input type="date" name="date">
+            <br>
+            <br>
+            <label for="couleur"></label>Votre couleur préférée <input type="color">
+            <br>
+            <br><br>
+            <label for="mail"></label>Votre adresse e-mail <input type="text" name="mail" placeholder="Saisir votre e-mail">
+            <br>
+            <br>
+
+            <label for="objet"></label>Objet du message: <input type="text" name="objet">
+            <br>
+            <br>
+            <label for="message"></label>Saisir votre message <textarea rows="15" cols="100" name="present" id="presentation">
+			</textarea>
+            <br>
+            <br>
+            <input class="bouton1" type="submit" value="Envoyer">
+            <br>
+            </fieldset>
+            <br><br>
+    </section>
+</body>
+
+</html>

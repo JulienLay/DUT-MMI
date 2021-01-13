@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <section>
+        <h1>Un exemple de formulaire</h1>
+        <form id=formulaire1 action="exo.php" method="POST">
+            <br>
+            <fieldset id="section1">
+                <legend>VOS COORDONNEES</legend>
+                <label for="nom"></label>Nom <input type="text" name="nom" placeholder="Saisir votre nom">
+                <br>
+                <br>
+                <label for="prenom"></label>Prénom <input type="text" name="prenom" placeholder="Saisir votre prénom">
+                <br>
+                <br>
+                <label for="Code Postal"></label>Code Postal <input type="text" name="Code Postal" placeholder="Saisir votre code postal">
+                <label for="Ville"></label>Ville <input type="text" name="Ville" placeholder="Saisir votre ville">
+                <br>
+                <br>
+                <input type="submit" value="VALIDER">
+                <br>
+            </fieldset>
+            <br><br>
+            <fieldset id=section2>
+                <legend>PRECISEZ VOTRE DEMANDE</legend>
+                <h1>Votre profil</h1>
+                <input type="radio" name="profil" value="choix1" id="choix1">
+                <label for="choix1">Formation initiale</label>
+                <br>
+                <br>
+                <input type="radio" name="profil" value="choix2" id="choix2">
+                <label for="choix2">Formation continue</label>
+                <br>
+                <br>
+                <h1>Choisir :</h1>
+                <select name="formation">
+                <optgroup label="Licence">
+                <option value="Licence Com2Web">Licence Com2Web</option>
+                <option value="Licence DREAM">Licence DREAM</option>
+            </optgroup>
+
+            <optgroup label="DUT">
+                <option value="DUT MMI">MMI</option>
+                <option value="DUT PEC">PEC</option>
+                <option value="DUT Chimie">Chimie</option>
+                <option value="DUT TC">TC</option>
+            </optgroup>
+            </select>
+                <br>
+            </fieldset>
+            <br>
+            <br>
+            <input type="submit" value="VALIDER">
+            <br>
+            <br>
+        </form>
+    </section>
+</body>
+
+</html>

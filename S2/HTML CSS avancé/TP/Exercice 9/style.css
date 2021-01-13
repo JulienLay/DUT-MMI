@@ -1,0 +1,25 @@
+body {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+h2{
+	margin:0 auto;
+	color: #e61c56;
+    font-size: 36px;
+}
+h3{
+    color: #e61c56;
+    font-size: 25px;
+}
+header ul{
+    background-color: #BB2823;
+    margin: 30px 0 0;
+    padding: 0;
+}
+
+
+
+
+

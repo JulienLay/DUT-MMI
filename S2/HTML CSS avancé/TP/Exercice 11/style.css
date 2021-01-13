@@ -1,0 +1,31 @@
+             body {
+                 font-family: Arial, Helvetica, sans-serif;
+                 color: rgb(55, 43, 226);
+                 font-size: 12px;
+             }
+             
+             #formulaire1 {
+                 border: 2px solid green;
+                 width: 500px;
+                 margin: 15px;
+                 padding: 5px;
+                 display: block;
+             }
+             
+             #section1 {
+                 background-color: rgba(168, 197, 36, 0.6);
+                 padding: 10px;
+                 margin: 20px 0px;
+             }
+             
+             #section2 {
+                 background-color: rgba(91, 157, 233, 0.6);
+                 padding: 10px;
+                 margin: 20px 0px;
+             }
+             
+             legend {
+                 font-family: Georgia, 'Times New Roman', Times, serif;
+                 color: blue;
+                 font-size: 14px;
+             }
