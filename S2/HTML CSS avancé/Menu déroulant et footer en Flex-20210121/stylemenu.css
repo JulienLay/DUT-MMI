@@ -1,0 +1,149 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    color: #6f6f6f;
+    line-height: 130%;
+    font-family: 'Droid', serif;
+    font-size: 20px;
+}
+
+
+/* Header -> modifier l'écart entre les textes */
+
+#header {
+    background-color: #1d0955;
+    height: 250px;
+    width: auto;
+    margin-bottom: 20px;
+    line-height: 100%;
+}
+
+#header>p {
+    color: white;
+    text-align: center;
+}
+
+#nom {
+    font-weight: bold;
+    font-size: 40px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    font-family: 'Arapey', serif;
+    letter-spacing: 8px;
+}
+
+#mmi {
+    font-style: italic;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* Navigation avec ancres */
+
+nav {
+    width: 100%;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    width: 20%;
+    margin: auto;
+    padding: 0;
+    text-decoration: none;
+    background-color: #1d0955;
+    border: solid 2px white;
+    border-radius: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 2px;
+}
+
+nav ul li:hover {
+    /*background-color: brown;*/
+    display: block;
+}
+
+
+/* sous menu en z-index */
+
+nav ul li:hover .sous {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 100;
+}
+
+nav ul li:hover .sous1 {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    z-index: 100;
+}
+
+a:hover {
+    color: gray;
+}
+
+li a {
+    color: white;
+}
+
+.sous {
+    display: none;
+
+}
+
+.sous1 {
+    display: none;
+}
+
+.sous a {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#article>a::after {
+    content: " ▼";
+    font-size: 15px;
+}
+
+#article1>a::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #1d0955;
+    justify-content: center;
+    height: 50px;
+    text-align: center;
+}
+
+footer>p {
+    /*flex-grow: 1;*/
+    width: 50px;
+    margin: 10px 5px;
+}
+
+.toto {
+    width: 30px;
+    height: 30px;
+}
