@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+    <script>
+        // ECRIRE ICI VOTRE ALGORITHME
+
+        // glossaire : mettre let devant chaque variable
+        let toulouse = {lat:43.604,lon:1.441}; 
+        let castres = {lat:43.606,lon:2.241};
+        let objet = {};
+        let latitude = Number(prompt("entrer une latitude : "));
+        let longitude = Number(prompt("entrer une longitude : "));
+
+        // début de l'algo
+
+        if(latitude >= toulouse.lat && latitude <= castres.lat) {
+            document.write("Latitude convenable.");
+            objet.lat = latitude;
+        } else {
+            document.write("Latitude non convenable");
+        }
+
+        if(longitude >= toulouse.lon && longitude <= castres.lon) {
+            document.write("Longitude convenable.");
+            objet.lon = longitude;
+        } else {
+            document.write("Longitude non convenable.");
+        }
+
+        console.log(objet);
+        // fin de l'algo
+
+    </script>
+</body>
+</html>

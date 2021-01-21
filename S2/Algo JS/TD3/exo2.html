@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modèle à utiliser pour l'algorithmique du S1</title>
+    <script>
+         function partieEntiere(n){if(n)return Math.floor(n);else return "erreur"}
+         function entrer(){return(prompt())}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+         function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+     </script>
+</head>
+<body>
+    <script>
+        // ECRIRE ICI VOTRE ALGORITHME
+
+        // glossaire : mettre let devant chaque variable
+        // rôle : retourne "1" (String) si le car est compris entre a et j ou m et s et retourne "0" (String) sinon
+        // paramètre(s) : car
+        // retour : "0" ou "1" (String)
+        
+        function bizarre(car) {
+            let rep="0";
+            if (car>="a" && car<="j" || car>="m" && car<="s" ) rep="1";
+            return rep; 
+        }
+        //La fonction bizarre() retourne un string
+
+        // début de l'algo
+        let mot=String(prompt("entrer un mot :")); 
+        let quoi="";
+        let c;
+        
+        for (let i=0; i<mot.length; i++) {
+            c=mot.charAt(i);
+            quoi=quoi+bizarre(c);
+        }
+
+        console.log(quoi); //si on teste avec azerty, cela doit afficher "101100"
+
+        // fin de l'algo
+
+    </script>
+</body>
+</html>
