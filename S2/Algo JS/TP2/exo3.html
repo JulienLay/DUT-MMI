@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S2 Algo en JS</title>
+    <script>
+        function partieEntiere(n){if(n!==undefined&&typeof n!=="string")return Math.floor(n);else return NaN}
+        function entrer(){return prompt()}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+        function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+    </script>
+</head>
+<body>
+<script>
+    
+    let tableau=[[1],[2,2],[3,3,3],[4,4,4]];
+    let numeroDeLigne = prompt("Entrez le numéro de la ligne dont vous voulez voir le contenu (contenu du sous-tableau) :");
+
+    while(numeroDeLigne < 0 || numeroDeLigne >= tableau.length) {
+        numeroDeLigne = prompt("Votre ligne n'est pas dans le tableau. Veuillez retaper un numéro de ligne : ");
+    }
+
+    document.writeln("Voici les éléments du tableau : " + "<br/><br/>");
+
+    for(let i=0; i<tableau.length; i++) {
+        document.writeln("Sous-tableau numéro " + i + " : ");
+        for(let j=0; j<tableau[i].length; j++) {
+            document.writeln(tableau[i][j] + " ");
+        }
+        document.writeln("</br>");
+    }
+
+    document.writeln("</br>");
+    document.writeln("Vous avez tapé le numéro " + numeroDeLigne + ".</br>");
+    document.writeln("Voici donc l'affichage du contenu du sous-tableau numéro " + numeroDeLigne + " : ");
+
+    for(let k=0; k<tableau[numeroDeLigne].length; k++) {
+        document.writeln(tableau[numeroDeLigne][k] + " ");
+    }
+
+    
+</script>
+</body>
+</html>

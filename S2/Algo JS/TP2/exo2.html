@@ -21,14 +21,27 @@
 
     let mail = prompt("Un email ?");
     let mailingList = [];
+    let indicePremierCarac = mail.indexOf("@");
 
-    if (estValide(mail) == true) {
-        mailingList.push(mail);
-        document.writeln("Votre adresse est enregistrée");
+    if(!estValide(mail)) {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        document.writeln("Elle ne contient pas le caractère \"@\"." + "</br>");
+        document.writeln("Elle n'a donc pas été enregistrée. </br>");
     }
 
-    
-    
+    else if (estValide(mail) && mail.indexOf("@", indicePremierCarac+1) == -1) {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        mailingList.push(mail);
+        document.writeln("Elle a donc été enregistrée. </br>");
+        document.writeln("L'adresse contient bien 1 seul caractère \"@\".");
+    }   
+
+    else {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        document.writeln("L'adresse contient plus d'un caractère \"@\"." + "</br>");
+        document.writeln("Elle n'a donc pas été enregistrée.");
+    }
+
 </script>
 </body>
 </html>
