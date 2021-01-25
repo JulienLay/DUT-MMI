@@ -21,21 +21,15 @@
         let longitude = Number(prompt("entrer une longitude : "));
 
         // début de l'algo
-
-        if(latitude >= toulouse.lat && latitude <= castres.lat) {
-            document.write("Latitude convenable.");
+        if (latitude <= castres.lat && latitude >= toulouse.lat && longitude <= castres.lon && longitude >= toulouse.lon) {
+            document.write("Saisie validée.");
             objet.lat = latitude;
-        } else {
-            document.write("Latitude non convenable");
-        }
-
-        if(longitude >= toulouse.lon && longitude <= castres.lon) {
-            document.write("Longitude convenable.");
             objet.lon = longitude;
         } else {
-            document.write("Longitude non convenable.");
+            document.write("Saisie non valide.");
         }
-
+        
+       // on peut voir l'objet ainsi que son contenu en allant dans la console de la page
         console.log(objet);
         // fin de l'algo
 
