@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>S2 Algo en JS</title>
+    <script>
+        function partieEntiere(n){if(n!==undefined&&typeof n!=="string")return Math.floor(n);else return NaN}
+        function entrer(){return prompt()}function entrerNB(msg=""){return Number(prompt(msg))}function entrerCH(msg=""){return String(prompt(msg))}
+        function sortir(n=""){("\n"===n)?document.write("<br>"):document.write(n)}function sortirln(n=""){n?document.write(n+"<br>"):document.write("<br>")}
+    </script>
+</head>
+<body>
+<script>
+    function estValide(mail) {
+        if (mail.indexOf("@") == -1) {
+            return false
+        } else {
+            return true
+        }
+    }
+
+    let mail = prompt("Un email ?");
+    let mailingList = [];
+    let indicePremierCarac = mail.indexOf("@");
+
+    if(!estValide(mail)) {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        document.writeln("Elle ne contient pas le caractère \"@\"." + "</br>");
+        document.writeln("Elle n'a donc pas été enregistrée. </br>");
+    }
+
+    else if (estValide(mail) && mail.indexOf("@", indicePremierCarac+1) == -1) {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        mailingList.push(mail);
+        document.writeln("Elle a donc été enregistrée. </br>");
+        document.writeln("L'adresse contient bien 1 seul caractère \"@\".");
+    }   
+
+    else {
+        document.writeln("Votre adresse est : " + mail + "</br>");
+        document.writeln("L'adresse contient plus d'un caractère \"@\"." + "</br>");
+        document.writeln("Elle n'a donc pas été enregistrée.");
+    }
+        /*
+        ///// c'est la fonction qu'il faudrait modifier : /////
+
+        let adresse=String(prompt("entrer une adresse :"));
+        let mailingList=[];
+        
+        if (estValide(adresse)) {
+            mailingList.push(adresse);
+            console.log("Votre adresse est enregistrée");
+        }       
+      
+        // rôle : teste la présence d'un et un seul @
+        // paramètres : une chaine de caractère
+        // retour : true / false
+        function estValide(mot){
+            let reponse=false;
+            let index= mot.indexOf("@");
+            if (index!=-1) {
+                index= mot.indexOf("@", index+1);
+                if (index==-1) {
+                    reponse = true;
+                }
+            }
+            return reponse;
+        }
+        */
+
+</script>
+</body>
+</html>
