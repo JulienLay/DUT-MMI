@@ -41,6 +41,32 @@
         document.writeln("L'adresse contient plus d'un caractère \"@\"." + "</br>");
         document.writeln("Elle n'a donc pas été enregistrée.");
     }
+        /*
+        ///// c'est la fonction qu'il faudrait modifier : /////
+
+        let adresse=String(prompt("entrer une adresse :"));
+        let mailingList=[];
+        
+        if (estValide(adresse)) {
+            mailingList.push(adresse);
+            console.log("Votre adresse est enregistrée");
+        }       
+      
+        // rôle : teste la présence d'un et un seul @
+        // paramètres : une chaine de caractère
+        // retour : true / false
+        function estValide(mot){
+            let reponse=false;
+            let index= mot.indexOf("@");
+            if (index!=-1) {
+                index= mot.indexOf("@", index+1);
+                if (index==-1) {
+                    reponse = true;
+                }
+            }
+            return reponse;
+        }
+        */
 
 </script>
 </body>
