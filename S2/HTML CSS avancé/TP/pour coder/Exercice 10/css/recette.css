@@ -1,0 +1,141 @@
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgba(173, 192, 0, 0.36);
+}
+
+section,
+nav,
+dl {
+    border: 2px solid green;
+}
+
+body {
+    width: 80vw;
+    margin: auto;
+    padding: 16px;
+    border: 6px solid rgba(0, 0, 0, 0.5);
+    font-size: 1em;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: #4E4E4E;
+    background-color: white;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+p {
+    margin padding: 0;
+}
+
+#recette1 {
+    max-width: 100%;
+}
+
+#droite ul {
+    line-height: 1.8em;
+    display: list-item;
+    list-style: square inside url("liste1.png");
+}
+
+#gauche dt {
+    font-size: 1.4em;
+    font-style: italic;
+    margin: 15px 0;
+    list-style-type: none;
+    /* on annule la puce par défaut */
+    background-image: url(doublefleche.png);
+    /* on affiche l'image souhaitée */
+    background-repeat: no-repeat;
+    /* on annule la répétition par défaut */
+    background-position: left center;
+    /* on positionne où l'on veut */
+    padding-left: 25px;
+    /* pour éviter la superposition du contenu */
+}
+
+#gauche dd {
+    border: 1px dashed #dddddd;
+    padding-bottom: 12px;
+    margin: 0 20px 8px 20px;
+}
+
+#gauche {
+    width: 33%;
+    padding: 20px 20px 20px 0;
+}
+
+#droite {
+    width: 33%;
+    padding: 20px 0px 20px 20px;
+}
+
+#centre {
+    text-align: justify;
+    width: 33%;
+    padding: 20px;
+}
+
+#recette2 {
+    border: 1px solid #eeeeee;
+    padding: 8px;
+}
+
+#plus {
+    display: inline-block;
+    width: 146px;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    background-image: url("bouton.jpg");
+    border: 1px solid rgb(234, 0, 255);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+a#plus:hover {
+    background-image: url("bhover.jpg");
+}
+
+#centrer {
+    display: flex;
+}
+
+#entree {
+    background-color: #ADC000;
+    margin: auto;
+}
+
+ul {
+
+}
+
+.navi {
+    text-align: center;
+    height: 3em;
+    line-height: 3em;
+    display: inline-block;
+    width: 24%;
+}
+
+a {
+    color: #eee;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
