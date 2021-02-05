@@ -1,0 +1,117 @@
+html {
+    background-color: #111;
+}
+
+body, nav, aside, section {
+    border: solid 2px black;
+}
+
+body {
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    background-image: url(img/bg.png);
+    background-repeat: repeat;
+    width: 80vw; 
+    margin: auto;
+    color: #eee;
+    border: 2px solid red;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4em;
+    color: #bb2823;
+}
+
+h2 {
+	margin:0 auto;
+	color: #e61c56;
+    font-size: 36px;
+}
+
+h3 {
+    color: #e61c56;
+    font-size: 25px;
+}
+
+header ul{
+    background-color: #BB2823;
+    margin: 30px;
+    padding: 0;
+}
+
+nav {
+    border: 2px solid blue;
+}
+
+ul {
+    display: flex;
+    font-size: 30px;
+    list-style-type: none;
+}
+
+li {
+    line-height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #111;
+}
+
+aside {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 20px;
+    display: flex;
+}
+
+#recette {
+    border: 1px solid red;
+    display: flex;
+}
+
+#recette1 {
+    font-size: 18px;
+    line-height: 50px;
+    padding: 0px 10px;
+}
+
+#recette a {
+    border: 1px solid red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#fondLien {
+    width: 50px;
+}
+
+main {
+    margin: 10px;
+    padding: 20px;
+    border: 1px dotted #fff;
+}
+
+main article {
+    display: flex;
+    flex-direction: row;
+}
+
+main article p {
+    padding: 10px;
+    text-align: justify;
+}
+
+main article p a {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #bb2823;
+}
