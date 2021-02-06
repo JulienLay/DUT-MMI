@@ -1,0 +1,48 @@
+html,body {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    color: #4cb2bd;
+    font-size: 40px;
+    border-bottom: solid 2px #4cb2bd;
+}
+
+#etudiant {
+    font-family: 'Lato', sans-serif;
+    color: #747474;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    color: #4cb2bd;
+}
+
+p:not(#etudiantMMI) {
+    font-family: 'Lato', sans-serif;
+    color: #747474;
+}
+
+#etudiantMMI {
+    font-family: 'Gentium Book Basic', serif;
+}
+
+li {
+    font-family: 'Lato', sans-serif;
+    color: #808080;
+}
+
+li #tel{
+    display: list-item;
+    /* Chercher comment afficher le téléphone dans la puce */
+    list-style-type: url(img/téléphone.png);
+}
+
+strong {
+    font-family: 'Lato', sans-serif;
+    color: #747474;
+}
+
+ 
