@@ -1,10 +1,8 @@
-/* Partie responsive */
-
-/* @media only screen and (min-width: px) and (max-width: px) {
-    
-}  */
-
 /* Ajustement pour faire comme les bords du CV */
+
+/** {
+    border: 2px solid red;
+}*/
 
 html {
     margin: 20px;
@@ -60,6 +58,23 @@ strong {
     color: #747474;
 }
 
+/* Partie menu nav */
+
+nav {
+    display: flex;
+}
+
+nav a{
+    color: #747474;
+    text-decoration: none;
+    width: 20%;
+    text-align: center;
+}
+
+nav a:hover {
+    color: #4cb2bd;
+}
+
 /* Partie en #etudiant */
 
 #etudiant {
@@ -86,7 +101,7 @@ strong {
     display: flex;
     flex-direction: column;
     font-size: 25px;
-    width: 30%;
+    width: 32%;
     /* border: 2px solid green; */
 }
 
@@ -232,4 +247,284 @@ li {
 
 #imagelanguesparlées img {
     padding-top: 13%;
+}
+
+/* Footer */
+
+footer ul {
+    display: flex;
+}
+
+footer ul p{
+    width: 25%;
+}
+
+footer img {
+    width: 50px;
+}
+
+/* Partie responsive */
+
+@media screen and (max-width: 380px) {
+    html {
+        width: 100%;
+        margin: 20px;
+        background-color: black;
+    }
+    
+    /* aligner les blocs en haut et en bas en flex */
+    
+    #haut, #bas {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #haut aside nav {
+        padding-left: 100px;
+    }
+    
+    /* modifier la taille de l'image avec ma photo */
+    
+    #haut aside img {
+        width: 300px;
+    }
+    
+    h1 {
+        font-family: 'Lato', sans-serif;
+        color: #4cb2bd;
+        font-size: 80px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom: solid 2px #4cb2bd;
+    }
+    
+    #etudiant {
+        font-family: 'Lato', sans-serif;
+        color: #747474;
+    }
+    
+    h2 {
+        font-family: 'Lato', sans-serif;
+        color: #4cb2bd;
+        font-size: 40px;
+    }
+    
+    p:not(#etudiantMMI) {
+        font-family: 'Lato', sans-serif;
+        color: #747474;
+    }
+    
+    #etudiantMMI {
+        font-family: 'Gentium Book Basic', serif;
+    }
+    
+    strong {
+        font-family: 'Lato', sans-serif;
+        color: #747474;
+    }
+
+    /* Partie menu nav */
+
+    nav {
+        display: flex;
+    }
+
+    nav a{
+        color: #747474;
+        text-decoration: none;
+        width: 20%;
+        text-align: center;
+    }
+
+    nav a:hover {
+        color: #4cb2bd;
+    }
+    
+    /* Partie en #etudiant */
+    
+    #etudiant {
+        font-size: 25px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    
+    /* Partie en #etudiantMMI */
+    
+    #etudiantMMI {
+        font-size: 25px;
+    }
+    
+    /* Partie # FORMATION */
+    
+    #formation {
+        display: flex;
+        /* border: 2px solid red; */
+        width: 80%;
+    }
+    
+    #formation section {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        width: 32%;
+        /* border: 2px solid green; */
+    }
+    
+    #formation aside {
+        font-size: 25px;
+        padding-left: 30px;
+        width: 75%;
+        /* border: 2px solid yellow; */
+    }
+    
+    
+    /* La liste pour me contacter */
+    
+    ul {
+        padding-left: 150px;
+    }
+    
+    li {
+        font-family: 'Lato', sans-serif;
+        color: #808080;
+    }
+    
+    #haut aside li:first-child {
+        display: list-item;
+        font-size: 20px;
+        list-style-image: url(img/téléphone.png);
+    }
+    
+    #haut aside li:nth-child(2) {
+        display: list-item;
+        font-size: 20px;
+        list-style-image: url(img/maison.png);
+    }
+    
+    #haut aside li:nth-last-child(2) {
+        display: list-item;
+        font-size: 20px;
+        list-style-image: url(img/mail.png);
+    }
+    
+    #haut aside li:last-child {
+        display: list-item;
+        font-size: 20px;
+        list-style-image: url(img/linkedin.png);
+    }
+    
+    /* Partie # EXPÉRIENCES PROFESSIONELLES */
+    
+    #bas {
+        font-size: 25px;
+    }
+    
+    #bas #gauche1 strong, #bas #gauche2 strong, #bas #gauche3 strong, #bas #gauche4 strong {
+        text-align: center;
+    }
+    
+    #bas article section {
+        display: flex;
+    }
+    
+    #bas article #aside1, #bas article #aside2, #bas article #aside3, #bas article #aside4 {
+        padding-top: 40px;
+    }
+    
+    #gauche1, #gauche2, #gauche3, #gauche4 {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        padding-top: 40px;
+    }
+    
+    #gauche1 img {
+        width: 200px;
+    }
+    
+    #gauche2 img {
+        width: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 50px;
+    }
+    
+    #gauche3 img {
+        width: 100px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 25px;
+    }
+    
+    #gauche4 img {
+        width: 150px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 75px;
+    }
+    
+    #bas article section article {
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    
+    /* Partie # COMPÉTENCES */
+    
+    #bas aside article {
+        padding-left: 120px;
+    }
+    
+    #competences {
+        display: flex;    
+    }
+    
+    #langages {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 100px;
+    }
+    
+    #imagelangages {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #imagelangages img {
+        padding-top: 13%;
+    }
+    
+    /* Partie # LANGUES */
+    
+    #langues {
+        display: flex;
+    }
+    
+    #languesparlées {
+        flex-direction: column;
+        text-align: center;
+        padding-right: 120px;
+    }
+    
+    #imagelanguesparlées {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #imagelanguesparlées img {
+        padding-top: 13%;
+    }
+
+    /* Footer */
+
+    footer ul {
+        display: flex;
+    }
+
+    footer ul p{
+        width: 25%;
+    }
+
+    footer img {
+        width: 50px;
+    }
 }

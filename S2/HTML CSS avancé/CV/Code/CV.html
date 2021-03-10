@@ -12,7 +12,15 @@
     <title>CV Julien LAY</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav>
+            <a href="#h2formation">FORMATION</a>
+            <a href="#h2exppro">EXPÉRIENCES PROFESSIONELLES</a>
+            <a href="#h2competences">COMPÉTENCES</a>
+            <a href="#h2langues">LANGUES</a>
+            <a href="#h2hobbies">HOBBIES</a>
+        </nav>
+    </header>
     <main>
         <div id="haut"> <!--Pour mettre du flex sur le haut du CV -->
             <!-- Partie en haut à gauche -->
@@ -32,7 +40,7 @@
                     </p>
                 </section>
                 <section>
-                    <h2># FORMATION</h2>
+                    <h2 id="#h2formation"># FORMATION</h2>
                     <div id="formation">
                         <section>
                             <p><strong>2020 - Actuel</strong></p>
@@ -57,13 +65,13 @@
                         <li id="linkedin">linkedin.com/in/julienlay657ab219a/</li>
                     </ul>
                 </nav>
-                <img src="img/hashtag.jpg" alt="photo avec hashtag derrière">
+                <img id="moi" src="img/hashtag.jpg" alt="photo avec hashtag derrière">
             </aside>
         </div>
         <div id="bas"> <!--Pour mettre du flex sur le bas du CV -->
             <!-- Partie en bas à gauche -->
             <article>
-                <h2># EXPÉRIENCES PROFESSIONELLES</h2>
+                <h2 id="h2exppro"># EXPÉRIENCES PROFESSIONELLES</h2>
                 <section>
                     <div id="gauche1">
                         <strong>2018 - Actuel</strong>
@@ -128,7 +136,7 @@
             <!-- Partie en bas à droite -->
             <aside>
                 <article>
-                    <h2># COMPÉTENCES</h2>
+                    <h2 id="h2competences"># COMPÉTENCES</h2>
                     <div id="competences">
                         <section id="langages">
                             <p>C</p>
@@ -149,7 +157,7 @@
                     </div>
                 </article>
                 <article>
-                    <h2># LANGUES</h2>
+                    <h2 id="h2langues"># LANGUES</h2>
                     <section id="langues">
                         <section id="languesparlées">
                             <p>Français</p>
@@ -164,7 +172,7 @@
                     </section>
                 </article>
                 <article id="hobbies">
-                    <h2># HOBBIES</h2>
+                    <h2 id="h2hobbies"># HOBBIES</h2>
                     <p>Je regarde des vidéos de vulgarisation
                         scientifique, je crée et je joue de la
                         musique (FL Studio + piano).
@@ -177,6 +185,17 @@
             </aside>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <ul>
+            <img src="img/facebook.png" alt="logo facebook" href="https://www.facebook.com/groups/313168089788476">
+            <p id="footerFacebook">Facebook</p>
+            <img src="img/linkedin2.png" alt="logo linkedin" href="https://www.linkedin.com/school/mmi-castres/">
+            <p id="footerLinkedin">Linkedin</p>
+            <img src="img/instagram.png" alt="logo instagram" href="https://www.instagram.com/corpo_mmi_castres/">
+            <p id="footerInstagram">Instagram</p>
+            <img src="img/twitter.jpg" alt="logo twitter" href="https://twitter.com/search?q=mmi%20castres&src=recent_search_click">
+            <p id="footerTwitter">Twitter</p>
+        </ul>
+    </footer>
 </body>
 </html>
