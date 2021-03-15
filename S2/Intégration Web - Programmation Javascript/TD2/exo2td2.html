@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title> Javascript : TD2 </title>
+    <style>
+        div.partie p {
+            background: #cc0000;
+            border-radius: 4px;
+            width: 80px;
+            height: 80px;
+            float: left;
+            margin: 5px 5px 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="partie" id="partie1">
+    </div>
+    <script>
+        let lg = 5;
+        let tCartes = [];
+        let partie1 = document.getElementById("partie1");
+        for (let i = 0; i < lg; i++) {
+            tCartes[i] = document.createElement("p");
+            tCartes[i].className = "carte" + i;
+            tCartes[i].innerHTML = "<a href='#'>" + i + "</a>";
+            partie1.appendChild(tCartes[i]);
+        }
+        tCartes[0].style.backgroundColor="#00cc00";
+
+        let el = document.getElementById("carte3");
+        document.getElementById("partie").removeChild(el);
+
+        document.getElementById("carte4").style.backgroundColor="#blue";
+        document.getElementById("carte4").style.width="160px";
+        
+    </script>
+</body>
+</html>
