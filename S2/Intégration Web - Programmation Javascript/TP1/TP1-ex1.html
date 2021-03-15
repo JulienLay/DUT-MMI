@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrono</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        body.dark {
+            background-color: #333;
+            color: #ccc;
+        }
+
+        h1{
+            font-size:6em
+        }
+
+        div#progression {
+            background-color: #666;
+            height: 30px;
+            width: 90%;
+        }
+
+        div#progression > span {
+            background-color: purple;
+            height: 30px;
+            width: 0%;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body  id="body" class="dark">
+
+    <h1 id='chrono'></h1>
+
+    <div id='progression'><span id="barre"></span></div>
+
+    <script>
+        
+        let laps=5;
+
+        let chrono = setInterval(updateDisplay, 1000);
+
+        function updateDisplay() {
+
+            //  Votre code ici : Afficher la valeur laps dans la div chrono
+
+            document.getElementById("chrono").textContent = laps;
+
+            //  Votre code ici : Modifier la barre de progression
+
+            document.getElementById("barre").style.width = (5 - laps)*20+"%";
+
+            console.log(laps);
+
+            laps = laps - 1; 
+                                    
+            if(laps == -1){
+                clearInterval(chrono);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

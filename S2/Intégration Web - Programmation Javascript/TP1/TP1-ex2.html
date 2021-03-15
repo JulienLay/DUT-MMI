@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Modification du dom</title>
+</head>
+
+<body>
+    <h1 id="titre">Programmation web</h1>
+    <p>Introduction générale</p>
+    <h2 id="langages">Langages utilisés dans le web</h2>
+    <ul id="liste">
+        <li>
+            <h3>HTML</h3>
+            <p>Introduction ...</p>
+        </li>
+        <li>
+            <h3>Javascript</h3>
+            <p>Introduction ...</p>
+        </li>
+        <li>
+            <h3>PHP</h3>
+            <p>Introduction ...</p>
+        </li>
+    </ul>
+
+    <script>
+
+
+    // A) Rechercher l’élément ayant l’id « titre » 
+
+    const element = document.getElementById("titre");
+    console.log(element);
+
+    // B) Rechercher les éléments « <li>»
+
+    const li = document.getElementsByTagName("li");
+    console.log(li);
+
+    // C) Rechercher le premier paragraphe 
+
+    const premierParagraphe = document.querySelector("p");
+    console.log(premierParagraphe);
+
+    // D) Rechercher les paragraphes contenus dans la liste
+
+    const paragraphes = document.getElementById("liste").querySelectorAll("p");
+    console.log(paragraphes);
+
+    // E) Modifier le texte du h2 : «Gestion du DOM »
+
+    document.getElementById("langages").textContent = "Texte modifié";
+
+
+    // F) Ajouter la classe « invisible » à la liste <ul>
+
+    document.getElementById("liste").setAttribute("class", "invisible");
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

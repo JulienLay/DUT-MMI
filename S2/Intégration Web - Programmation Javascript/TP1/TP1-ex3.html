@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Le DOM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        body.dark {
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <h1 id='date'>Février 2021</h1>
+    <h2 id='time'></h2>
+
+    <script>
+
+    if(window.location.search.indexOf("dark") != -1) {
+        console.log("c'est bon il y est");
+        document.getElementById("body").setAttribute("class", "dark");
+    } else {
+        console.log("c'est pas bon");
+    }
+
+    let date = new Date();
+    console.log(date);
+
+    // le jour de la semaine
+    const day = date.toLocaleDateString('default', {weekday:'long'});
+    console.log(day);
+
+    // le jour du mois
+    const dayOfMonth = date.getDate();
+    console.log(dayOfMonth);
+
+    // le mois
+    const month = date.toLocaleString('default', {month: 'long'});
+    console.log(month);
+
+    // l’année
+    const year = date.getFullYear();
+    console.log(year);
+
+    document.getElementById("date").textContent = day + ' ' + dayOfMonth + ' ' + month + ' ' + year;
+
+    let hour = date.getHours();
+    let minutes = date.getMinutes();
+    let secondes = date.getSeconds();
+
+    document.getElementById("time").textContent = hour + ' ' + minutes + ' ' + secondes;
+
+    if(hour <= 7 || hour >= 19) {
+        document.getElementById("body").setAttribute("class", "dark");
+    } else {
+        document.getElementById("body").removeAttribute("class", "dark");
+    }
+
+    setInterval(updateDisplay, 1000);
+
+    function updateDisplay() {
+        let date = new Date();
+        let hour = date.getHours();
+        let minutes = date.getMinutes();
+        let secondes = date.getSeconds();
+        time = hour + ":" + minutes + ":" + secondes;
+        document.getElementById('time').textContent = time;
+    }
+
+    </script>
+
+</body>
+
+</html>
