@@ -1,3 +1,33 @@
+DE MANON 
+
+Hello, 
+
+Je viens de regarder ton mail, mais je te fais les retours en me basant sur le dernier WeTransfer que tu m'as envoyé.
+
+•	Pour la carte graphique, je t'ai fait une proposition directement dans le InDesign
+•	Pour la typographie, je te conseille d'utiliser la "Montserra" qui est celle du futur nouveau site. Il faut donc que tu la mettre partout.
+•	Par rapport au couleur, je te conseille d'utiliser le bleu foncé que j'ai mis en fond de première page pour tes textes parce qu'il se rapproche du noir (#1A223E)
+•	Pour le sommaire je t'ai mis une image à côté de la page d'une mise en page que je trouve sympas.
+•	Tu trouveras ci-joint une image des couleurs que tu peux utiliser pour ta mise en page, qui reste dans la carte graphique de Aracade Factory (et je te remets la capture à côté de la page d'acceuil dans le document)
+•	De manière générale dans ta mise en page je te conseille de rester sur un fond blanc, avec des images ou des éléments graphique (trait en dégradé ou triangles)
+•	Et je te conseille aussi d'utiliser plusieurs pages quand tu as beaucoup de texte sur une seule (celle rendra la lecture beaucoup plus facile), aussi n'hésite pas à utiliser deux colonnes ou à faire un retour à la ligne en cas de besoin.
+•	Pour les pages avec des images, n'hésite pas à les mettre en plus grand.
+•	J'ai aussi fait une proposition pour la dernière page (qui reprend le design de la page de garde)
+•	Dernière petit conseil, quand tu exporte ton InDesign, il faut aller dans fichier > assemblage pour que logiciel créer un ficher avec ton document et toutes les images associés (sinon il te manqueras des liens). Tu n'as pas besoin de le faire lors de ton export en .pdf mais uniquement lorsque tu veux envoyer ton fichier InDesign ) à quelqu'un.
+Voilà, je n'aurais pas le temps d'en faire plus pour le moment, mais je te laisse faire le reste et surtout ajouter ta pâte mais je pense que cela te donne déjà de bonnes bases.
+
+PS : Je te renvoi le InDesign dans un WeTransfer.
+
+Bon courage et bisous 😉 
+
+Manon 👩🏼‍💻
+
+
+
+
+
+
+
 POUR LE RAPPORT :
 
 - mettre les noms sous les images (et mettre figure ?? pour citer dans le texte)
