@@ -63,17 +63,18 @@ strong {
 
 #menu {
     display: flex;
-    background-image: url(img/menu.jpg);
 }
 
 #menu a{
     color: #747474;
     text-decoration: none;
-    width: 15%;
+    width: 25%;
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     border: solid 2px #4cb2bd;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 #menu a:hover {
@@ -255,6 +256,12 @@ li {
     padding-top: 13%;
 }
 
+/* Ancre pour remonter en haut de la page */
+
+#ancre {
+    text-align: center;
+}
+
 /* Footer */
 
 footer {
@@ -354,17 +361,19 @@ footer img {
     #menu {
         display: flex;
         flex-direction: column;
-        background-image: url(img/menu.jpg);
     }
-
+    
     #menu a{
         color: #747474;
         text-decoration: none;
         width: auto;
         text-align: center;
-        font-size: 15px;
-        font-weight: bold;
+        font-size: 20px;
+        /*font-weight: bold;*/
         border: solid 2px #4cb2bd;
+        padding-bottom: 30px;
+        padding-top: 30px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     #menu a:hover {
@@ -641,6 +650,12 @@ footer img {
         padding-top: 13%;
     }
 
+    /* Ancre pour remonter en haut de la page */
+
+    #ancre {
+        text-align: center;
+    }
+
     /* Footer */
 
     footer {
@@ -740,18 +755,18 @@ footer img {
 
     #menu {
         display: flex;
-        flex-direction: column;
-        background-image: url(img/menu.jpg);
     }
-
+    
     #menu a{
         color: #747474;
         text-decoration: none;
-        width: auto;
+        width: 25%;
         text-align: center;
-        font-size: 15px;
+        font-size: 20px;
         font-weight: bold;
         border: solid 2px #4cb2bd;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
     
     #menu a:hover {
@@ -1029,6 +1044,12 @@ footer img {
         padding-top: 13%;
     }
 
+    /* Ancre pour remonter en haut de la page */
+
+    #ancre {
+        text-align: center;
+    }
+
     /* Footer */
 
     footer {
@@ -1052,4 +1073,10 @@ footer img {
     footer img {
         width: 50px;
     }
+}
+
+/* Partie responsive (entre 681 px et 960 px) */
+
+@media screen and (min-width: 681px) and (max-width: 960px) {
+
 }
