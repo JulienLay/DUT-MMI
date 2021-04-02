@@ -46,9 +46,10 @@
         */
 
         // B) Ecrire les instructions JS pour ajouter la classe « dark » à l’élément <body>, lorsque l’utilisateur clique sur le bouton. 
+
         // C) Modifier les instructions JS pour retirer la classe « dark » à l’élement <body> si il a déjà cette classe au moment où se produit le clic
         
-            const button = document.getElementById('button');
+            const button = document.querySelector('button');
             button.addEventListener('click', inverserContrastes);
             function inverserContrastes(event) {
                 let listeDesClasses = document.querySelector('body').classList;
@@ -67,13 +68,39 @@
             Quelle sera l’action ? mettre display « none » en CSS
         */
 
-        //E) Ecrire les instructions JS pour ajouter le style display « none » à l’image, lorsque l’utilisateur clique sur ce bouton
+        // E) Ecrire les instructions JS pour ajouter le style display « none » à l’image, lorsque l’utilisateur clique sur ce bouton
+        // F) Ecrire les instructions JS pour ajouter le style display «block» à l’image, lorsque l’utilisateur clique sur ce bouton et que l’image est invisible.
+        // G) Modifier le texte du bouton en fonction de la situation.
+        
         const mask = document.getElementById('mask');
         mask.addEventListener('click', masquer);
         function masquer(event) {
-            document.querySelector('img').style.display = 'none';
+            if (document.querySelector('img').style.display == 'none') {
+                document.querySelector('img').style.display = 'block';
+                document.getElementById('mask').innerHTML = "Masquer l'image";
+            }
+            else {
+                document.querySelector('img').style.display = 'none';
+                document.getElementById('mask').innerHTML = "Afficher l'image";
+            }
+            
         }
 
+        /* 
+            H) On souhaite utiliser ce curseur pour faire varier l’opacité de l’image. 
+            Quelle sera la cible ? le curseur
+            Quel sera l’événement ? faire glisser le curseur
+            Quelle sera l’action ? propriété CSS opacity qui varie
+        */
+
+        // I) Ecrire les instructions JS pour faire varier l’opacité de l’image, lorsque l’utilisateur fait varier le curseur.
+
+        const curseur = document.querySelector('input');
+        curseur.addEventListener('input', glisserOpacite);
+        function glisserOpacite(event) {
+            document.querySelector('img').style.opacity = (curseur.value)/100;
+        }
+        
     </script>
 
 </body>

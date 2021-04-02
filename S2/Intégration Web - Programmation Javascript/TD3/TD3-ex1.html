@@ -83,38 +83,10 @@
 
         // Corriger les fautes dans les instructions suivantes
         const cible = document.querySelector('h1#titre');
-        cible.addEventListener('mouseover', 'action');
+        cible.addEventListener('mouseover', action);
         function action(event) {
             console.log(event.target);
         }
-
-        /*
-        
-        a) Souris
-            1. L'évènement click est émis lorsqu'un bouton d'une souris est pressé puis relaché.
-            2. L'évènement mousedown est émis lorsqu'un bouton d'une souris est pressé sur la cible.
-            3. L'évènement mouseup est émis lorsqu'un bouton d'une souris est relaché sur la cible.
-            4. L'évènement mouseover est émis lorsque la souris est déplacée au-dessus de la cible.
-            5. L'évènement mouseout est émis lorsque la souris est déplacée en dehors de la cible.
-            6. L'évènement mouseenter est émis lorsque la souris rentre au-dessus de la cible.
-            7. L’évènement scroll est émis lorsque l’on fait défiler le document.
-
-        b) Formulaire
-            1. L’évènement change est émis lorsque l’on modifie une balise <select></select>
-            2. L’évènement focus est émis lorsque l’on donne le focus à une balise <input>
-            3. L’évènement submit est émis lorsque l’on clique sur le bouton « envoyer » d’un formulaire
-
-        c) Clavier
-            1. L’évènement keydown est émis lorsque l’on presse une touche du clavier
-            2. L’évènement keyup est émis lorsque l’on relâche une touche du clavier
-
-        d) Chargement de la page
-            L’évènement DOMContentLoaded est émis lorsque la page HTML est complètement chargée ainsi que
-            toutes les ressources (le CSS et les images). La cible de l’événement est document.
-
-        */
-
-
     </script>
 </body>
 
