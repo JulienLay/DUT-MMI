@@ -274,20 +274,19 @@ li {
 /* Footer */
 
 footer {
-    background-image: url(img/menu.jpg);
-}
-
-footer ul {
+    width: 100%;
     display: flex;
+    flex-direction: row;
 }
 
-footer ul a{
-    width: 22%;
+footer a {
+    width: 25%;
     text-align: center;
     text-decoration: none;
+    border: solid 2px #4cb2bd;
 }
 
-footer ul a:hover {
+footer a:hover {
     background-color: #cecaca;
 }
 
@@ -675,20 +674,19 @@ footer img {
     /* Footer */
 
     footer {
-        background-image: url(img/menu.jpg);
-    }
-
-    footer ul {
+        width: 100%;
         display: flex;
+        flex-direction: row;
     }
 
-    footer ul a{
+    footer a {
         width: 25%;
         text-align: center;
         text-decoration: none;
+        border: solid 2px #4cb2bd;
     }
 
-    footer ul a:hover {
+    footer a:hover {
         background-color: #cecaca;
     }
 
@@ -1082,20 +1080,19 @@ footer img {
     /* Footer */
 
     footer {
-        background-image: url(img/menu.jpg);
-    }
-
-    footer ul {
+        width: 100%;
         display: flex;
+        flex-direction: row;
     }
 
-    footer ul a{
+    footer a {
         width: 25%;
         text-align: center;
         text-decoration: none;
+        border: solid 2px #4cb2bd;
     }
 
-    footer ul a:hover {
+    footer a:hover {
         background-color: #cecaca;
     }
 
@@ -1493,23 +1490,22 @@ footer img {
     /* Footer */
 
     footer {
-        background-image: url(img/menu.jpg);
-    }
-
-    footer ul {
+        width: 100%;
         display: flex;
+        flex-direction: row;
     }
-
-    footer ul a{
+    
+    footer a {
         width: 25%;
         text-align: center;
         text-decoration: none;
+        border: solid 2px #4cb2bd;
     }
-
-    footer ul a:hover {
+    
+    footer a:hover {
         background-color: #cecaca;
     }
-
+    
     footer img {
         width: 50px;
     }
@@ -1899,20 +1895,19 @@ footer img {
     /* Footer */
 
     footer {
-        background-image: url(img/menu.jpg);
-    }
-
-    footer ul {
+        width: 100%;
         display: flex;
+        flex-direction: row;
     }
 
-    footer ul a{
+    footer a {
         width: 25%;
         text-align: center;
         text-decoration: none;
+        border: solid 2px #4cb2bd;
     }
 
-    footer ul a:hover {
+    footer a:hover {
         background-color: #cecaca;
     }
 
