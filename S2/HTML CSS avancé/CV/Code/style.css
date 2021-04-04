@@ -122,6 +122,15 @@ strong {
 
 /* La liste pour me contacter */
 
+aside nav ul a {
+    color: #747474;
+    text-decoration: none;
+}
+
+aside nav ul a:hover {
+    color: #4cb2bd;
+}
+
 ul {
     padding-left: 150px;
 }
@@ -468,7 +477,7 @@ footer img {
     
     #haut aside li:last-child {
         display: list-item;
-        font-size: 12px;
+        font-size: 16px;
         list-style-image: url(img/linkedin.png);
         width: 100%;
     }
@@ -870,7 +879,7 @@ footer img {
     
     #haut aside li:last-child {
         display: list-item;
-        font-size: 12px;
+        font-size: 16px;
         list-style-image: url(img/linkedin.png);
         width: 100%;
     }
@@ -1280,7 +1289,7 @@ footer img {
     
     #haut aside li:last-child {
         display: list-item;
-        font-size: 12px;
+        font-size: 16px;
         list-style-image: url(img/linkedin.png);
         width: 100%;
     }
@@ -1686,7 +1695,7 @@ footer img {
     
     #haut aside li:last-child {
         display: list-item;
-        font-size: 12px;
+        font-size: 16px;
         list-style-image: url(img/linkedin.png);
         width: 100%;
     }
