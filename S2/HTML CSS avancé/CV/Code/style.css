@@ -9,6 +9,17 @@ body {
     margin: 20px;
 }
 
+/* Barre de progression */
+
+#progress {
+    background-color: red;
+    height: 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
 /* aligner les blocs en haut et en bas en flex */
 
 #haut, #bas {
