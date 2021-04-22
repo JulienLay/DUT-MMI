@@ -7,6 +7,7 @@
 
 body {
     margin: 20px;
+    margin-top: 0px;
 }
 
 /* Barre de progression */
@@ -18,6 +19,12 @@ body {
     top: 0;
     left: 0;
     z-index: 9999;
+}
+
+/* cacher le bouton pour le menu en responsive */
+
+#boutonmenu {
+    visibility: hidden;
 }
 
 /* aligner les blocs en haut et en bas en flex */
@@ -56,7 +63,7 @@ h2 {
     font-size: 40px;
 }
 
-p:not(#etudiantMMI) {
+section p:not(#etudiantMMI), aside p {
     font-family: 'Lato', sans-serif;
     color: #747474;
 }
@@ -77,20 +84,27 @@ strong {
 }
 
 #menu a{
-    color: #747474;
+    color: #fff;
+    background-color: #76c0c9;
     text-decoration: none;
+    text-transform: uppercase;
     width: 25%;
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
-    border: solid 2px #4cb2bd;
+    border-bottom: 2px solid #2c8791;
+    border-radius: 2%;
     padding-bottom: 30px;
     padding-top: 30px;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #menu a:hover {
     color: #4cb2bd;
     background-color: #cecaca;
+    transform: translateY(3px);
 }
 
 /* Partie en #etudiant */
@@ -280,6 +294,7 @@ li {
 
 #ancre {
     text-align: center;
+    padding-bottom: 30px;
 }
 
 /* Footer */
@@ -291,14 +306,26 @@ footer {
 }
 
 footer a {
+    color: #fff;
+    background-color: #76c0c9;
+    text-decoration: none;
+    text-transform: uppercase;
     width: 25%;
     text-align: center;
-    text-decoration: none;
-    border: solid 2px #4cb2bd;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #2c8791;
+    border-radius: 2%;
+    padding-top: 15px;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 footer a:hover {
+    color: #4cb2bd;
     background-color: #cecaca;
+    transform: translateY(3px);
 }
 
 footer img {
@@ -362,7 +389,7 @@ footer img {
         width: 100%;
     }
     
-    p:not(#etudiantMMI) {
+    section p:not(#etudiantMMI), aside p {
         font-family: 'Lato', sans-serif;
         color: #747474;
     }
@@ -379,27 +406,56 @@ footer img {
 
     /* Partie menu nav */
 
+    /* afficher le bouton pour le menu en responsive */
+
+    #boutonmenu {
+        visibility: visible;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #fff;
+        background-color: #4cb2bd;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px #2c8791;
+        padding: 20px;
+        outline: none;
+        border-bottom: 5px solid #2c8791;
+    }
+
+    #boutonmenu:hover {
+        transform: translateY(3px);
+        box-shadow: 0 2px #2c8791;
+    }
+
     #menu {
+        display: none;
+    }
+
+    #parent:hover #menu {
         display: flex;
         flex-direction: column;
     }
     
     #menu a{
-        color: #747474;
-        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #76c0c9;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 20px;
         width: auto;
         text-align: center;
         font-size: 20px;
-        /*font-weight: bold;*/
-        border: solid 2px #4cb2bd;
-        padding-bottom: 30px;
         padding-top: 30px;
+        border-bottom: 2px dashed #2c8791;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     #menu a:hover {
-        color: #4cb2bd;
-        background-color: #cecaca;
+        color: #6dbcc5;
+        background-color: #d8ecf5;
     }
     
     /* Partie en #etudiant */
@@ -691,13 +747,24 @@ footer img {
     }
 
     footer a {
+        color: #fff;
+        background-color: #76c0c9;
+        text-decoration: none;
+        text-transform: uppercase;
         width: 25%;
         text-align: center;
-        text-decoration: none;
-        border: solid 2px #4cb2bd;
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #2c8791;
+        border-radius: 2%;
+        padding-top: 15px;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     footer a:hover {
+        color: #4cb2bd;
         background-color: #cecaca;
     }
 
@@ -763,7 +830,7 @@ footer img {
         width: 100%;
     }
     
-    p:not(#etudiantMMI) {
+    section p:not(#etudiantMMI), aside p {
         font-family: 'Lato', sans-serif;
         color: #747474;
     }
@@ -780,27 +847,56 @@ footer img {
 
     /* Partie menu nav */
 
+    /* afficher le bouton pour le menu en responsive */
+
+    #boutonmenu {
+        visibility: visible;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #fff;
+        background-color: #4cb2bd;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px #2c8791;
+        padding: 20px;
+        outline: none;
+        border-bottom: 5px solid #2c8791;
+    }
+
+    #boutonmenu:hover {
+        transform: translateY(3px);
+        box-shadow: 0 2px #2c8791;
+    }
+
     #menu {
+        display: none;
+    }
+
+    #parent:hover #menu {
         display: flex;
         flex-direction: column;
     }
     
     #menu a{
-        color: #747474;
-        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #76c0c9;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 20px;
         width: auto;
         text-align: center;
         font-size: 20px;
-        /*font-weight: bold;*/
-        border: solid 2px #4cb2bd;
-        padding-bottom: 30px;
         padding-top: 30px;
+        border-bottom: 2px dashed #2c8791;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     #menu a:hover {
-        color: #4cb2bd;
-        background-color: #cecaca;
+        color: #6dbcc5;
+        background-color: #d8ecf5;
     }
     
     /* Partie en #etudiant */
@@ -1097,13 +1193,24 @@ footer img {
     }
 
     footer a {
+        color: #fff;
+        background-color: #76c0c9;
+        text-decoration: none;
+        text-transform: uppercase;
         width: 25%;
         text-align: center;
-        text-decoration: none;
-        border: solid 2px #4cb2bd;
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #2c8791;
+        border-radius: 2%;
+        padding-top: 15px;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     footer a:hover {
+        color: #4cb2bd;
         background-color: #cecaca;
     }
 
@@ -1130,7 +1237,7 @@ footer img {
         /*background-color: pink;*/
         /*border: solid 2px blue;*/
     }
-    
+
     /* aligner les blocs en haut et en bas en flex */
     
     #haut, #bas {
@@ -1172,7 +1279,7 @@ footer img {
         width: 100%;
     }
     
-    p:not(#etudiantMMI) {
+    section p:not(#etudiantMMI), aside p {
         font-family: 'Lato', sans-serif;
         color: #747474;
     }
@@ -1189,27 +1296,56 @@ footer img {
 
     /* Partie menu nav */
 
+    /* afficher le bouton pour le menu en responsive */
+
+    #boutonmenu {
+        visibility: visible;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: #fff;
+        background-color: #4cb2bd;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 6px #2c8791;
+        padding: 20px;
+        outline: none;
+        border-bottom: 5px solid #2c8791;
+    }
+
+    #boutonmenu:hover {
+        transform: translateY(3px);
+        box-shadow: 0 2px #2c8791;
+    }
+
     #menu {
+        display: none;
+    }
+
+    #parent:hover #menu {
         display: flex;
         flex-direction: column;
     }
     
     #menu a{
-        color: #747474;
-        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: #76c0c9;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 20px;
         width: auto;
         text-align: center;
         font-size: 20px;
-        /*font-weight: bold;*/
-        border: solid 2px #4cb2bd;
-        padding-bottom: 30px;
         padding-top: 30px;
+        border-bottom: 2px dashed #2c8791;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
     
     #menu a:hover {
-        color: #4cb2bd;
-        background-color: #cecaca;
+        color: #6dbcc5;
+        background-color: #d8ecf5;
     }
     
     /* Partie en #etudiant */
@@ -1505,18 +1641,29 @@ footer img {
         display: flex;
         flex-direction: row;
     }
-    
+
     footer a {
+        color: #fff;
+        background-color: #76c0c9;
+        text-decoration: none;
+        text-transform: uppercase;
         width: 25%;
         text-align: center;
-        text-decoration: none;
-        border: solid 2px #4cb2bd;
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #2c8791;
+        border-radius: 2%;
+        padding-top: 15px;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
-    
+
     footer a:hover {
+        color: #4cb2bd;
         background-color: #cecaca;
     }
-    
+
     footer img {
         width: 50px;
     }
@@ -1528,17 +1675,25 @@ footer img {
         scroll-behavior: smooth;
     }
     
-    /*html {
-        border: solid 2px violet;
-    }*/
+    html {
+        /*border: solid 2px red;*/
+        margin-right: 40px;
+    }
 
     body {
         width: 100%;
         margin: 20px;
+        margin-top: 0px;
         /*background-color: pink;*/
         /*border: solid 2px blue;*/
     }
     
+    /* cacher le bouton pour le menu en responsive */
+
+    #boutonmenu {
+        visibility: hidden;
+    }
+
     /* aligner les blocs en haut et en bas en flex */
     
     #haut, #bas {
@@ -1548,8 +1703,9 @@ footer img {
     
     #haut aside nav {
         padding-left: 50%;
+        width: 30%;
     }
-    
+
     /* modifier la taille de l'image avec ma photo */
     
     #haut aside img {
@@ -1579,7 +1735,7 @@ footer img {
         width: 100%;
     }
     
-    p:not(#etudiantMMI) {
+    section p:not(#etudiantMMI), aside p {
         font-family: 'Lato', sans-serif;
         color: #747474;
     }
@@ -1601,20 +1757,27 @@ footer img {
     }
 
     #menu a{
-        color: #747474;
+        color: #fff;
+        background-color: #76c0c9;
         text-decoration: none;
+        text-transform: uppercase;
         width: 25%;
         text-align: center;
         font-size: 15px;
         font-weight: bold;
-        border: solid 2px #4cb2bd;
+        border-bottom: 2px solid #2c8791;
+        border-radius: 2%;
         padding-bottom: 30px;
         padding-top: 30px;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     #menu a:hover {
         color: #4cb2bd;
         background-color: #cecaca;
+        transform: translateY(3px);
     }
     
     /* Partie en #etudiant */
@@ -1901,6 +2064,7 @@ footer img {
 
     #ancre {
         text-align: center;
+        padding-bottom: 30px;
     }
 
     /* Footer */
@@ -1912,14 +2076,26 @@ footer img {
     }
 
     footer a {
+        color: #fff;
+        background-color: #76c0c9;
+        text-decoration: none;
+        text-transform: uppercase;
         width: 25%;
         text-align: center;
-        text-decoration: none;
-        border: solid 2px #4cb2bd;
+        font-size: 15px;
+        font-weight: bold;
+        border-bottom: 2px solid #2c8791;
+        border-radius: 2%;
+        padding-top: 15px;
+        cursor: pointer;
+        outline: none;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     footer a:hover {
+        color: #4cb2bd;
         background-color: #cecaca;
+        transform: translateY(3px);
     }
 
     footer img {
