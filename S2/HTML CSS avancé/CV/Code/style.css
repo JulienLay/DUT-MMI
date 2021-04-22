@@ -92,6 +92,7 @@ strong {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
+    border: 1px solid grey;
     border-bottom: 2px solid #2c8791;
     border-radius: 2%;
     padding-bottom: 30px;
@@ -307,6 +308,7 @@ footer {
 
 footer a {
     color: #fff;
+    border: 1px solid grey;
     background-color: #76c0c9;
     text-decoration: none;
     text-transform: uppercase;
@@ -747,6 +749,7 @@ footer img {
     }
 
     footer a {
+        border: 1px solid grey;
         color: #fff;
         background-color: #76c0c9;
         text-decoration: none;
@@ -1193,6 +1196,7 @@ footer img {
     }
 
     footer a {
+        border: 1px solid grey;
         color: #fff;
         background-color: #76c0c9;
         text-decoration: none;
@@ -1644,6 +1648,7 @@ footer img {
 
     footer a {
         color: #fff;
+        border: 1px solid grey;
         background-color: #76c0c9;
         text-decoration: none;
         text-transform: uppercase;
@@ -1668,6 +1673,8 @@ footer img {
         width: 50px;
     }
 }
+
+/* Partie responsive (entre 961 px et 1420 px) */
 
 @media screen and (min-width: 961px) and (max-width: 1420px) {
     * {
