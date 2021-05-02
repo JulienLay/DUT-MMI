@@ -26,13 +26,13 @@
     <script>
         //A
         console.log(document.getElementById("p2").children[0]);
-        
+
         //B
         console.log(document.getElementById("p2").children[0].innerHTML);
 
         //C
         const noeuds = document.getElementsByTagName("a");
-        for (let i=0; i<noeuds.length; i++) {
+        for (let i = 0; i < noeuds.length; i++) {
             console.log(noeuds[i].innerHTML);
         }
 
@@ -52,7 +52,7 @@
         //H
         let h2 = document.getElementsByTagName('h2');
 
-        for (let j=0; j< h2.length; j++){
+        for (let j = 0; j < h2.length; j++) {
             h2[j].style.color = "green";
         }
 
@@ -75,13 +75,12 @@
         function changeColor(tag, color) {
             const balise = document.getElementsByTagName(tag);
 
-            for (let j=0; j< balise.length; j++){
+            for (let j = 0; j < balise.length; j++) {
                 balise[j].style.color = color;
-        }
+            }
         }
 
         changeColor('h1', "red");
-        
     </script>
 </body>
 

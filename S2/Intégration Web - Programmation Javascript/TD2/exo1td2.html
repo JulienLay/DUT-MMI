@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title> Javascript : TD2 </title>
-    </head>
-    <body>
-        <div id="main">
-            <form id="testForm">
+
+<head>
+    <meta charset="utf-8">
+    <title> Javascript : TD2 </title>
+</head>
+
+<body>
+    <div id="main">
+        <form id="testForm">
             <fieldset>
-            <legend>Identité</legend>
-            <p id="p1">
-                <label class="champ" for="nom">Votre nom</label>
-                <input class="champ" id="nom" name="nom" type="text" /><br/>
-            </p>
-            <p id="p2">
-                <input class="submit" type="submit" value="Valider"/>
-            </p>
+                <legend>Identité</legend>
+                <p id="p1">
+                    <label class="champ" for="nom">Votre nom</label>
+                    <input class="champ" id="nom" name="nom" type="text" /><br/>
+                </p>
+                <p id="p2">
+                    <input class="submit" type="submit" value="Valider" />
+                </p>
             </fieldset>
-            </form>
-        </div>
-        <script>
-            let elt=document.getElementsByTagName("fieldset");
+        </form>
+    </div>
+    <script>
+        let elt = document.getElementsByTagName("fieldset");
 
-            for (let i=0; i<elt[0].children.length; i=i+1) {
-                console.log("noeud élément "+elt[0].children[i].nodeName );
-            }
+        for (let i = 0; i < elt[0].children.length; i = i + 1) {
+            console.log("noeud élément " + elt[0].children[i].nodeName);
+        }
 
-            console.log(document.getElementById("p1").innerHTML);
-        </script>
-    </body>
+        console.log(document.getElementById("p1").innerHTML);
+
+        console.log(document.getElementById("p1").children[2]);
+        console.log(document.getElementById("p1").children[0]);
+        console.log(document.getElementById("p1").textContent);
+        console.log(document.getElementById("p1").innerHTML);
+    </script>
+</body>
+
 </html>

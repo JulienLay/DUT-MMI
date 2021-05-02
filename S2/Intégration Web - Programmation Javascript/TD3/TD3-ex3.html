@@ -13,11 +13,11 @@
             height: 100vh;
             background-color: #ccc;
         }
-
+        
         body>* {
             margin: 1em
         }
-
+        
         body.dark {
             background-color: #666;
             color: #ccc;
@@ -29,7 +29,7 @@
 
     <h1>Gestion d'événement</h1>
 
-    <img src="https://picsum.photos/300/230"/>
+    <img src="https://picsum.photos/300/230" />
 
     <button>Inverser les contrastes</button>
 
@@ -39,27 +39,28 @@
 
     <script>
         /*
-            A) On souhaite inverser les contrastes lorsque l’utilisateur clique sur le bouton. 
-            Quelle sera la cible ? le bouton
-            Quel sera l’événement ? le click du bouton
-            Quelle sera l’action ? inverser le contraste/changer la couleur
-        */
+                    A) On souhaite inverser les contrastes lorsque l’utilisateur clique sur le bouton. 
+                    Quelle sera la cible ? le bouton
+                    Quel sera l’événement ? le click du bouton
+                    Quelle sera l’action ? inverser le contraste/changer la couleur
+                */
 
         // B) Ecrire les instructions JS pour ajouter la classe « dark » à l’élément <body>, lorsque l’utilisateur clique sur le bouton. 
 
         // C) Modifier les instructions JS pour retirer la classe « dark » à l’élement <body> si il a déjà cette classe au moment où se produit le clic
-        
-            const button = document.querySelector('button');
-            button.addEventListener('click', inverserContrastes);
-            function inverserContrastes(event) {
-                let listeDesClasses = document.querySelector('body').classList;
 
-                if (listeDesClasses.contains('dark')) {
-                    listeDesClasses.remove('dark');
-                } else {
-                    listeDesClasses.add('dark');
-                }
+        const button = document.querySelector('button');
+        button.addEventListener('click', inverserContrastes);
+
+        function inverserContrastes(event) {
+            let listeDesClasses = document.querySelector('body').classList;
+
+            if (listeDesClasses.contains('dark')) {
+                listeDesClasses.remove('dark');
+            } else {
+                listeDesClasses.add('dark');
             }
+        }
 
         /*
             D) Dans le code html, ajouter un bouton pour masquer l’image. On souhaite masquer l’image lorsque l’utilisateur clique sur le bouton. 
@@ -71,19 +72,19 @@
         // E) Ecrire les instructions JS pour ajouter le style display « none » à l’image, lorsque l’utilisateur clique sur ce bouton
         // F) Ecrire les instructions JS pour ajouter le style display «block» à l’image, lorsque l’utilisateur clique sur ce bouton et que l’image est invisible.
         // G) Modifier le texte du bouton en fonction de la situation.
-        
+
         const mask = document.getElementById('mask');
         mask.addEventListener('click', masquer);
+
         function masquer(event) {
             if (document.querySelector('img').style.display == 'none') {
                 document.querySelector('img').style.display = 'block';
                 document.getElementById('mask').innerHTML = "Masquer l'image";
-            }
-            else {
+            } else {
                 document.querySelector('img').style.display = 'none';
                 document.getElementById('mask').innerHTML = "Afficher l'image";
             }
-            
+
         }
 
         /* 
@@ -97,10 +98,10 @@
 
         const curseur = document.querySelector('input');
         curseur.addEventListener('input', glisserOpacite);
-        function glisserOpacite(event) {
-            document.querySelector('img').style.opacity = (curseur.value)/100;
+
+        function glisserOpacite() {
+            document.querySelector('img').style.opacity = (curseur.value) / 100;
         }
-        
     </script>
 
 </body>
