@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Jeu de poker solitaire</title>
+	<style>
+		img {
+			width: 60px;
+			height: auto;
+			padding: 2px 2px 2px 2px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Jeu de poker solitaire</h1>
+	<button>Jouer</button>
+	<div id="cartes"></div>
+
+	<script src="afficherNcartes.js"></script>
+	<script src="retournerCarteVerso.js"></script>
+	<script>
+		// tableau contenant les 52 cartes d'un jeu
+		let jeu = ["01_carreau", "02_carreau", "03_carreau", "04_carreau", "05_carreau", "06_carreau", "07_carreau", "08_carreau", "09_carreau", "10_carreau", "11_carreau", "12_carreau", "13_carreau",
+			"01_coeur", "02_coeur", "03_coeur", "04_coeur", "05_coeur", "06_coeur", "07_coeur", "08_coeur", "09_coeur", "10_coeur", "11_coeur", "12_coeur", "13_coeur",
+			"01_pique", "02_pique", "03_pique", "04_pique", "05_pique", "06_pique", "07_pique", "08_pique", "09_pique", "10_pique", "11_pique", "12_pique", "13_pique",
+			"01_trefle", "02_trefle", "03_trefle", "04_trefle", "05_trefle", "06_trefle", "07_trefle", "08_trefle", "09_trefle", "10_trefle", "11_trefle", "12_trefle", "13_trefle"];
+
+		let etape = 1;
+
+		// rôle : Quand l'utilisateur clique sur le bouton "Jouer" (et que etape vaut 1), 5 cartes s'affichent
+		// cible : le bouton
+		// retour : affichage des 5 cartes
+		let btn = document.querySelector("button");
+		btn.addEventListener('click', afficherCartes);
+		
+		let tIdCartes = [];
+		let indice = 0;
+
+		function afficherCartes() {
+			if (etape == 1) {
+				afficherNCartes(5, jeu);
+				etape = 2;
+				let lesCartes = document.getElementsByTagName("img");
+
+				for(let i=0; i<lesCartes.length; i++) {
+					lesCartes[i].addEventListener("click", afficherID);
+				}
+			}
+		}
+
+		function afficherID(e) {
+			let id = e.target.id;
+			tIdCartes[indice] = id;
+			retournerCarteVerso(id)
+			indice = indice + 1;
+			console.log(id);
+		}
+		
+		function changerNCartes(tabId) {
+			for(j=0; j<tabId; j++) {
+				document.getElementById(tabId[j]).remove;
+				afficherNCartes(1, jeu);
+			}
+		}
+
+		
+	</script>
+</body>
+
+</html>
