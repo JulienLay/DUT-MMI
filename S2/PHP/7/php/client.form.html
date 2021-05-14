@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Livres &amp; Compagnie</title>
+</head>
+<body>
+	<header>
+    <h1>Livres &amp; Compagnie</h1><h2>Création d'un compte client</h2>
+  </header>
+  <section>
+  	<!-- renseignement du formulaire : -->  	
+  	<form method="POST" action="ajouter_client.ctrl.php">
+		<label>Pseudo</label><input type="text" name="pseudo" required="required" /><br />
+		<label>Nom</label><input type="text" name="nom" required="required" /><br />
+		<label>Prénom</label><input type="text" name="prenom" required="required" /><br />
+		<label>Adresse électronique</label><input type="email" name="adresseMail" required="required" /><br />
+		<label>Mot de passe</label><input type="password" name="mdp" required="required" /><br />
+		<label>Client professionnel ?</label><input type="checkbox" name="pro" /><br />
+		<label>Combien de livres lisez-vous généralement par an ?</label><input type="number" name="nbLivresLus" /><br />
+		<input type="submit" value="Créer un compte client" />
+	</form>	
+</section>
+<footer>Copyright &copy; <a href="index.html">Livres &amp; Compagnie</a> - Tous droits réservés MMI Castres</footer>
+</body>
+</html>
+
