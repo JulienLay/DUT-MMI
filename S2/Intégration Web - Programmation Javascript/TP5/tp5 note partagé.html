@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        
+        body.dark {
+            background-color: #333;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <form>
+        <p>Mode : <input type="text" name="mode"></p>
+
+        <div class=""></div>
+
+        <p>Contraste : <input type="text" name="contrast" id="contrast"></p>
+
+        <div id="msg_contrast"></div>
+
+        <button type="submit">Go</button>
+    </form>
+
+    <script>
+        const search = window.location.search;
+
+        console.log(search);
+
+
+        let isDark = search.indexOf('mode=dark') != -1;
+
+        if (isDark) {
+
+            // on change la couleur
+
+            const body = document.getElementById('body');
+            body.classList.add('dark');
+
+        }
+
+        // Contrôler la saisie du contraste
+
+        const contraste = document.getElementById('contrast');
+        contraste.addEventListener('keydown', check);
+
+        function check(event) {
+            let key = event.key
+            console.log(key);
+
+            const msg_contrast = document.getElementById('msg_contrast');
+
+            if (key >= 0 && key <= 9) {
+
+                msg_contrast.textContent = "";
+
+            } else {
+
+                event.preventDefault();
+
+                msg_contrast.textContent = "Seulement des chiffres";
+
+            }
+        }
+
+        // Contrôler les saisies de l'utilisateur avant que le formulaire soit envoyé
+
+        const formulaire = document.querySelector('form');
+
+        formulaire.addEventListener('submit', validate)
+
+        function validate(event) {
+
+            const input = formulaire.querySelector('input');
+
+            const value = input.value;
+
+            // Si les données sont valides, on envoie le formulaire
+
+            if (value == 'dark' || value == 'light') {
+
+                // On ne fait rien
+
+            } else {
+
+                // Sinon on affiche un message à l'utilisateur
+
+                event.preventDefault(); // Permet de stopper l'envoi du formulaire
+
+                const msg = document.querySelector('.msg');
+
+                msg.textContent = "Veuillez saisir light ou dark, svp";
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
