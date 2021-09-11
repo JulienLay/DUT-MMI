@@ -54,8 +54,8 @@ Mot.prototype.convertirMajPremier = function() {
  * @constructor Page
  */
  function Page(num, tabNum) {
-    this.num=num;
-    this.tabNum=tabNum;
+    this.num = num;
+    this.tabNum = tabNum;
 }
 
 /** 
@@ -63,5 +63,38 @@ Mot.prototype.convertirMajPremier = function() {
  * @constructor Livre
  */
  function Livre(isbn, editeur, tabPages) {
-    
+    this.isbn = isbn;
+    this.editeur = editeur;
+    this.tabPages = tabPages;
+}
+
+/**
+ * 
+ * @returns
+ */
+ Livre.prototype.ouvrir = function() {
+     return this.tabPages[0];
+}
+
+/**
+ * 
+ * @returns
+ */
+ Livre.prototype.lire = function(numPage) {
+    if (numPage > 0 && numPage < this.tabPages.length) {
+        return this.tabPages[numPage];
+    } else {
+        console.log("Page non définie.");
+    }
+}
+
+/**
+ * 
+ * @returns
+ */
+ Livre.prototype.afficher = function(numPage) {
+    if (numPage > 0 && numPage < this.tabPages.length) {
+        let texte = document.querySelector("p");
+        texte.textContent = " Num page : " + this.tabPages[numPage-1].num + " /  Contenu du tableau : " + this.tabPages[numPage-1].tabNum;
+    }
 }
