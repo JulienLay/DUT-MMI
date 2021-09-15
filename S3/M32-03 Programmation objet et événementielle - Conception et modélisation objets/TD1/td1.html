@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="LeCompteEstBon.js"></script>
+    <script src="MotProto.js"></script>
+    <script src="PageProto.js"></script>
+    <script src="LivreProto.js"></script>
+</head>
+<body>
+cliquer ici ...
+<div id="zone"> </div>
+<script>
+    //exo 1
+    const nb = new LeCompteEstBon(456);
+    console.log(nb.nombre);
+    console.log(nb.additionner());
+
+    //exo 2
+    
+    /*
+    const m=new Mot("irving", "nom propre");
+    m.majEnDebut();
+    console.log(m.valeur);
+     */
+
+    const tabCh=["liberté", "pour", "les", "ours"];
+    const tabType=["nom commun", "article", "article", "nom commun"];
+
+    let tabMots=[];
+    for (let i=0; i< tabCh.length; i++)
+        {
+            tabMots[i]=new Mot(tabCh[i], tabType[i]);
+        }
+
+    const p1=new Page(1, tabMots);
+
+    const l1=new Livre(1, "Folio", [p1]);
+    l1.ouvrir();
+
+    document.body.addEventListener("click", (e)=>{
+        l1.lire(); 
+        l1.afficher(document.getElementById("zone"));
+    });
+</script>
+</body>
