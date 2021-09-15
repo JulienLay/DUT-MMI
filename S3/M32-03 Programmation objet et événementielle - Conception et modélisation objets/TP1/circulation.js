@@ -47,7 +47,7 @@ Inventaire :
  * @constructor Voiture
  */
 
- function Voiture(numIma, marque, type) {
+function Voiture(numIma, marque, type) {
     this.numIma = numIma;
     this.marque = marque;
     this.type = type;
@@ -59,7 +59,7 @@ Inventaire :
  * @param plus valeur d'acceleration
  */
 Voiture.prototype.accelerer = function(plus) {
-    this.vitCour+=plus;
+    this.vitCour += plus;
 };
 
 /**
@@ -67,7 +67,7 @@ Voiture.prototype.accelerer = function(plus) {
  * @param moins valeur de deceleration 
  */
 Voiture.prototype.freiner = function(moins) {
-    this.vitesse=(this.vitesse-moins>=0)?this.vitesse-moins:0;
+    this.vitCour = (this.vitCour - moins >= 0) ? this.vitCour - moins : 0;
 };
 
 
@@ -97,32 +97,32 @@ function Camion(numIma, marque, poidsMax) {
  * accelerer
  * @param plus valeur d'acceleration
  */
-Camion.prototype.accelerer = function() {
-    this.vitCour+=plus;
+Camion.prototype.accelerer = function(plus) {
+    this.vitCour += plus;
 };
 
 /**
  * freiner
  * @param moins valeur de deceleration 
  */
-Camion.prototype.freiner = function() {
-    this.vitesse=(this.vitesse-moins>=0)?this.vitesse-moins:0;
+Camion.prototype.freiner = function(moins) {
+    this.vitCour = (this.vitCour - moins >= 0) ? this.vitCour - moins : 0;
 };
 
 /**
  * charger
- * @param
+ * @param poids poids à ajouter
  */
-Camion.prototype.charger = function() {
-    if (this.charge+poids<=this.poidsMax) this.charge = this.charge + poids;
+Camion.prototype.charger = function(poids) {
+    if (this.poidsCour + poids <= this.poidsMax) this.poidsCour += poids;
 };
 
 /**
  * decharger
- * @param
+ * @param poids poids à enlever
  */
-Camion.prototype.decharger = function() {
-    
+Camion.prototype.decharger = function(poids) {
+    if (this.poidsCour > poids) this.poidsCour -= poids;
 };
 
 
@@ -131,31 +131,35 @@ Camion.prototype.decharger = function() {
 
 /** 
  * @param nbMax
- * @param vitesse
- * @param tabVoitures
- * @param tabCamions
+ * @param vMax
  * @constructor Route
  */
 
- function Route(nbMax, vitesse, tabVoitures, tabCamions) {
+function Route(vMax, nbMax) {
+    this.vMax = vMax;
+    this.lv = [];
+    this.nb = 0;
     this.nbMax = nbMax;
-    this.vitesse = vitesse;
-    this.tabVoitures = tabVoitures;
-    this.tabCamions = tabCamions;
 }
 
 /**
- * controler
- * @param
+ * ajouter
+ * @param y
  */
-Route.prototype.controler() = function (){
-
+Route.prototype.ajouter = function(y) {
+    if (y != null && this.nb < this.nbMax) this.lv[this.nb++] = y;
 };
 
 /**
- * verbaliser
+ * controlerRadar
  * @param
  */
-Route.prototype.verbaliser() = function (){
-    
+Route.prototype.controlerRadar = function() {
+    let voit = [];
+    for (let i = 0; i < this.nb; i++) {
+        if (this.lv[i].vitCour > this.vMax) {
+            voit.push(this.lv[i]);
+        }
+    }
+    return voit;
 };

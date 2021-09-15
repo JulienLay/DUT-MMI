@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="circulation.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const voiture1 = new Voiture(1111, "Citroen", "berline");
+        const voiture2 = new Voiture(2222, "Ferrari", "cabriolet");
+        const voiture3 = new Voiture(3333, "Volswagen", "break");
+        const camion1 = new Camion(1111, "Citroen", 200);
+        const camion2 = new Camion(2222, "Ferrari", 400);
+        const camion3 = new Camion(3333, "Volswagen", 600);
+        const vehicules = new Array(voiture1, voiture2, voiture3, camion1, camion2, camion3);
+
+        voiture1.accelerer(200);
+        voiture1.freiner(30);
+        console.log(voiture1);
+
+        camion1.accelerer(30);
+        camion1.freiner(30);
+        camion1.charger(125);
+        camion1.decharger(75);
+        console.log(camion1);
+
+        const autoroute = new Route(90, 2);
+        autoroute.ajouter(voiture1);
+        autoroute.ajouter(voiture2);
+        autoroute.ajouter(voiture3);
+
+        console.log(autoroute.controlerRadar(voiture1));
+    </script>
+</body>
+
+</html>
