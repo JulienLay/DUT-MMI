@@ -1,0 +1,36 @@
+Choix : Site sur être un développeur
+
+5 parties
+
+- Partie "Accueil"/"Introduction" du site 
+- Partie UI/UX
+- Partie sur le back-end
+- Les compétences à avoir (barre de chargement des compétences)
+- Footer (avec formulaire, réseaux sociaux)
+
+Regarder la doc de bootstrap pour mettre des menus, et plein d'autres trucs
+Mettre des icones ?
+Site en noir et blanc ?
+
+-----------------------------------------------------------------
+
+
+Réalisation 1er TP
+
+Choix du thème / OK
+Design – infographie – charte graphique /  
+Prévision organisation par rapport au nombre de TP /
+Mise en place du squelette / 
+
+Test de l’ensemble des possibilités de réalisation via bootstrap et la documentation 
+
+
+Organisation des tp :
+
+Chaque étudiant organise son planning à partir de s41.
+
+Conseil : 
+ - wireframe
+ - html
+ - Bootstrap
+ - Css
