@@ -1,7 +1,8 @@
-.row {
+/* .row { 
     margin-bottom: 15px;
 }
-
+*/
+/*  
 .row [class^="col-"] {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -10,7 +11,78 @@
     background-color: rgba(86,61,124,.15);
     border: 1px solid rgba(86,61,124,.2);
 }
-
-.bg-test {
+*/
+/* .bg-test {
     background-color: #B647C1;    
 }
+
+#image {
+    width: 300px;
+}
+
+h1 {
+    margin: 50px;
+}
+
+/* Barre progressive */
+/* 
+#progress {
+    background-color: black;
+    height: 3px;
+    position: fixed;
+    top: 100;
+    left: 100;
+    z-index: 9999;
+}
+*/
+/* Bouton top */
+/*
+#scroll_to_top {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    bottom: 50px;
+    right: 30px;
+}
+
+#scroll_to_top img {
+    width: 50px;
+}
+      
+
+h1 {
+    text-align: center;
+}
+
+#accueil {
+    background-image: url(img/background-image.png);
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+    text-align: center;
+}
+
+#accueil button {
+    margin-top: 50vh;
+}
+
+.carousel {
+    width: 50%;
+}
+
+#formulaire {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    width: 50px;
+    border-radius: 25%;
+}
+
+#pages {
+    text-align: center;
+} */
