@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Météo</title>
+</head>
+<body>
+    <h1>Meteo</h1>
+    <form id="formulaire">
+        <input type="text" id="ville" value="">
+        <input type="submit" value="Valider">
+    </form>
+    <table>
+        <tr>
+            <td>Ville</td>
+            <td id="laville"></td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td id="temperature"></td>
+        </tr>
+        <tr>
+            <td>Pression</td>
+            <td id="pression"></td>
+        </tr>
+        <tr>
+            <td>Humidité</td>
+            <td id="humidite"></td>
+        </tr>
+        <tr>
+            <td>Vitesse du vent</td>
+            <td id="vitesse"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td id="description"></td>
+        </tr>
+    </table>
+    <div id="image"></div>
+    <script src="meteo.js"></script>
+</body>
+</html>

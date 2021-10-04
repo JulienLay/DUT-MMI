@@ -72,10 +72,6 @@ Voiture.prototype.freiner = function(moins) {
 
 
 
-
-
-
-
 /** 
  * @param numIma
  * @param marque

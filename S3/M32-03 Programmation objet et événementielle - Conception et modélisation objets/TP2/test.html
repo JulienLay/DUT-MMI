@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="point.js"></script>
+    <script src="figure.js"></script>
+    <script src="polygone.js"></script>
+    <script src="losange.js"></script>
+    <script src="cercle.js"></script>
+    <script src="FileFigure.js"></script>
+    <script>
+        /*  
+                                                                                                                                                                let p1 = new Point();
+                                                                                                                                                                let p2 = new Point(4, 1);
+                                                                                                                                                                // distance entre deux points
+                                                                                                                                                                console.log("distance p1p2 = " + p1.distance(p2))                                                                            
+                                                                                                                                                                let p3 = new Point(4, 4);
+                                                                                                                                                                let figure1 = new Figure(new Array(p1,p2));
+                                                                                                                                                                figure1.ajouterPoint(p3);
+                                                                                                                                                                console.log(figure1);
+                                                                                                                                                        */
+
+        // creation d'un polygone à 5 sommets
+        let p0 = new Point(0, 0),
+            p1 = new Point(1, 1),
+            p2 = new Point(1, 2),
+            p3 = new Point(0, 3),
+            p4 = new Point(-1, 2);
+
+        let losange = new Losange(new Array(p0, p1, p2, p3));
+        let penta = new Polygone(new Array(p0, p1, p2, p3, p4));
+        // perimetre du polygone
+        console.log("perimetre de penta (doit être 7,47...) = " + penta.perimetre());
+        //dimension
+        console.log("dimension de penta = " + penta.dimension());
+
+        //nb cotes
+        console.log("nb de cotes de penta = " + penta.nombreDeCotes());
+
+        //losange
+        console.log(losange.nombreDeCotes());
+        console.log(losange.perimetre());
+        console.log(losange.toString());
+
+        // cercle
+        let cercle = new Cercle(new Array(p1), 5);
+        cercle.toString();
+        console.log(cercle.perimetre());
+
+        let cercle2 = new Cercle(new Array(p1), 6);
+
+        //file
+        let maFile = new FileFigure(new Array(cercle, losange, penta, cercle2));
+        console.log(maFile);
+        console.log(maFile.file);
+        maFile.composition();
+        maFile.sortirCercle();
+        maFile.composition();
+    </script>
+</body>
+
+</html>

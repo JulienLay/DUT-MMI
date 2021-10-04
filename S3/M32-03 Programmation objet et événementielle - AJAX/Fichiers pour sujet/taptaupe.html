@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+   <head>
+	  <meta charset="UTF-8">
+      <title>Jeu Tap'Taupe</title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	  <style>
+	   div.prairie { display : inline-block;width:70%; }
+	   div.controle { display : inline-block;width:28%;vertical-align:top; }
+	   #taupe { position: absolute; z-index: 2; }
+	   #taupecachee { position: absolute; z-index: 2; }
+	  </style>
+   </head>
+   <body> 	 
+      <div class="prairie"><img id="prairie" src="prairie.png" /></div>
+	  <div class="controle">
+		<input id="commencer" type="button" value="commencer"><br>
+		<label>Score : </label><input id="score" value="0" size="3" type="text" readonly>
+	  </div>
+	  <div id="taupe"><img src="taupe.png" /></div>
+      <div id="taupecachee"><img src="taupecachee.png" /></div>
+   </body>
+   <script src="taptaupe.js"></script>
+</html>
