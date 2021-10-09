@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://moodle.iut-tlse3.fr/pluginfile.php/219740/mod_resource/content/3/test1.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>test Entite</title>
+    <script src="Entite.js"></script>
+    <!-- <script src="./test Entite_files/EntiteClass.js.téléchargement"></script> -->
+</head>
+<body>
+<script>
+    const e1=new Entite(10, 5, 20, 20);
+    const e2=new Entite(15, 10, 10, 10);
+    const e3=new Entite(5, 25, 10, 10);
+
+    console.log("la réponse doit être false : "+ e1.toucher(e2));
+    console.log("la réponse doit être false : "+ e1.toucher(e3));
+    console.log("la réponse doit être true : "+ e2.toucher(e1));
+    console.log(e1.toString());
+
+    const tab = new Array(e1, e2, e3);
+    const env = new Environnement(50, 50, tab);
+    env.ajouter(e1);
+    env.supprimer(e1);
+    console.log(env);
+</script>
+
+</body></html>

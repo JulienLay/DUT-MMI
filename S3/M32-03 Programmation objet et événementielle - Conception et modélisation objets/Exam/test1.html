@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Une idée de neurones...</title>
+    <script src="Neurone.js"></script>
+</head>
+
+<body>
+    <script>
+        let inputs = [1, 1];
+        let n = new Neurone(2);
+        console.log(n);
+        console.log(n.toString());
+        console.log("le neurone répond : " + n.activation(n.somme(inputs)));
+        // console.log("le neurone répond : " + n.calculerSortie(inputs));
+        /* console.log("on a : ");
+        let somme=0;
+         console.log(inputs.forEach(e=>somme+=e));
+         console.log(somme);*/
+    </script>
+</body>
+
+</html>

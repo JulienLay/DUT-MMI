@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <script src="circulation3.js"></script>
+    <script src="circulation5.js"></script>
     <script>
         const voiture1 = new Voiture(1111, "Citroen", "berline");
         const voiture2 = new Voiture(2222, "Ferrari", "cabriolet");
@@ -23,18 +23,19 @@
         voiture1.freiner(30);
         console.log(voiture1);
 
-        camion1.accelerer(30);
+        camion1.accelerer(70);
         camion1.freiner(30);
         camion1.charger(125);
         camion1.decharger(75);
+        camion1.allerAFond();
         console.log(camion1);
 
-        const autoroute = new Route(90, 2);
-        autoroute.ajouter(voiture1);
-        autoroute.ajouter(voiture2);
-        autoroute.ajouter(voiture3);
+        // const autoroute = new Route(90, 2);
+        // autoroute.ajouter(voiture1);
+        // autoroute.ajouter(voiture2);
+        // autoroute.ajouter(voiture3);
 
-        console.log(autoroute.controlerRadar(voiture1));
+        // console.log(autoroute.controlerRadar(voiture1));
     </script>
 </body>
 

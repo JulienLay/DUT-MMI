@@ -5,18 +5,21 @@
  * @constructor Voiture
  */
 
-class Vehicule {
-    constructor(numIma, marque) {
+ class Voiture {
+    constructor(numIma, marque, type) {
         this._numIma = numIma;
         this._marque = marque;
+        this._type = type;
         this._vitCour = 0;
     }
+
     accelerer(plus) {
         this._vitCour += plus;
     }
+
     freiner(moins) {
         this._vitCour = (this._vitCour - moins >= 0) ? this._vitCour - moins : 0;
-        console.log("ralentir de véhicule");
+        console.log("ralentir de Voiture");
     }
 
     get numIma() {
@@ -24,6 +27,9 @@ class Vehicule {
     }
     get marque() {
         return this._marque;
+    }
+    get type() {
+        return this._type;
     }
     get vitCour() {
         return this._vitCour;
@@ -35,52 +41,35 @@ class Vehicule {
     set marque(value) {
         this._marque = value;
     }
-    set vitCour(value) {
-        this._vitCour = value;
-    }
-
-}
-
-class Voiture extends Vehicule {
-    constructor(numIma, marque, type) {
-        // APPEL DU CONSTRUCTEUR DE LA SUPERCLASSE
-        super(numIma, marque);
-        // + vitesse de la superclasse pris en compte
-        this._type = type;
-    }
-
-    get type() {
-        return this._type;
-    }
     set type(value) {
         this._type = value;
     }
-
+    set vitCour(value) {
+        this._vitCour = value;
+    }
 }
 
-class Camion extends Vehicule {
+
+class Camion extends Voiture {
     constructor(numIma, marque, poidsMax) {
-        // APPEL DU CONSTRUCTEUR DE LA SUPERCLASSE
-        super(numIma, marque);
-        // + vitesse de la superclasse pris en compte
+        //APPEL de la super-classe Voiture
+        super(numIma, marque, vitCour)
         this._poidsCour = 0;
         this._poidsMax = poidsMax;
     }
+
+    freiner(moins) {
+        super.freiner(moins)
+        this._vitCour -= 6;
+        console.log("ralentir de Camion");
+    }
+
     charger(poids) {
         if (this.poidsCour + poids <= this.poidsMax) this.poidsCour += poids;
     }
+
     decharger(poids) {
         if (this.poidsCour > poids) this.poidsCour -= poids;
-    }
-
-    freiner(moins) {
-        super.freiner(moins); // APPEL DE LA METHODE DE LA SUPERCLASSE
-        this._vitCour -= 6; // On freine de 6 // Permet d'ajouter une fonction a une méthode déja existante + éviter de le recopier.
-        console.log("ralentir de camion");
-    }
-    allerAFond() {
-        super.accelerer(); // reprend l'accélération du véhicule
-        this._vitCour = 100;
     }
 
     get poidsCour() {
@@ -89,10 +78,61 @@ class Camion extends Vehicule {
     get poidsMax() {
         return this._poidsMax;
     }
+
     set poidsCour(value) {
         this._poidsCour = value;
     }
     set poidsMax(value) {
         this._poidsMax = value;
+    }
+}
+
+
+class Route {
+    constructor(vMax, nbMax) {
+        this._vMax = vMax;
+        this._lv = [];
+        this._nb = 0;
+        this._nbMax = nbMax;
+    }
+
+    ajouter(y) {
+        if (y != null && this.nb < this.nbMax) this.lv[this.nb++] = y;
+    }
+
+    controlerRadar() {
+        let voit = [];
+        for (let i = 0; i < this.nb; i++) {
+            if (this.lv[i].vitCour > this.vMax) {
+                voit.push(this.lv[i]);
+            }
+        }
+        return voit;
+    }
+
+    get vMax() {
+        return this._vMax;
+    }
+    get lv() {
+        return this._lv;
+    }
+    get nb() {
+        return this._nb;
+    }
+    get nbMax() {
+        return this._nbMax;
+    }
+
+    set vMax(value) {
+        this._vMax = value;
+    }
+    set lv(value) {
+        this._lv = value;
+    }
+    set nb(value) {
+        this._nb = value;
+    }
+    set nbMax(value) {
+        this._nbMax = value;
     }
 }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test Entite</title>
+    <script src="Utils.js"></script>
+    <script src="Entite.js"></script>
+    <script src="Environnement.js"></script>
+</head>
+<body>
+<script>
+    const e1=new Entite(10, 5, 20, 20);
+    const e2=new Entite(15, 10, 10, 10);
+    const e3=new Entite(5, 25, 10, 10);
+
+    const env=new Environnement(100, 100, [e1]);  // création avec une entité
+    env.ajouter(e2);
+
+    console.log("la réponse doit être entite (10,5),entite (15,10) : "+
+        env.listeEntites.map(function(item) { return item.toString(); })
+    );
+    env.supprimer(e3);
+    console.log("la réponse doit être entite (10,5),entite (15,10) : "+
+        env.listeEntites.map(function(item) { return item.toString(); })
+    );
+
+    env.supprimer(e1);
+    console.log("la réponse doit être entite (15,10) : "+
+        env.listeEntites.map(function(item) { return item.toString(); })
+    );
+
+
+</script>
+</body>
+</html>
