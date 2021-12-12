@@ -1,0 +1,130 @@
+
+# -----------------------------------------------------------------------------
+#       TABLE : membre
+# -----------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS membre
+ (
+   IDMEMBRE INTEGER NOT NULL  ,
+   NOM VARCHAR(40) NOT NULL  ,
+   PRENOM VARCHAR(40) NULL  ,
+   EMAIL VARCHAR(128) NOT NULL  ,
+   PASSWORD VARCHAR(15) NOT NULL  ,
+   ANNEENAISSANCE INTEGER NULL  ,
+   SEXE VARCHAR(2) NULL  ,
+   VOITURE VARCHAR(128) NULL  ,
+   TELPORTABLE VARCHAR(12) NOT NULL ,
+   ADMIN INTEGER NOT NULL,
+   PRIMARY KEY (IDMEMBRE) 
+ ) 
+ comment = "";
+
+# -----------------------------------------------------------------------------
+#       TABLE : itineraire
+# -----------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS itineraire
+ (
+   IDITI INTEGER NOT NULL  ,
+   IDMEMBRE INTEGER NOT NULL  ,
+   LIEUDEPART VARCHAR(128) NULL  ,
+   LIEUARRIVEE VARCHAR(128) NULL  ,
+   HEUREDEPART TIME NULL  ,
+   DATEDEPART DATE NULL  ,
+   TARIF DECIMAL(13,2) NOT NULL  ,
+   NBPLACES INTEGER NOT NULL  ,
+   BAGAGESAUTORISES INTEGER NOT NULL  ,
+   DETAILS VARCHAR(255) NULL  
+   , PRIMARY KEY (IDITI) 
+ ) 
+ comment = "";
+
+# -----------------------------------------------------------------------------
+#       INDEX DE LA TABLE itineraire
+# -----------------------------------------------------------------------------
+
+
+CREATE  INDEX I_FK_ITINERAIRE_MEMBRE
+     ON itineraire (IDMEMBRE ASC);
+
+# -----------------------------------------------------------------------------
+#       TABLE : reserver
+# -----------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS reserver
+ (
+   IDMEMBRE INTEGER NOT NULL  ,
+   IDITI INTEGER NOT NULL  ,
+   DATERESERVATION DATETIME NULL ,
+   NBPLACESRESERVEES INTEGER NOT NULL
+   , PRIMARY KEY (IDMEMBRE,IDITI) 
+ ) 
+ comment = "";
+
+# -----------------------------------------------------------------------------
+#       INDEX DE LA TABLE reserver
+# -----------------------------------------------------------------------------
+
+
+CREATE  INDEX I_FK_RESERVER_MEMBRE
+     ON reserver (IDMEMBRE ASC);
+
+CREATE  INDEX I_FK_RESERVER_ITINERAIRE
+     ON reserver (IDITI ASC);
+
+# -----------------------------------------------------------------------------
+#       TABLE : faire_commentaire
+# -----------------------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS faire_commentaire
+ (
+   IDMEMBRE INTEGER NOT NULL  ,
+   IDMEMBRE_1 INTEGER NOT NULL  ,
+   DATECOMMENTAIRE DATETIME NOT NULL  ,
+   TEXTECOMMENTAIRE VARCHAR(255) NULL  ,
+   CODEQUALITE INTEGER NULL  
+   , PRIMARY KEY (IDMEMBRE,IDMEMBRE_1) 
+ ) 
+ comment = "";
+
+# -----------------------------------------------------------------------------
+#       INDEX DE LA TABLE faire_commentaire
+# -----------------------------------------------------------------------------
+
+
+CREATE  INDEX I_FK_FAIRE_COMMENTAIRE_MEMBRE
+     ON faire_commentaire (IDMEMBRE ASC);
+
+CREATE  INDEX I_FK_FAIRE_COMMENTAIRE_MEMBRE1
+     ON faire_commentaire (IDMEMBRE_1 ASC);
+
+
+# -----------------------------------------------------------------------------
+#       CREATION DES REFERENCES DE TABLE
+# -----------------------------------------------------------------------------
+
+
+ALTER TABLE itineraire 
+  ADD FOREIGN KEY FK_ITINERAIRE_MEMBRE (IDMEMBRE)
+      REFERENCES membre (IDMEMBRE) ;
+
+
+ALTER TABLE reserver 
+  ADD FOREIGN KEY FK_RESERVER_MEMBRE (IDMEMBRE)
+      REFERENCES membre (IDMEMBRE) ;
+
+
+ALTER TABLE reserver 
+  ADD FOREIGN KEY FK_RESERVER_ITINERAIRE (IDITI)
+      REFERENCES itineraire (IDITI) ;
+
+
+ALTER TABLE faire_commentaire 
+  ADD FOREIGN KEY FK_FAIRE_COMMENTAIRE_MEMBRE (IDMEMBRE)
+      REFERENCES membre (IDMEMBRE) ;
+
+
+ALTER TABLE faire_commentaire 
+  ADD FOREIGN KEY FK_FAIRE_COMMENTAIRE_MEMBRE1 (IDMEMBRE_1)
+      REFERENCES membre (IDMEMBRE) ;
+

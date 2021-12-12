@@ -1,0 +1,7 @@
+trier les fonctions par commentaireManager, utilisateurManager etc --> normalement c'est OK
+
+enlever les foreach quand on recupere qu'un seul élément OK
+
+faire un tableau vertical (th th--> tr td td tr )
+
+faire du clean code : enlever les boucles inutiles et changer les noms des fonctions + mettre de bons commentaires OK

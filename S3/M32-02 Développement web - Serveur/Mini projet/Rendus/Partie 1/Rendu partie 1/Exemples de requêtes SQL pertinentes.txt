@@ -1,0 +1,15 @@
+Pour UTILISATEUR:
+
+SELECT nom, prenom FROM UTILISATEUR
+
+Pour JEU:
+
+SELECT nom_possede, nom, nombrejoueurs, tempsmoyen, regle, materiel FROM JEU
+
+Pour EVALUER:
+
+SELECT note, commentaire, heureevaluation, dateevaluation FROM EVALUER
+
+Pour CATEGORIE:
+
+SELECT nom FROM CATEGORIE
