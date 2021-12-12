@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluation 2021-2022</title>
+    <script src="Case.js"></script>
+    <script src="Drone.js"></script>
+    <script src="DroneTerrestre.js"></script>
+    <script src="DroneAerien.js"></script>
+    <script src="Colonie.js"></script>
+</head>
+<body>
+
+<script>
+    const d1 = new DroneTerrestre("Wall-E1", 11, 4); // nom - adresse - nbre de roues
+    const d2 = new DroneTerrestre("Wall-E2",12, 4);
+    const d3 = new DroneAerien("Eve1", 21, 5.0); // nom - adresse - hauteur de vol
+
+
+    d3.bouger(d3._pLigne+2, d3._pColonne);
+    d3.bouger(d3._pLigne, d3._pColonne-2);
+    d3.bouger(d3._pLigne, d3._pColonne-2);
+
+    const colo = new Colonie(20,20, [d1, d2, d3]);
+
+    colo.ajouterDrone(new DroneTerrestre("Wall-E3", 13));
+    colo.ajouterDrone(new DroneAerien("Eve1", 22));
+    colo.ajouterDrone(new DroneAerien("Eve2", 23));
+
+    console.log(`voici la colonie : ${colo}`);
+
+     // les 2 lignes suivantes ne changent pas la colonie
+    colo.ajouterDrone(new DroneTerrestre("Wall-E3",13,5));
+    colo.ajouterDrone(new DroneAerien("Eve1",23));
+
+    console.log(`voici la colonie : ${colo}`);
+
+    console.log(`les noms des drones sont : \n ${colo.listeNom()}`);
+    //  Eve1 Eve2 Eve3 Wall-E1 Wall-E2 Wall-E3
+    console.log(`les déplacements de Eve1 sont : \n ${colo.getDeplacements("Eve1")}`);
+
+    console.log(`les cases occupées sont : \n ${colo.getOccupation()}`)
+
+    for(const value of this._tabDrones.values()) {
+        console.log(values);
+    }
+    
+</script>
+</body>
+</html>

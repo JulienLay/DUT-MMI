@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <title>Formulaire</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <form method="GET" action="#" id="form" class="form-example">
+                <div class="mb-3">
+                    <label>Nom</label>
+                    <input id="nom" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label>Prenom</label>
+                    <input id="prenom" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label>Age</label>
+                    <input id="age" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleMail" class="form-label">Mail</label>
+                    <input type="text" class="form-control" id="mail">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
+                    <input type="text" class="form-control" id="mdp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Reclamation</label>
+                    <textarea name="" cols="30" rows="10" class="form-control" id="reclamation"></textarea>
+                </div>
+                <button id="bouton" type="submit" class="btn btn-primary">Envoyer la reclamation</button>
+                <button type="text" class="btn btn-primary">Réinitialiser le formulaire</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="etudiant.js"></script>
+    <script src="reclamation.js"></script>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", prendreDonnees);
+
+        function prendreDonnees(e) {
+            e.preventDefault();
+            let nom = document.getElementById("nom").value;
+            let prenom = document.getElementById("prenom").value;
+            let age = document.getElementById("age").value;
+            let mail = document.getElementById("mail").value;
+            let mdp = document.getElementById("mdp").value;
+            let reclamation = document.getElementById("reclamation").value;
+            let etudiant = new Etudiant(nom, prenom, age, mail, mdp, reclamation);
+            console.log(etudiant);
+
+            let exprAge = /^\d{1,3}$/;
+            let exprMdp = /\W+/;
+            let exprPrenom = /^[A-Z]{1}[a-z]+-*[a-zA-z]+$/;
+            let exprMail = /^(\w\_*\-*\.*)+@([a-zA-Z]+\w{2,}_*-*)+\.([a-zA-Z]\w{2,}_*-*)+\.[a-zA-Z]{2,3}$/; // à compléter depuis l'énoncé du TP pour bien vérifier le mail
+
+            if (!exprPrenom.test(prenom)) {
+                window.alert("Entrez un prenom correct")
+            } else {
+                if (!exprAge.test(age)) {
+                    window.alert("Entrez un age avec des chiffres")
+                } else {
+                    if (!exprMail.test(mail)) {
+                        window.alert("Entrez un mail correct")
+                    } else {
+                        if (!exprMdp.test(mdp)) {
+                            window.alert("Entrez mot de passe contient au moins un caractère non alphanumérique")
+                        } else {
+                            //Reclamation
+                            let reclam;
+                            try {
+                                reclam = new Reclamation(reclamation);
+                            } catch (e) {
+                                reclamation = reclamation.replace(/tamere/ig, "******");
+                                reclam = new Reclamation(reclamation);
+                            }
+                            console.log(reclam);
+                            console.log("nombre de phrases : " + reclam.nombreDePhrase());
+                            console.log("phrase numéro 5 : " + reclam.retournePhraseNumero(5));
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        // test de l'énoncé
+
+        const reg = new RegExp("[A-Z]+", "g");
+        let ch = "Lundi Mardi MERcredi";
+        let res = reg.exec(ch);
+        while (res !== null) {
+            console.log("on trouve " + res[0] + " à l'indice " + (reg.lastIndex - 1));
+            res = reg.exec(ch); // on relance la recherche à partir de lastIndex
+        }
+    </script>
+</body>
+
+</html>
