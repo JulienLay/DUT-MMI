@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test Entite</title>
+    <style>
+        .personnage {
+            position: absolute;
+            border-radius: 20px;
+            background-color: #B10000;
+        }
+
+        #terrain {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background-color: #CCC;
+        }
+    </style>
+    <script src="Util.js"></script>
+    <script src="Entite.js"></script>
+    <script src="Environnement.js"></script>
+    <script src="Personnage.js"></script>
+</head>
+<body>
+<div id="terrain"></div>
+<script>
+    function $(elt) {
+        return document.getElementById(elt);
+    }
+
+    let conteneur = $("terrain");
+    const e1 = new Personnage("e1", 10, 5, 20, 20, Direction.direction[0], 1, {largeur:conteneur.offsetWidth, hauteur:conteneur.offsetHeight});
+    e1.ajouterRepresentation(conteneur);
+    const e2 = new Personnage("e2", 15, 10, 10, 10, Direction.direction[7], 1);
+    e2.ajouterRepresentation(conteneur);
+    const e3 = new Personnage("e3", 5, 25, 10, 10, Direction.direction[8], 1);
+    e3.ajouterRepresentation(conteneur);
+    e1.promener();
+</script>
+</body>
+</html>
