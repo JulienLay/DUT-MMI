@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Développeur web</title>
+</head>
+
+<body>
+    <!-- Bouton haut de page -->
+    <div id="scroll_to_top">
+        <a href="#top"><img src="img/top.png" alt="Retourner en haut" /></a>
+    </div>
+
+    <!-- Barre de progression -->
+    <div id="progress"></div>
+        
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://webmmi.iut-tlse3.fr/~lwj3346a/bootstrap/"><img src="img/logo.png"
+                        alt="logo" style="width: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item active ">
+                            <a class="navlink" href="#top">ACCUEIL</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="navlink " href="#uiuxdesign">UI/UX DESIGN</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="navlink " href="#code">CODE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink" href="#competences">COMPÉTENCES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="navlink" href="#contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+
+            <!-- ACCUEIL -->
+            <div class="d-flex flex-column align-items-center justify-content-center" id="accueil">
+                <h1>DÉVELOPPEUR <br>FULL STACK</h1>
+                <p>Apprenez le chemin d'un développeur dans le milieu du digital.</p>
+                <button onclick="window.location.href='#uiuxdesign'" type="button" class="btn bg-dark text-white">Entrer sur le site</button>
+            </div>
+
+            <!-- UI/UX DESIGN -->
+            <div class="container-fluid ui">
+                <div class="container">
+
+                    <div id="uiuxdesign"></div>
+                    <div style="height: 50px;"></div>
+                    <h1 class="text-white">UI/UX DESIGN</h1>
+                    <div class="row align-items-center uiux">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column">
+                            <h2 class="align-self-center text-white">UI/UX</h2>
+                            <p class="align-self-center text-white">L’UX designer travaille en collaboration avec les
+                                graphistes, les
+                                développeurs et les chefs de produit, et ce, dans une démarche centrée sur
+                                l’utilisateur. Il
+                                adapte les technologies à différents clients : boutique en ligne, service mobile, site
+                                corporate… Après avoir été briefé par le chef de produit, il identifie les objectifs du
+                                projet
+                                de son client pour faire naître un concept global.
+
+                                <br><br> Ce concept doit améliorer l’usage d’un dispositif numérique (site web,
+                                application
+                                mobile, borne interactive, etc.), sachant qu’aujourd’hui, la navigation intuitive,
+                                l’efficacité
+                                et la recherche de l’émotion face à l’outil numérique font partie des attentes des
+                                utilisateurs.
+                            </p>
+                        </div>
+                        <img class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" src="img/ui_ux.jpg" alt="" id="image">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center second">
+                        <img class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6" src="img/responsive.jpg" alt="" id="image2">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 d-flex flex-column">
+                            <h2 class="align-self-center text-white">ASPECT</h2>
+                            <p class="align-self-center text-white">L’UX designer cherche les scénarios et les parcours
+                                d’usage qui
+                                adoptent le point de vue de l’utilisateur, en ciblant des interactions faciles et
+                                agréables. Il
+                                effectue des recherches, en contexte et à travers des études, pour définir les parcours
+                                utilisateurs les plus adaptés.
+                                <br><br> Il définit ensuite des « personas » représentant un groupe cible. Il schématise
+                                les
+                                interfaces, les scénarios d’usage, les arborescences… Et propose des solutions pour
+                                chaque point
+                                noir de l’expérience utilisateur identifié.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!-- CODE -->
+        <h1>CODE</h1>
+        <section>
+            <div class="container">
+                <div id="code"></div>
+                <div style="height: 50px;"></div>
+                <div class="align-items-center">
+                    <div class="row">
+                        <div class="card bg-dark text-white col-12 col-sm-12 col-md-6 col-lg-6">
+                            <img class="card-img" src="img/front.jpg" alt="Card image" style="height: 100%;">
+                            <div class="card-img-overlay">
+                            </div>
+                            <div class="card-body">
+                                <h5>Développement Front-End</h5>
+                            </div>
+                        </div>
+                        <div class="card bg-dark text-white col-12 col-sm-12 col-md-6 col-lg-6">
+                            <img class="card-img" src="img/backend.jpeg" alt="Card image" style="height: 100%;">
+                            <div class="card-img-overlay">
+                            </div>
+                            <div class="card-body">
+                                <h5>Développement Back-End</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card-group">
+                        <div class="card col-12 col-sm-12 col-md-12 col-lg-12">
+                            <img class="card-img-top" src="img/uiux.png" alt="Card image cap"
+                                style="width:25%; margin-left: auto; margin-right: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Développeur Front-End</h5>
+                                <p class="card-text">Le Développeur Front-End est en charge d’optimiser
+                                    <strong>l’ergonomie</strong> et la navigation d’un site web. <br><br>
+
+                                    Son travail est visible à l’écran et le rendu est l’élément premier que
+                                    l’utilisateur
+                                    verra. <br><br>
+
+                                    Afin de rendre l’interface des utilisateurs agréable, le Développeur Front-End se
+                                    tient
+                                    régulièrement informé des évolutions web. <br><br>
+
+                                    Son objectif est de proposer un site internet ergonomique et accessible. Pour cela,
+                                    une
+                                    connaissance approfondie des normes du W3C lui est nécessaire. Elle lui permet de
+                                    soumettre un contenu optimal tout en respectant les exigences des navigateurs web.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">ERGONOMIE</small>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-12 col-md-12 ">
+                            <img class="card-img-top" src="img/a.png" alt="Card image cap"
+                                style="width:25%; margin-left: auto; margin-right: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Développeur Back-End</h5>
+                                <p class="card-text">Le Développeur Back-End est en charge de l’ensemble des
+                                    <strong>fonctionnalités</strong> d’un site web. <br><br>
+
+                                    A la différence du Développeur Front-End, le Développeur Back-End ne s’occupe pas de
+                                    l’aspect ergonomique du site mais de l’aspect technique et fonctionnel.<br><br>
+
+                                    Il travaille dans l’ombre. Il peut concevoir un site web et dans ce cas réaliser
+                                    lui-même l’architecture technique du site ; ou bien rester sur la plateforme
+                                    instaurée
+                                    et adapter des solutions techniques sur celle-ci.<br><br>
+
+                                    S’il crée le site, il devra partir de zéro et prendre en considération les
+                                    inconvénients
+                                    auxquels il devra faire face tout comme les leviers disponibles qu’il pourra mettre
+                                    en
+                                    place.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">FONCTIONALITÉS</small>
+                            </div>
+                        </div>
+                        <div class="card col-12 col-sm-12 col-md-12 col-lg-12">
+                            <img class="card-img-top" src="img/cible.png" alt="Card image cap"
+                                style="width:25%; margin-left: auto; margin-right: auto;">
+                            <div class="card-body">
+                                <h5 class="card-title">Développeur Full Stack</h5>
+                                <p class="card-text">Au final, le Développeur Full Stack est le regroupement des travaux
+                                    du
+                                    Développeur Front-End et du Développeur Back-end. <br><br>
+
+                                    Un Développeur Full Stack est un “développeur à tout faire”. Aussi bien capable de
+                                    coder
+                                    sur la partie front que back, il connaît toute la chaîne de développement d’un
+                                    logiciel
+                                    ou d’un site web et est à l’aise avec plusieurs langages et technologies.<br><br>
+
+                                    Un Développeur Full Stack doit être généraliste. Il peut être amené à travailler sur
+                                    chaque étape de création d’un site ou d’une application : du développement à la
+                                    production de celui-ci.</p>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-muted">FRONT-END & BACK-END</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- COMPÉTENCES -->
+        <div class="container-fluid ui">
+            <div class="container">
+                <div id="competences"></div>
+                <div style="height: 50px;"></div>
+                <h1 class="text-white">COMPÉTENCES</h1>
+                <div class="row text-white">
+                    <p>Le Développeur Full Stack est le regroupement des travaux du Développeur Front-End et du
+                        Développeur
+                        Back-end.
+
+                        Un Développeur Full Stack est un “développeur à tout faire”. Aussi bien capable de coder sur la
+                        partie front que back, il connaît toute la chaîne de développement d’un logiciel ou d’un site
+                        web et
+                        est à l’aise avec plusieurs langages et technologies.
+
+                        Un Développeur Full Stack doit être généraliste. Il peut être amené à travailler sur chaque
+                        étape de
+                        création d’un site ou d’une application : du développement à la production de celui-ci.</p>
+
+                    <div class="col-lg-4 mb-4 mb-lg-0 image2">
+                        <img src="img/developpeur-full-stack-768x432.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="" />
+
+                        <img src="img/developpeur-full-stack-768x432.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="" />
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0 image2">
+                        <img src="img/developpeur-full-stack-768x432.jpg"
+                            class="w-100 shadow-1-strong rounded mb-4 aaaa" alt="" />
+
+                        <img src="img/developpeur-full-stack-768x432.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="" />
+                    </div>
+                    <div class="col-lg-4 mb-4 mb-lg-0">
+                        <img src="img/developpeur-full-stack-768x432.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="" />
+
+                        <img src="img/developpeur-full-stack-768x432.jpg" class="w-100 shadow-1-strong rounded mb-4"
+                            alt="" />
+                    </div>
+                </div>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" id="slide1">
+                        </div>
+                        <div class="carousel-item" id="slide2">
+                        </div>
+                        <div class="carousel-item" id="slide3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CONTACT -->
+        <div id="contact"></div>
+        <div style="height: 50px;"></div>
+        <h1>CONTACT</h1>
+        <div class="container">
+            <h2 class="align-items-center">Besoin de discuter ? N'hésitez pas à m'envoyer un message !</h2>
+            <div class="align-items-center">
+                <form class="form-row">
+                    <h1 class="text-center">M'envoyer un message</h1>
+                    <div class="row justify-content-md-center">
+                        <div class="nom col-12 col-sm-12 col-md-6">
+                            <label>Nom</label>
+                            <input type="text" class="form-control" placeholder="Nom">
+                        </div>
+                        <div class="prenom col-12 col-sm-12 col-md-6 ">
+                            <label>Prénom</label>
+                            <input type="text" class="form-control" placeholder="Prenom">
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="form-group col-12 col-sm-12 col-md-12">
+                            <label>Votre email</label>
+                            <input type="email" class=" form-control" id="inputEmail4"
+                                placeholder="exemple@exemple.com">
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="form-group col-12 col-sm-12 col-md-12">
+                            <label>Votre message</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="M'envoyer un message"></textarea>
+                            <div class="d-flex justify-content-center">
+                                <button type="submit" class="btn btn-dark">Envoyer</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <!-- Map -->
+                <div class="map-responsive">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.290506974339!2d2.259069315365358!3d43.621312179122405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae0e2ced41d76f%3A0xd1ebf20be08320ec!2sIUT%20&#39;A&#39;%20Paul%20Sabatier%20Castres!5e0!3m2!1sfr!2sfr!4v1634996411464!5m2!1sfr!2sfr"
+                        width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-center">
+        <a href="mentionslegales.html" class="text-white">Mentions légales</a>
+        <p class="text-white">© Julien LAY</p>
+        <a href="https://github.com/JulienLay" target="_blank"><img src="img/github.png" alt=""></a>
+        <a href="https://linkedin.com/in/layjulien" target="_blank"><img src="img/linkedin.png" alt=""></a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="barreProgressive.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+
+</html>

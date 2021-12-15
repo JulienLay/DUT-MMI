@@ -1,0 +1,93 @@
+/* Généralités */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+}
+
+h5 {
+    text-align: center;
+}
+
+main {
+    margin: 0px 50px 0px 50px;
+}
+
+.row { 
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Barre progressive */
+
+#progress {
+    background-color: red;
+    height: 3px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* Bouton top */
+
+#scroll_to_top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 9999;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#scroll_to_top img {
+    width: 50px;
+}
+
+.container-fluid {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Menu */
+
+.navlink {
+    color: white;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: #fff900;
+}
+
+nav li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button.navbar-toggler {
+    background-color: white;
+}
+
+/* Footer */
+
+footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer img {
+    width: 50px;
+    border-radius: 25%;
+}
