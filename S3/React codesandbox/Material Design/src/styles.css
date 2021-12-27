@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+  width: 300px;
+}
+.App-header {
+  color: whitesmoke;
+  background: black;
+}
+.App-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  min-height: 200px;
+  background: rgb(240, 235, 235);
+}
