@@ -1,0 +1,196 @@
+/* Police */
+
+* {
+  font-family: "Cormorant";
+  /* border: solid 1px blue; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap%22");
+
+/* Généralités */
+
+h2 {
+  font-size: 60px;
+}
+
+/* Bouton haut de page */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 9999;
+  background-color: #7bc5db;
+  transition: 0.2s;
+}
+
+#btn-back-to-top img {
+  width: 15px;
+  margin-bottom: 5px;
+}
+#btn-back-to-top:hover {
+  opacity: 50%;
+}
+/* Image d'accueil */
+header {
+  background-image: url(img/accueil.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Menu */
+nav {
+  text-align: center;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+}
+
+nav ul {
+  list-style-type: none;
+  justify-content: space-between;
+  width: 33%;
+  margin-top: 15px;
+  display: flex;
+  padding-left: 0px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+nav ul li a:hover {
+  color: pink;
+}
+
+.titre {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nous {
+  height: 30em;
+  align-items: center;
+  padding: 0px 30px 0px 30px;
+}
+.nous h2 {
+  margin-bottom: 50px;
+}
+/* Notre équipe */
+.equipe {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 50px 0px 50px 0px;
+}
+.equipe img {
+  margin: 50px 0px 15px 0px;
+}
+.profil {
+  padding: 30px;
+}
+/* Nos services */
+#services h2 {
+  margin-top: 70px;
+}
+.services {
+  margin-bottom: 50px;
+}
+.card {
+  margin-bottom: 50px;
+  padding: 30px;
+}
+.card-title {
+  font-weight: bolder;
+}
+/* Nos valeurs */
+#valeurs {
+  margin-top: 30px;
+}
+.valeurs {
+  background-image: url(img/accueil.jpg);
+  height: 30vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.valdesc {
+  margin-top: 70px;
+}
+.valdesc h3 {
+  margin-top: 30px;
+}
+.val p {
+  padding: 0px 30px 0px 30px;
+}
+/* Contact */
+#contact {
+  margin: 80px 0px 50px 0px;
+}
+.bloccontact {
+  background-color: #dcf7ff;
+  padding: 20px;
+}
+
+.bloccontact a {
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px 30px 10px 30px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Pour la map */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Footer */
+
+footer img {
+  width: 50px;
+}
+
+footer ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+footer ul li a:hover {
+  color: pink;
+}
+
+/* Responsive */
+
+/* Menu */
+.navbar-toggler-icon {
+  color: white;
+}
+
+/* Nos valeurs */
+@media (min-width: 768px) and (max-width: 1000px) {
+  .val img {
+    height: 200px;
+    width: 200px;
+  }
+}
