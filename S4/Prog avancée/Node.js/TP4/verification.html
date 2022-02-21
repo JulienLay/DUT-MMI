@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Les web sockets</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Exercice de synthèse</h1>
+        <label for="">palindrome :</label>
+        <input type="text" id="palindrome"> 
+        <br>
+        <input type="button" value="oui!" id="oui">
+    </div>
+    <script>
+        // client vers serveur
+        let socket = io.connect('http://localhost:3000');
+        socket.emit("event1", { nom: "tutur" });
+
+        // serveur vers client
+        socket.on("reponse", function (data) {
+            document.getElementById("palindrome").value = data;
+        });
+
+        document.getElementById("oui").addEventListener("click", (e) => {
+            let val = document.getElementById("palindrome").value;
+            socket.emit("demande",{ retour: val });
+        });
+
+        
+    </script>
+</body>
+
+</html>

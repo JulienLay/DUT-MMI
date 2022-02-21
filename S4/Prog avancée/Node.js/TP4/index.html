@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Les web sockets</title>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Exercice de synthèse</h1>
+        <label for="">toi :</label>
+        <input type="text" id="toi"> 
+        <br>
+        <label for="">réponse :</label>
+        <input type="text" id="reponse">
+    </div>
+    <script>
+        // client vers serveur
+        let socket = io.connect('http://localhost:3000');
+        socket.emit("event1", { nom: "tutur" });
+
+        // serveur vers client
+        socket.on("test", function (data) {
+            console.log(data)
+        });
+
+        document.getElementById("toi").addEventListener("change", (e) => {
+            document.getElementById("reponse").value = e.target.value;
+
+            socket.emit("proposition", { proposition: e.target.value });
+        });
+
+        socket.on("reponse2", function (data) {
+            document.getElementById("reponse").value = data;
+        });
+
+    </script>
+</body>
+
+</html>
