@@ -1,0 +1,188 @@
+/* Police */
+
+* {
+  font-family: "Cormorant";
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+/* Généralités */
+p,
+a {
+  font-family: "Montserrat";
+}
+
+h1 {
+  font-size: 60px;
+  padding: 30px 0px 20px 0px;
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Bouton haut de page */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  z-index: 9999;
+  background-color: #7bc5db;
+  transition: 0.2s;
+}
+
+#btn-back-to-top img {
+  width: 15px;
+  margin-bottom: 5px;
+}
+#btn-back-to-top:hover {
+  opacity: 50%;
+}
+
+/* Video accueil */
+
+header {
+  position: relative;
+  background-color: black;
+  height: 20px;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* Media Query for devices withi coarse pointers and no hover functionality */
+
+/* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+
+@media (pointer: coarse) and (hover: none) {
+  header {
+    background: url("https://source.unsplash.com/XT5OInaElMw/1600x900") black
+      no-repeat center center scroll;
+  }
+
+  header video {
+    display: none;
+  }
+}
+
+/* Menu */
+nav {
+  color: white;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  background-color: #7bc5db;
+}
+
+nav ul {
+  list-style-type: none;
+  justify-content: space-between;
+  width: 50%;
+  margin-top: 15px;
+  display: flex;
+  padding-left: 0px;
+  padding-bottom: 15px;
+}
+
+.nav {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.nav:hover {
+  color: black;
+}
+
+.titre {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nous {
+  height: 30em;
+  align-items: center;
+  padding: 0px 30px 0px 30px;
+}
+.nous h2 {
+  margin-bottom: 50px;
+}
+
+/* Articles */
+
+.article {
+  margin: 30px 0px 30px 0px;
+  width: 90%;
+}
+
+/* Footer */
+
+footer img {
+  width: 50px;
+}
+
+footer ul li a {
+  color: black;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 0px 10px;
+}
+
+footer ul li a:hover {
+  color: #7bc5db;
+}
+
+/* Responsive */
+
+/* Menu */
+.navbar-toggler-icon {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  nav ul {
+    width: 100%;
+  }
+  nav ul li {
+    padding: 10px 0px;
+  }
+}

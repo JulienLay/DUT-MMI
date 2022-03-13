@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="img/logo.png" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!-- à changer -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>ONDEM</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+
+    <header>
+      <!-- Video -->
+      <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+      <div class="overlay"></div>
+
+      <!-- The HTML5 video element that will create the background video on the header -->
+      <video
+        playsinline="playsinline"
+        autoplay="autoplay"
+        muted="muted"
+        loop="loop"
+      >
+        <source src="video/accueil.mp4" type="video/mp4" />
+      </video>
+
+      <!-- The header content -->
+      <div class="container h-100">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item d-flex justify-content-center">
+                  <a href="#nous" class="nav">Qui sommes-nous ?</a>
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a href="#services" class="nav">Nos services</a>
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a href="#valeurs" class="nav">Nos valeurs</a>
+                </li>
+                <li class="nav-item d-flex justify-content-center">
+                  <a href="#contact" class="nav">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- <nav class="d-flex">
+            <ul>
+                <li><a href="#nous">Qui sommes-nous ?</a></li>
+                <li><a href="#services">Nos services</a></li>
+                <li><a href="#valeurs">Nos valeurs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav> -->
+    </header>
+
+    <!-- Bouton haut de page -->
+
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-circle"
+      id="btn-back-to-top"
+    >
+      <img src="img/fleche.png" />
+    </button>
+
+    <!-- Accueil -->
+
+    <div id="nous">
+      <div class="container nous d-flex">
+        <div class="row text-center">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            Nous sommes une agence web à Castres, passionnée et engagée dans la
+            stratégie digitale, la conception UI UX et le développement web.
+            Avec notre expérience dans le milieu du multimédia, nous ne cessons
+            d’innover chaque jour pour vous offrir des solutions créatives avec
+            expertise et tendresse. Basée sur Castres, nos collaborations
+            témoignent de notre volonté à toujours nous améliorer et enrichir
+            notre offre un peu plus chaque jour.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Notre équipe -->
+
+    <div class="container-fluid equipe">
+      <div class="container">
+        <div class="row text-center">
+          <h2>Notre équipe</h2>
+        </div>
+        <div class="d-flex flex-wrap justify-content-around">
+          <!-- ----------------------------------------------------------------------------------- -->
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="françois"
+          >
+            <img
+              class="rounded-circle"
+              src="img/hop2.jpg"
+              alt=""
+              class="btn-memb"
+            />
+            <h3>Mathias FRANÇOIS</h3>
+            <p>Chef de projet</p>
+          </div>
+          <div class="memb-details fadein mfrancois">
+            <div class="memb-window">
+              <div class="vide close-btn"></div>
+              <div class="memb-detail">
+                
+                <div class="bloc-banner">
+
+                  <div class="memb-pp">
+                      <img src="img/hop2.jpg" alt="" />
+                  </div>
+
+                  <div class="memb-title">
+                      <button class="close-btn">Fermer</button>
+                      <h3>Mathias FRANÇOIS</h3>
+                  </div>
+
+                </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Je m'appelle François Mathias, âgé de 20 ans ma passion est celle de la musique et de la direction artistique. 
+                          Etudiant de deuxième année en MMI à Castres, j'ai pour projet de continuer mes études dans l'audiovisuel et plus principalement le domaine du son.
+                          J'aime la lecture et la philosophie, souhaitant également dans le futur voyager et ainsi découvrir de nouvelles expériences.</p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-indesign"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-photoshop"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-illustrator"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-xd"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-PHP">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-after-effects"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://twitter.com/hopreme_"><img src="img/twitter-logo.png" alt=""></a>
+                      <a target="_blank" href="https://www.linkedin.com/in/mathias-fran%C3%A7ois-2465741ba/"><img src="img/linkedin.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- ----------------------------------------------------------------------------------- -->
+
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="lay"
+          >
+            <img
+              class="rounded-circle"
+              src="img/julienlay.png"
+              alt=""
+              class="btn-memb"
+            />
+            <h3>Julien LAY</h3>
+            <p>Développeur Full Stack</p>
+          </div>
+          <div class="memb-details fadein jlay">
+              <div class="memb-window">
+                <div class="vide close-btn"></div>
+                <div class="memb-detail">
+                  
+                  <div class="bloc-banner">
+  
+                    <div class="memb-pp">
+                        <img src="img/julienlay.png" alt="" />
+                    </div>
+  
+                    <div class="memb-title">
+                        <button class="close-btn">Fermer</button>
+                        <h3>Julien LAY</h3>
+                    </div>
+  
+                  </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Salut ! Moi c'est Julien ! <br><br> J'ai pour projet de devenir Développeur Full Stack et j’ai donc décidé de faire mes études au DUT MMI de Castres. Grâce à mon parcours, j’ai déjà acquis des compétences que j’ai pu mettre en pratique lors de projets personnels en auto-formation (Python, C, JavaScript, JQuery, HTML, CSS, PHP, SQL, Node.js, Wordpress, Bootstrap, etc.) que vous pourrez retrouver sur mon <a target="_blank" href="https://linkedin.com/in/layjulien/">LinkedIn</a> ainsi que sur mon <a target="_blank" href="https://github.com/JulienLay">GitHub</a> ! <br><br> Si jamais vous êtes intéressé par mon profil, n'hésitez pas à me contacter car je suis en recherche d'alternance à compter de septembre 2022 !</p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:python"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:html-5"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:css-3"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:javascript"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-PHP">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:php"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-SQL">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="dashicons:database"
+                            data-inline="false"
+                            style="color: black;"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://www.linkedin.com/in/layjulien/"><img src="img/linkedin.png" alt=""></a>
+                      <a target="_blank" href="https://github.com/JulienLay"><img src="img/github.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="k-ancel"
+          >
+            <img
+              class="rounded-circle"
+              src="img/kylian.jpg"
+              alt=""
+              class="btn-memb"
+            />
+            <h3>Kylian ANCEL</h3>
+            <p>Community manager</p>
+          </div>
+          <div class="memb-details fadein kancel">
+              <div class="memb-window">
+                <div class="vide close-btn"></div>
+                <div class="memb-detail">
+                  
+                  <div class="bloc-banner">
+  
+                    <div class="memb-pp">
+                        <img src="img/kylian.jpg" alt="" />
+                    </div>
+  
+                    <div class="memb-title">
+                        <button class="close-btn">Fermer</button>
+                        <h3>Kylian ANCEL</h3>
+                    </div>
+  
+                  </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Je m'appelle Ancel Kylian, j'ai 21 ans, et j'étudie dans le web design et le graphisme, et j'ai pour projet de continuer sur cette voie.
+                          J'aime la lecture, les jeux vidéos et en particulier l'eSport, et j'aimerais, dans le futur voyager dans d'autres pays afin d'acquérir de nouvelles expériences, tant professionnelles que personnelles. </p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-indesign"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-photoshop"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-illustrator"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-xd"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-PHP">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-after-effects"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://www.linkedin.com/in/kylian-ancel-689285211/"><img src="img/linkedin.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="tucoou"
+          >
+            <img
+              class="rounded-circle"
+              src="img/arthur.jpg"
+              alt=""
+              class="btn-memb"
+            />
+            <h3>Arthur TUCOOU</h3>
+            <p>Référenceur</p>
+          </div>
+          <div class="memb-details fadein atucoou">
+              <div class="memb-window">
+                <div class="vide close-btn"></div>
+                <div class="memb-detail">
+                  
+                  <div class="bloc-banner">
+  
+                    <div class="memb-pp">
+                        <img src="img/arthur.jpg" alt="" />
+                    </div>
+  
+                    <div class="memb-title">
+                        <button class="close-btn">Fermer</button>
+                        <h3>Arthur TUCOOU</h3>
+                    </div>
+  
+                  </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Je m'appelle Arthur TUCOOU, j'ai 20 ans. Passionné par le multimédia et le développement web.
+                          Je suis quelqu'un d'autonome, sérieux, à l'écoute et j'ai pu acquérir tout au long de mes expériences une capacité d'adaptation.</p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="dashicons:wordpress"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:html-5"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:css-3"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:javascript"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-PHP">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-premiere"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-SQL">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-photoshop"
+                            data-inline="false"
+                            style="color: black;"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://www.linkedin.com/in/arthur-tucoou-981aa11b8/"><img src="img/linkedin.png" alt=""></a>
+                      <a target="_blank" href="https://github.com/ArthurTuc"><img src="img/github.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="r-ancel"
+          >
+            <img
+              class="rounded-circle"
+              src="img/ryan2.jpg"
+              alt=""
+              class="btn-memb"
+            />
+            <h3>Ryan ANCEL</h3>
+            <p>Designer graphique</p>
+          </div>
+          <div class="memb-details fadein rancel">
+              <div class="memb-window">
+                <div class="vide close-btn"></div>
+                <div class="memb-detail">
+                  
+                  <div class="bloc-banner">
+  
+                    <div class="memb-pp">
+                        <img src="img/ryan2.jpg" alt="" />
+                    </div>
+  
+                    <div class="memb-title">
+                        <button class="close-btn">Fermer</button>
+                        <h3>Ryan ANCEL</h3>
+                    </div>
+  
+                  </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Je m'appelle Ryan Ancel, j'ai 21 ans, passionné par le web design j'apprends et développe chaque jour mes capacités dans ce domaine. De part mon expérience le travail en équipe est ce qui me correspond le mieux mais aussi ce qui me plaît le plus. Au quotidien j'aime beaucoup lire, romans ou manga principalement en anglais pour développer ma 2ème langue car j'ai pour ambition de travailler dans un pays anglophone.</p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-indesign"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-photoshop"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-illustrator"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-xd"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-PHP">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="cib:adobe-after-effects"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://www.linkedin.com/in/ryan-ancel-9421951bb/"><img src="img/linkedin.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div
+            class="row profil col-12 col-sm-6 col-md-4 col-lg-4 text-center"
+            id="huynh"
+          >
+            <img src="img/julienhuynh.png" alt="julienhuynh" class="btn-memb" />
+            <h3>Julien HUYNH</h3>
+            <p>Webdesigner</p>
+          </div>
+          <div class="memb-details fadein jhuynh">
+              <div class="memb-window">
+                <div class="vide close-btn"></div>
+                <div class="memb-detail">
+                  
+                  <div class="bloc-banner">
+  
+                    <div class="memb-pp">
+                        <img src="img/julienhuynh.png" alt="" />
+                    </div>
+  
+                    <div class="memb-title">
+                        <button class="close-btn">Fermer</button>
+                        <h3>Julien HUYNH</h3>
+                    </div>
+  
+                  </div>
+                  <div class="Section1 row">
+                    <div class="col-lg-6 col-md-6 blocdesc">
+                        <h1>A mon propos...</h1>
+                        <p>Bonjour ! je m'appelle Julien Huynh, je viens d'un DUT MMI, je suis quelqu’un de sérieux et attentif aux demandes, je mets tout en œuvre pour que mon travail
+                          soit précis et réalisé au mieux car je suis également perfectionniste. 
+                          Je sais réaliser des visuels, des maquettes et travailler une identité visuelle à partir d’une charte
+                          graphique et d’outils de PAO tels que ceux de la suite Adobe, j’ai d’autre part un certain sens de
+                          l’expérience utilisateur, un aspect qui m’est utile lors de mes travaux en développement front-end dans
+                          la création d’un site en HTML/CSS (avec Bootstrap et SCSS) et Javascript (avec ReactJS) !
+                          
+                          </p>
+                    </div>
+                  <div class="col-lg-6 col-md-6 blocskills">
+                    <!-- BARRES DE COMPETENCES -->
+                    <div id="SkillBox">
+                      <h2 class="Skill-heading">Compétences</h2>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-Python">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="vscode-icons:file-type-photoshop"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="file-icons:adobe-illustrator"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-JS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:javascript"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-HTML">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:html-5"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+  
+                      <div class="SkillBar">
+                        <div id="Skill-CSS">
+                          <span
+                            class="Skill-Area iconify"
+                            data-icon="logos:css-3"
+                            data-inline="false"
+                            data-width="35"
+                            data-height="35"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memb-reseau row">
+                    <div class="col-lg-6 col-md-6">
+                      <a target="_blank" href="https://twitter.com/Julienhynh"><img src="img/twitter-logo.png" alt=""></a>
+                      <a target="_blank" href="https://www.linkedin.com/in/julien-huynh-a43748200/"><img src="img/linkedin.png" alt=""></a>
+                      <a target="_blank" href="https://github.com/JulienHuynh"><img src="img/github.png" alt=""></a>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <h1>MES RÉSEAUX</h1>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+
+    <div id="services">
+      <div class="container">
+        <div class="row">
+          <div class="text-center services">
+            <h2>Nos services</h2>
+          </div>
+          <div class="d-flex flex-wrap justify-content-around">
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-webdesign"
+            >
+              <img src="img/webdesign.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">Webdesign UX/UI</h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    Nous proposons des pages responsives conformes aux normes UX
+                    UI et adaptés aux demandes des clients.
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-webdesign">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Webdesign UX/UI</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>Le concept graphique est le fil conducteur de votre image sur internet, la naissance de votre ADN numérique ! Il doit traduire les objectifs de votre entreprise et concevoir une identité, au delà de l’ergonomie, pour véhiculer les messages clés propres à votre activité. Grâce à notre stratégie de contenu sur mesure, nous concevons des interfaces dans un esprit d'interactivité. Ludiques, séduisants ou classiques, nos concepts graphiques sont pensés avec exigence afin de faire parfaitement transparaître l’âme de votre entreprise depuis sa plateforme digitale.</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/webdesign.jpg" alt="webdesign">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/webdesign-innovants.png" alt="" height="50px">
+                      <p>Nous ne sommes guidés que par la soif de l’innovation. Et ça, on le voit dans nos solutions.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/webdesign-exigeants.png" alt="" height="50px">
+                      <p>Nous avons toujours le soucis de vous apporter des réponses adaptées et irréprochables.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/webdesign-creatifs.png" alt="" height="50px">
+                      <p>Nous sommes aussi des artistes, impatients de mettre la main à la pâte !</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                   <a href="#contact">
+                     <button type="button" class="btn btn-info btn-serv close-btn">
+                    Contactez-nous !
+                  </button>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- ----------------------------------------------------------------------------------- -->
+
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-designgraph"
+            >
+              <img src="img/graphicdesign.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  Design graphique & Branding
+                </h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    Nous réalisons des designs ainsi que des chartes graphiques
+                    avant toute mise en place d'un site web.
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-design">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Design graphique & Branding</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>De formaliser les codes graphiques à respecter pour construire un site web à votre image. Votre logo, lui aussi, nous le travaillons sous plusieurs angles et au moyen de pistes plurielles pour toujours garantir une homogénéité sur votre interface digitale.</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/graphicdesign.jpg" alt="graphicdesign">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/design-flex.png" alt="" height="50px">
+                      <p>Il faut parfois se plier en 4 pour s’adapter à l’innovation. Et nous avons juste ce qu’il faut de flexibilité pour ça !</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/design-imagination.png" alt="" height="50px">
+                      <p>Nous sommes un trop plein d’idées qui bouillonnent et ne demandent qu’à vous satisfaire ! Vous aussi, vous aimez l’extraordinaire ?</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/design-unique.png" alt="" height="50px">
+                      <p>Si notre team n’a pas (toujours) son énergie sous contrôle, ses propositions n’en restent pas moins parfaitement adéquates et uniques.</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                    <a href="#contact">
+                    <button type="button" class="btn btn-info btn-serv close-btn">
+                      Contactez-nous !
+                    </button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-siteweb"
+            >
+              <img src="img/devweb.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">
+                  Refonte & Création de site web
+                </h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    Envie d'un site web ? Ou alors souhaitez-vous améliorer un
+                    site que vous avez déjà créé ? Nous sommes l'équipe dont
+                    vous avez besoin !
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-refonte">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Refonte & Création de site web</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>De propulser votre activité et ses offres de produits ou services en ligne. Nous magnifions votre image de marque et donnons à votre structure la visibilité digitale qu’elle mérite !
+                          Votre site web est la vitrine de votre structure, sa conception est cruciale pour la pérennité de votre image de marque. Chez Ondem, nous mesurons l’importance de cette étape et nous nous engageons à toujours être à l’écoute de vos besoins et objectifs.</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/devweb.jpg" alt="devweb">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/dev-original.png" alt="" height="50px">
+                      <p>Rayonner sur le web avec des outils performants, des stratégies pointues et beaucoup d’originalité.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/dev-singulier.png" alt="" height="50px">
+                      <p>Parce que ce qui vous différencie est votre plus grande force, Ondem met en lumière votre singularité.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/dev-magie.png" alt="" height="50px">
+                      <p>Il faut toujours une pointe de magie pour vous faire briller dans l’œil de vos utilisateurs.</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                    <a href="#contact">
+                      <button type="button" class="btn btn-info btn-serv close-btn">
+                        Contactez-nous !
+                      </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-heberg"
+            >
+              <img src="img/formation.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">Hébergement & Formation</h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    On s'occupe de l'hébergement de votre site web et vous
+                    propose un suivi ainsi qu'une formation tout vous apprendre
+                    sur votre site.
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-heb">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Hébergement & Formation</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>La gestion totale de votre hébergement en garantissant sécurité, temps de chargement réduits et optimisés avec un support technique constemment disponible en cas de faille.
+                          Performance, sécurité, redondance, évolutivité sont les exigences que l’on priorise sur notre parc d’hébergement. Avec une infogérance 24h/24h, nous avons opté pour la solution «dormir l’esprit tranquille».</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/formation.jpg" alt="formation">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/heb-simple.png" alt="" height="50px">
+                      <p>Nous sommes équipés de la tête aux pieds pour héberger votre interface pour plus de simplicité et de lâcher prise !</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/heb-safe.png" alt="" height="50px">
+                      <p>Nous faire confiance c’est la garantie d’un hébergement en toute sécurité sur nos serveurs, avec scrupule et dévouement. </p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/heb-nom.png" alt="" height="50px">
+                      <p>Si vous n’avez pas encore le nom de votre domaine… Honte à vous ! Mais on vous pardonne, car ça aussi on s’en occupe.</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                    <a href="#contact">
+                      <button type="button" class="btn btn-info btn-serv close-btn">
+                        Contactez-nous !
+                      </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-ref"
+            >
+              <img src="img/referencement.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">Référencement</h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    Notre équipe de référenceurs s'assurera du Page Ranking de
+                    votre site et prendra en compte son positionnement pour lui
+                    donner un maximum de visibilité.
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-ref">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Référencement</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>L'équipe Ondem est obsédée par les techniques qui permettent à votre interface de gagner en visibilité.
+                         Que ce soit du marketing inbound ou une campagne de pub, dans ce domaine qui est extrêmement évolutif, il est impératif d’adopter une approche omni-canal au niveau national et international.</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/referencement.jpg" alt="referencement">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/ref-plume.png" alt="" height="50px">
+                      <p>Vous connaissez votre métier, vos cibles… Mais parfois faire appel à une plume de plus change tout !</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/ref-ecriture.png" alt="" height="50px">
+                      <p>Newsletter, blogging, SMO, SEO… chez Ondem c’est tout en même temps et en totale collaboration avec vous.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/ref-rgpd.png" alt="" height="50px">
+                      <p>Nous prenons un soin particulier à envoyer les campagnes uniquement aux personnes délibérément abonnées à votre liste.</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                    <a href="#contact">
+                      <button type="button" class="btn btn-info btn-serv close-btn">
+                        Contactez-nous !
+                      </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card col-12 col-sm-6 col-md-4 col-lg-4 service"
+              id="serv-cm"
+            >
+              <img src="img/com.jpg" class="card-img-top" alt="..." />
+
+              <div class="card-body">
+                <h5 class="card-title text-center">Community management</h5>
+                <div class="serv-resum">
+                  <p class="card-text">
+                    Nous nous assurons du suivi de votre identité sur internet
+                    et nous pouvons notamment créer vos propres réseaux sociaux
+                    ou s'assurer du suivi de votre site.
+                  </p>
+                  <button type="button" class="btn btn-info btn-serv">
+                    En savoir plus
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="serv-details fadein">
+              <div class="serv-window">
+                <div class="vide close-btn"></div>
+                <div class="serv-detail">
+                  <div class="bloc-banner banner-com">
+                    <button class="close-btn">Fermer</button>
+                    <h3>Community management</h3>
+                  </div>
+                  <div class="serv-container row">
+                    <div class="serv-desc col-lg-6 col-md-6">
+                      <h3>Nous vous proposons ...</h3>
+                      <p>Vous n‘êtes pas sûrs du temps et des ressources à dédier à une telle tâche ? Ok, nous prenons soin de votre communauté en votre nom. En révélant votre actualité, évènements, inspirations et plus encore. Nous gérons vos commentaires, vos retours et générons des likes, une augmentation de vos followers et aussi de super revues.</p>
+                    </div>
+                    <div class="serv-illu col-lg-6 col-md-6">
+                      <img src="img/com.jpg" alt="Community management">
+                    </div>
+                  </div>
+                  <div class="serv-exp">
+                    <div class="serv-bloc">
+                      <img src="img/com-cm.png" alt="" height="50px">
+                      <p>Créer, inspirer, partager, liker, commenter… Gérez votre communauté, gardez le contact et diffusez votre actualité !</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/com-choix.png" alt="" height="50px">
+                      <p>Si vous vous posez la question, il y a des chances pour que, oui, il y ait quelque chose à (re)mettre en place.</p>
+                    </div>
+                    <div class="serv-bloc">
+                      <img src="img/com-vente.png" alt="" height="50px">
+                      <p>Gagnez du temps : restez connecté à vos clients et prospects et générez plus de ventes.</p>
+                    </div>
+                  </div>
+                  <div class="serv-contact">
+                    <h3>Vous êtes tenté ?</h3>
+                    <p>Créez votre site web avec nous !</p>
+                    <p>Nous sommes une agence web à Castres, passionnée et engagée dans la stratégie digitale</p>
+                    <a href="#contact">
+                      <button type="button" class="btn btn-info btn-serv close-btn">
+                        Contactez-nous !
+                      </button>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Valeurs -->
+
+    <div id="valeurs">
+      <div
+        class="text-center valeurs d-flex justify-content-center align-items-center text-white"
+      >
+        <h2>Nos valeurs</h2>
+      </div>
+      <div class="container">
+        <div class="row"></div>
+      </div>
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-around valdesc">
+          <div class="val col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <img src="img/partage.png" alt="" />
+            <h3>Partage</h3>
+            <p>
+              Nous souhaitons mettre en avant l'aspect de partage de nos valeurs
+              et notre lien avec les clients du monde entier, nous avons donc
+              mélangé les mots "<strong>Onde</strong>" et
+              "<strong>Monde</strong>" pour donner <strong>ONDEM</strong>. Nous
+              retrouvons dans ce nom le mot “Monde” en tant qu’anagramme.
+            </p>
+          </div>
+          <div class="val col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <img src="img/interconnexion.png" alt="" />
+            <h3>Interconnexion</h3>
+            <p>
+              Nous y trouvons aussi un lien avec le mot "<strong>Modem</strong>"
+              reliant à notre secteur d’activité tout en signifiant
+              l’interconnexion entre nos clients et le web. Une bonne
+              représentation de notre service de création de site pour la
+              projection de nos clients sur ce grand réseau qu’est le web.
+            </p>
+          </div>
+          <div class="val col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+            <img src="img/on.png" alt="" />
+            <h3>ON and ON</h3>
+            <p>
+              Le mot "<strong>Ondem</strong>" fait par ailleurs référence au
+              pronom personnel "<strong>On</strong>" car nous sommes une agence
+              engagée, qui a pour but d’aider les clients en étant le plus
+              humain possible. Nous cherchons à montrer que l’agence est à
+              l’écoute des besoins des clients et cherche réellement à les
+              rapprocher de l’agence pour comprendre leurs attentes. Le but de
+              cela est de réaliser un site final qui correspond le plus possible
+              au client. De plus, on y trouve la signification
+              "<strong>Allumé</strong>" par le mot anglais
+              "<strong>ON</strong>", qui donne l’image d’une équipe active et
+              dynamique.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+
+    <!-- <div id="contact">
+    <div class="container d-flex justify-content-center">
+        <div class="d-flex flex-column bloccontact text-center">
+            <h2>Vous souhaitez nous contacter ?</h2>
+            <div class="d-flex flex-wrap justify-content-around align-items-center">
+                <p>Avenue Georges Pompidou<br>
+                    81100, Castres<br>
+                    06 56 70 18 39<br>
+                    ondem@contact.fr</p>
+                <div>
+                    <a href="mailto:ondem@contact.fr">Nous envoyer un mail</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+    <!-- Formulaire -->
+    <div class="container">
+      <form id="contact">
+        <div class="d-flex flex-column bloccontact text-center">
+          <h2>Vous souhaitez nous contacter ?</h2>
+          <p>
+            Avenue Georges Pompidou<br />
+            81100, Castres<br />
+            06 56 70 18 39<br />
+            ondem@contact.fr
+          </p>
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              id="form4Example1"
+              class="form-control"
+              placeholder="Votre nom..."
+            />
+            <label class="form-label" for="form4Example1">Nom</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <input
+              type="email"
+              id="form4Example2"
+              class="form-control"
+              placeholder="Votre email..."
+            />
+            <label class="form-label" for="form4Example2">Adresse mail</label>
+          </div>
+
+          <div class="form-outline mb-4">
+            <textarea
+              class="form-control"
+              id="form4Example3"
+              rows="4"
+              placeholder="Votre message..."
+            ></textarea>
+            <label class="form-label" for="form4Example3">Message</label>
+          </div>
+
+          <button
+            type="submit"
+            class="btn btn-block mb-8 boutonformulaire text-white"
+          >
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+    <!-- Map -->
+
+    <div class="map-responsive">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.290506974339!2d2.259069315365358!3d43.621312179122405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae0e2ced41d76f%3A0xd1ebf20be08320ec!2sIUT%20&#39;A&#39;%20Paul%20Sabatier%20Castres!5e0!3m2!1sfr!2sfr!4v1634996411464!5m2!1sfr!2sfr"
+        width="600"
+        height="450"
+        style="border: 0;"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="container">
+      <footer
+        class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+      >
+        <p class="col-md-2 mb-0 text-muted">© 2021 ONDEM, Inc</p>
+
+        <a
+          href="#top"
+          class="col-md-1 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+        >
+          <img src="img/ondem-typo.png" alt="logo ondem" />
+        </a>
+
+        <ul class="nav col-md-8 justify-content-around d-flex">
+          <li class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <a href="index.html/#nous">Qui sommes-nous ?</a>
+          </li>
+          <li class="col-12 col-sm-12 col-md-12 col-lg-2">
+            <a href="#services">Nos services</a>
+          </li>
+          <li class="col-12 col-sm-12 col-md-12 col-lg-2">
+            <a href="#valeurs">Nos valeurs</a>
+          </li>
+          <li class="col-12 col-sm-12 col-md-12 col-lg-2">
+            <a href="#contact">Contact</a>
+          </li>
+          <li class="col-12 col-sm-12 col-md-12 col-lg-3">
+            <a href="mentions.html">Mentions légales</a>
+          </li>
+        </ul>
+
+        <ul class="nav col-md-1 justify-content-center d-flex">
+          <li class="RS">
+            <a
+              href="https://www.instagram.com/ondemofficiel/"
+              class="col-md-1 align-items-center justify-content-center mb-3 mb-md-0 me-md-auto"
+              target="_blank"
+            >
+              <img src="img/instagram.png" alt="instagram" />
+            </a>
+          </li>
+          <li class="RS">
+            <a
+              href="https://twitter.com/OndemWeb"
+              class="col-md-1 align-items-center justify-content-center mb-3 mb-md-0 me-md-auto"
+              target="_blank"
+            >
+              <img src="img/twitter.png" alt="twitter" />
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <script src="boutonhautdepage.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
